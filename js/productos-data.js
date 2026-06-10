@@ -292,7 +292,7 @@ const CATALOGO = [
       bcn_medical_s_a: {
         nombre: 'BCN MEDICAl S.A',
         nombreProducto: 'KLAFEDOL IBUPROFENO 5 % PORCENTAJE GEL 50 GRAMOS B',
-        imagen: 'img/productos/Ibuprofeno 400mg.jpg',
+        imagen: 'img/productos/KLAFEDOL IBUPROFENO 5 % PORCENTAJE GEL 50 GRAMOS BI.jpg',
         precios: {
           caja: { label: 'Caja', precio: 19800 },
         },
@@ -300,51 +300,18 @@ const CATALOGO = [
       labquifar_ltda: {
         nombre: 'LABQUIFAR LTDA',
         nombreProducto: 'ACTIVIRAL  ACICLOVIR 800MG X 10 TAB',
-        imagen: 'img/productos/Ibuprofeno 400mg.jpg',
+        imagen: 'img/productos/ACTIVIRAL  ACICLOVIR 800MG X 10 TAB.jpg',
         precios: {
           caja: { label: 'Caja', precio: 25800 },
         },
       },
       laboratorios_coaspha: {
         nombre: 'LABORATORIOS COASPHARMA S.A.S',
-        nombreProducto: 'IBUPROFENO 400MG X60 TAB COASPHARMA',
-        imagen: 'img/productos/Ibuprofeno 400mg.jpg',
+        nombreProducto: 'IBUPROFENO 800MG X60 TAB COASPHARMA',
+        imagen: 'img/productos/IBUPROFENO 800MG X60 TAB COASPHARMA.jpg',
         precios: {
           blister: { label: 'Blíster', precio: 2000 },
           caja: { label: 'Caja', precio: 12000 },
-        },
-      },
-      genomma_lab_colombia: {
-        nombre: 'GENOMMA LAB.COLOMBIA',
-        nombreProducto: 'NEXT GL IBUPROFENO 200 MG MILIGRAMO(S) CAPSULA DE',
-        precios: {
-          caja: { label: 'Caja', precio: 12800 },
-          unidad: { label: 'Unidad', precio: 1800 },
-        },
-      },
-      icom: {
-        nombre: 'ICOM',
-        nombreProducto: 'LEGRIP IBUPROFENO 200 MG MILIGRAMO(S) CAPSULA DE G',
-        precios: {
-          blister: { label: 'Blíster', precio: 9500 },
-          caja: { label: 'Caja', precio: 90000 },
-          unidad: { label: 'Unidad', precio: 1000 },
-        },
-      },
-      pfizer_s_a_s: {
-        nombre: 'PFIZER S.A.S',
-        nombreProducto: 'ADVIL ULTRA IBUPROFENO FSCO X 20 CAPS',
-        imagen: 'img/productos/Motrin 800mg x30 tab.jpg',
-        precios: {
-          caja: { label: 'Caja', precio: 41000 },
-        },
-      },
-      generico: {
-        nombre: 'Genérico',
-        nombreProducto: 'DOLISTAN  IBUPROFENO JARABE  120 ML',
-        imagen: 'img/productos/MK 800mg caja x50 tab.jpg',
-        precios: {
-          caja: { label: 'Caja', precio: 16900 },
         },
       },
       tecnoquimicas_s_a: {
@@ -380,7 +347,7 @@ const CATALOGO = [
       glaxo_smithkline_con: {
         nombre: 'GLAXO SMITHKLINE CONSUMER',
         nombreProducto: 'DOLEX FORTE NF 48 TABLETAS',
-        imagen: 'img/productos/Dolex Forte caja x100 tab.jpg',
+        imagen: 'img/productos/DOLEX FORTE NF 48 TABLETAS.jpg',
         precios: {
           caja: { label: 'Caja', precio: 57600 },
           unidad: { label: 'Unidad', precio: 1600 },
@@ -391,7 +358,7 @@ const CATALOGO = [
       generico: {
         nombre: 'Genérico',
         nombreProducto: 'DOLEX FORTE CAJA 100 UND',
-        imagen: 'img/productos/Dolex Forte x10 tab.jpg',
+        imagen: 'img/productos/DOLEX FORTE CAJA 100 UND.jpg',
         precios: {
           blister: { label: 'Blíster', precio: 9500 },
           caja: { label: 'Caja', precio: 193523 },
@@ -401,7 +368,7 @@ const CATALOGO = [
       tecnoquimicas_s_a: {
         nombre: 'TECNOQUIMICAS S.A.',
         nombreProducto: 'MINOXIDIL FORTE 5% LOCION 60 ML MK',
-        imagen: 'img/productos/Dolex Forte caja x100 tab.jpg',
+        imagen: 'img/productos/MINOXIDIL FORTE 5% LOCION 60 ML MK.jpg',
         precios: {
           frasco: { label: 'Frasco', precio: 76900 },
           caja: { label: 'Caja', precio: 59000 },
@@ -411,6 +378,7 @@ const CATALOGO = [
       bayer_s_a: {
         nombre: 'BAYER S.A.',
         nombreProducto: 'CAFI ASPIRINA FORTE X 36 TAB',
+        imagen: 'img/productos/CAFI ASPIRINA FORTE X 36 TAB.jpg',
         precios: {
           caja: { label: 'Caja', precio: 37500 },
           par: { label: 'Par', precio: 2200 },
@@ -420,6 +388,7 @@ const CATALOGO = [
       lafrancol_s_a: {
         nombre: 'LAFRANCOL S.A.',
         nombreProducto: 'LUMBAL FORTE 36 TABLETAS',
+        imagen: 'img/productos/LUMBAL FORTE 36 TABLETAS.jpg',
         precios: {
           blister: { label: 'Blíster', precio: 14000 },
           caja: { label: 'Caja', precio: 80744 },
@@ -429,6 +398,7 @@ const CATALOGO = [
       novamed_s_a: {
         nombre: 'NOVAMED S.A.',
         nombreProducto: 'NAPROFLASH FORTE 500 MG 80 TBS',
+        imagen: 'img/productos/NAPROFLASH FORTE 500 MG 80 TBS.jpg',
         precios: {
           caja: { label: 'Caja', precio: 160000 },
           unidad: { label: 'Unidad', precio: 2000 },
@@ -511,7 +481,7 @@ const CATALOGO = [
       generico: {
         nombre: 'Genérico',
         nombreProducto: 'SEVEDOL EXTRAFUERTE X 24 TAB',
-        imagen: 'img/productos/Extra Fuerte x60 tab.jpg',
+        imagen: 'img/productos/SEVEDOL EXTRAFUERTE X 24 TAB.jpg',
         precios: {
           blister: { label: 'Blíster', precio: 10800 },
           caja: { label: 'Caja', precio: 43200 },
@@ -539,7 +509,7 @@ const CATALOGO = [
       laproff: {
         nombre: 'LAPROFF',
         nombreProducto: 'NAPROXENO 500MG CAJA X 300 TABLETAS',
-        imagen: 'img/productos/Laproff 500mg x300.jpg',
+        imagen: 'img/productos/NAPROXENO 500MG CAJA X 300 TABLETAS.jpg',
         precios: {
           blister: { label: 'Blíster', precio: 4500 },
           caja: { label: 'Caja', precio: 130000 },
@@ -548,7 +518,9 @@ const CATALOGO = [
       },
       quimica_patric_ltda: {
         nombre: 'QUIMICA PATRIC LTDA',
-        nombreProducto: 'PLURIGRAM CIPROFLOZACINA 500MG 10 TAB',
+        nombreProducto: 'PLURIGRAM CIPROFLOZACINA 500MG 100 TAB',
+         imagen: 'img/productos/PLURIGRAM CIPROFLOZACINA 500MG 100 TAB.jpg',
+        
         precios: {
           caja: { label: 'Caja', precio: 23500 },
         },
@@ -556,7 +528,7 @@ const CATALOGO = [
       laboratorios_coaspha: {
         nombre: 'LABORATORIOS COASPHARMA S.A.S',
         nombreProducto: 'NAPROXENO SODICO 125MG/5ML',
-        imagen: 'img/productos/Naproxeno 500mg x300 tab.jpg',
+        imagen: 'img/productos/NAPROXENO SODICO 125MG5ML.jpg',
         precios: {
           caja: { label: 'Caja', precio: 12500 },
           blister: { label: 'Blíster', precio: 1500 },
