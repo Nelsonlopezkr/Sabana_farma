@@ -8774,3 +8774,354 @@ body.oscuro .cat-hero-card[data-cat="Cuidado Personal y Belleza"] .cat-hero-icon
   padding: 3rem 2rem 2rem;
   color: #fff;
 }
+
+/* ══════════════════════════════════════════════════════════════
+   FIX MOBILE v2 — Navbar reorganizado + Modal producto corregido
+   ══════════════════════════════════════════════════════════════ */
+
+/* ──────────────────────────────────────────────────────────────
+   1. NAVBAR MOBILE — ☰ izquierda | Logo centro | 🛒 derecha
+   Aplicado desde 768px hacia abajo
+────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Contenedor principal: 3 zonas explícitas */
+  .navbar {
+    display: grid !important;
+    grid-template-columns: 44px 1fr 44px !important;
+    grid-template-rows: auto !important;
+    align-items: center !important;
+    padding: .65rem 1rem !important;
+    gap: 0 !important;
+    position: relative !important;
+  }
+
+  /* Hamburguesa — zona izquierda */
+  .navbar-toggle {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 5px !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: var(--gris-100, #f5f5f5) !important;
+    border: 1.5px solid var(--gris-200, #eee) !important;
+    border-radius: 10px !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    order: unset !important;
+    transition: background .18s ease !important;
+  }
+  .navbar-toggle:hover {
+    background: var(--azul-50, #e3f2fd) !important;
+    border-color: var(--azul, #1565C0) !important;
+  }
+  .navbar-toggle span {
+    width: 18px !important;
+    height: 2px !important;
+    background: var(--texto, #1a1a2e) !important;
+    border-radius: 2px !important;
+    transition: var(--trans) !important;
+    display: block !important;
+  }
+  /* Animación X cuando está abierto */
+  .navbar-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg) !important;
+  }
+  .navbar-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0 !important;
+    transform: scaleX(0) !important;
+  }
+  .navbar-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg) !important;
+  }
+
+  /* Logo — zona central, centrado */
+  .navbar-logo {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    justify-content: center !important;
+    font-size: .95rem !important;
+    gap: .5rem !important;
+    order: unset !important;
+  }
+  .navbar-logo img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  /* Acciones — solo el carrito visible a la derecha, ocultar el resto */
+  .navbar-actions {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 0 !important;
+    order: unset !important;
+  }
+
+  /* Ocultar: tema, teléfono, precio inline del carrito */
+  .navbar-actions .btn-tema,
+  .navbar-actions .btn-tel-nav,
+  .navbar-actions .carrito-precio-inline {
+    display: none !important;
+  }
+
+  /* Botón carrito — solo icono + badge, compacto */
+  .navbar-actions .btn-carrito {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1rem !important;
+    gap: 0 !important;
+    min-width: unset !important;
+  }
+  /* Ocultar el texto "Carrito" pero mantener el icono */
+  .navbar-actions .btn-carrito i {
+    font-size: 1rem !important;
+    margin: 0 !important;
+  }
+  /* Ocultar el texto "Carrito" usando clip trick */
+  .navbar-actions .btn-carrito {
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-indent: 0 !important;
+  }
+
+  /* Menu desplegable — ocupa toda la fila debajo */
+  .navbar-links {
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+    display: none !important;
+    flex-direction: column !important;
+    gap: .2rem !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+    border-top: none !important;
+    transition: max-height .3s ease, padding .3s ease !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .navbar-links.activo {
+    display: flex !important;
+    max-height: 500px !important;
+    padding: .6rem 0 .4rem !important;
+    border-top: 1px solid var(--gris-200, #eee) !important;
+    margin-top: .5rem !important;
+  }
+  .navbar-links li {
+    width: 100% !important;
+  }
+  .navbar-links a {
+    display: flex !important;
+    align-items: center !important;
+    padding: .7rem 1rem !important;
+    border-radius: 10px !important;
+    font-size: .93rem !important;
+    font-weight: 700 !important;
+    color: var(--gris-700, #616161) !important;
+    transition: background .15s ease, color .15s ease !important;
+  }
+  .navbar-links a:hover,
+  .navbar-links a.activo {
+    background: var(--azul-50, #e3f2fd) !important;
+    color: var(--azul, #1565C0) !important;
+  }
+  .navbar-links a.activo {
+    font-weight: 800 !important;
+  }
+}
+
+/* Dark mode — navbar mobile */
+@media (max-width: 768px) {
+  [data-theme="dark"] .navbar-toggle,
+  body.oscuro .navbar-toggle {
+    background: rgba(255,255,255,.08) !important;
+    border-color: rgba(255,255,255,.15) !important;
+  }
+  [data-theme="dark"] .navbar-toggle span,
+  body.oscuro .navbar-toggle span {
+    background: #fff !important;
+  }
+  [data-theme="dark"] .navbar-toggle:hover,
+  body.oscuro .navbar-toggle:hover {
+    background: rgba(21,101,192,.25) !important;
+    border-color: var(--azul) !important;
+  }
+  [data-theme="dark"] .navbar-links.activo,
+  body.oscuro .navbar-links.activo {
+    border-top-color: rgba(255,255,255,.1) !important;
+  }
+  [data-theme="dark"] .navbar-links a,
+  body.oscuro .navbar-links a {
+    color: rgba(255,255,255,.75) !important;
+  }
+  [data-theme="dark"] .navbar-links a:hover,
+  body.oscuro .navbar-links a:hover,
+  [data-theme="dark"] .navbar-links a.activo,
+  body.oscuro .navbar-links a.activo {
+    background: rgba(21,101,192,.2) !important;
+    color: #fff !important;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   2. MODAL DE PRODUCTO — Corregir recorte en mobile
+   Problema: imagen muy alta + poco espacio para el contenido
+────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Overlay: sin padding para full-width desde abajo */
+  .modal-producto-overlay {
+    padding: 0 !important;
+    align-items: flex-end !important;
+  }
+
+  /* Modal: bottom-sheet con altura suficiente */
+  .modal-producto {
+    grid-template-columns: 1fr !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    /* Altura mayor: 96vh para que quepa todo el contenido */
+    max-height: 96vh !important;
+    height: 96vh !important;
+    border-radius: 20px 20px 0 0 !important;
+    transform: translateY(100%) !important;
+    transition: transform .35s cubic-bezier(.4,0,.2,1) !important;
+    /* El modal como flex-column para controlar imagen y contenido */
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+  }
+  .modal-producto-overlay.activo .modal-producto {
+    transform: translateY(0) !important;
+  }
+
+  /* Franja de imagen — FIJA arriba, altura reducida */
+  .modal-prod-img-side {
+    flex-shrink: 0 !important;
+    border-radius: 20px 20px 0 0 !important;
+    min-height: 0 !important;
+    height: 200px !important;
+    max-height: 200px !important;
+    padding: .75rem !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+  .modal-prod-img-side img,
+  #modalProdImg {
+    max-height: 170px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    display: block !important;
+    object-fit: contain !important;
+  }
+
+  /* Botones de acción rápida en la imagen (tema + cerrar) */
+  .modal-close {
+    top: 10px !important;
+    right: 10px !important;
+    width: 34px !important;
+    height: 34px !important;
+    z-index: 10 !important;
+  }
+
+  /* Zona de info — ocupa el resto y hace scroll interno */
+  .modal-prod-info {
+    flex: 1 !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior: contain !important;
+    padding: 1.1rem 1.1rem 2rem !important;
+    max-height: none !important;
+    /* Evitar que se corte el contenido */
+    min-height: 0 !important;
+  }
+
+  /* Grilla de presentaciones más generosa */
+  .modal-labs-grid {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)) !important;
+    gap: .5rem !important;
+  }
+  .modal-pres-grid {
+    grid-template-columns: repeat(auto-fill, minmax(95px, 1fr)) !important;
+    gap: .5rem !important;
+  }
+
+  /* Precio grande — asegurar que no se corte */
+  .modal-precio-final,
+  .precio-final-display,
+  [class*="precio-final"] {
+    font-size: 1.6rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Botones de acción — siempre visibles, no se cortan */
+  .modal-acciones,
+  .modal-btns,
+  [class*="modal-btn"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: .5rem !important;
+  }
+  .modal-btn-agregar,
+  .modal-btn-wa {
+    width: 100% !important;
+    padding: .85rem 1rem !important;
+    font-size: .88rem !important;
+    border-radius: 12px !important;
+    min-height: 48px !important;
+  }
+
+  /* Indicador de scroll — muestra que hay más contenido abajo */
+  .modal-prod-info::after {
+    content: '';
+    display: block;
+    height: env(safe-area-inset-bottom, 16px);
+  }
+}
+
+/* Pantallas muy pequeñas (320-375px) */
+@media (max-width: 390px) {
+  .modal-producto {
+    height: 98vh !important;
+    max-height: 98vh !important;
+  }
+  .modal-prod-img-side {
+    height: 160px !important;
+    max-height: 160px !important;
+  }
+  .modal-prod-img-side img,
+  #modalProdImg {
+    max-height: 130px !important;
+  }
+  .modal-prod-info {
+    padding: .9rem .9rem 1.5rem !important;
+  }
+}
+
+
+/* ── Ocultar texto "Carrito" en mobile — solo icono + badge ── */
+@media (max-width: 768px) {
+  .navbar-actions .btn-carrito {
+    font-size: 0 !important;        /* oculta el texto "Carrito" */
+    letter-spacing: 0 !important;
+  }
+  .navbar-actions .btn-carrito i {
+    font-size: 1.05rem !important;  /* restaura el icono */
+  }
+  .navbar-actions .btn-carrito .carrito-badge {
+    font-size: .62rem !important;   /* restaura el badge */
+  }
+}
