@@ -69,14 +69,100 @@
   </div>
 </nav>
 
-<!-- PAGE HERO -->
-<header class="page-hero" role="banner">
-  <div class="breadcrumb">
-    <a href="index.html">Inicio</a> - Productos
+<!-- ════════════════════════════════════════════════════════
+     PAGE HERO — Catálogo de Productos
+     Imagen de fondo incrustada como base64 WebP
+     4 zonas clicables (Medicamentos · Cuidado Personal y Belleza · Bebé y Mamá · Mercado y Hogar)
+     Mantiene class="page-hero" para compatibilidad con catalogo.js / categorias-grid.js / filtros-avanzados.js
+     ════════════════════════════════════════════════════════ -->
+<header class="page-hero catalogo-hero" role="banner" id="catalogoHero">
+
+  <!-- Overlay semitransparente para legibilidad del texto -->
+  <div class="ch-overlay" aria-hidden="true"></div>
+
+  <!-- 4 zonas clicables superpuestas sobre el banner (grid 2x2) -->
+  <div class="ch-zonas" aria-label="Filtrar por categoría">
+
+    <!-- Cuadrante superior izquierdo — MEDICAMENTOS -->
+    <button class="ch-zona" data-cat="Medicamentos"
+            onclick="filtrarCategoriaHero('Medicamentos')"
+            aria-label="Ver Medicamentos" title="Medicamentos">
+      <span class="ch-zona-label"><i class="fas fa-pills"></i> Medicamentos</span>
+    </button>
+
+    <!-- Cuadrante superior derecho — CUIDADO PERSONAL Y BELLEZA -->
+    <div class="ch-zona ch-zona-split" aria-label="Cuidado Personal y Belleza">
+      <button class="ch-zona-half" data-cat="Cuidado Personal"
+              onclick="filtrarCategoriaHero('Cuidado Personal')"
+              aria-label="Ver Cuidado Personal" title="Cuidado Personal">
+        <span class="ch-zona-label"><i class="fas fa-hand-sparkles"></i> Cuidado Personal</span>
+      </button>
+      <button class="ch-zona-half" data-cat="Belleza"
+              onclick="filtrarCategoriaHero('Belleza')"
+              aria-label="Ver Belleza" title="Belleza">
+        <span class="ch-zona-label"><i class="fas fa-spa"></i> Belleza</span>
+      </button>
+    </div>
+
+    <!-- Cuadrante inferior izquierdo — BEBÉ Y MAMÁ -->
+    <button class="ch-zona" data-cat="Bebé y Mamá"
+            onclick="filtrarCategoriaHero('Bebé y Mamá')"
+            aria-label="Ver Bebé y Mamá" title="Bebé y Mamá">
+      <span class="ch-zona-label"><i class="fas fa-baby"></i> Bebé y Mamá</span>
+    </button>
+
+    <!-- Cuadrante inferior derecho — MERCADO Y HOGAR -->
+    <button class="ch-zona" data-cat="Mercado y Hogar"
+            onclick="filtrarCategoriaHero('Mercado y Hogar')"
+            aria-label="Ver Mercado y Hogar" title="Mercado y Hogar">
+      <span class="ch-zona-label"><i class="fas fa-home"></i> Mercado y Hogar</span>
+    </button>
+
   </div>
-  <h1><i class="fas fa-store"></i> Catálogo de Productos</h1>
-  <p>Variedad y calidad para toda la familia al mejor precio</p>
+
+  <!-- Indicador visual inferior -->
+  <div class="ch-hint" aria-hidden="true">
+    <i class="fas fa-hand-pointer"></i> Toca una sección para explorar
+  </div>
+
 </header>
+
+<!-- Script inline: conecta las zonas del banner con el sistema de filtros -->
+<script>
+function filtrarCategoriaHero(cat) {
+  /* Espera a que catalogo.js esté listo */
+  if (typeof filtrarCategoria === 'function') {
+    filtrarCategoria(cat);
+  } else {
+    /* Si aún no cargó, guarda la categoría y aplica en DOMContentLoaded */
+    window.__pendingCatHero = cat;
+  }
+  /* Scroll suave hacia el grid de productos */
+  var grid = document.getElementById('productosGrid') || document.querySelector('.categorias-grid');
+  if (grid) setTimeout(function() { grid.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 150);
+}
+
+/* Aplicar categoría pendiente una vez que el catálogo cargue */
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.__pendingCatHero && typeof filtrarCategoria === 'function') {
+    filtrarCategoria(window.__pendingCatHero);
+    window.__pendingCatHero = null;
+  }
+});
+</script>
+
+<!-- FRANJA TÍTULO CATÁLOGO -->
+<div class="catalogo-titulo-franja">
+  <div class="container">
+    <nav class="ctf-breadcrumb" aria-label="Ruta de navegación">
+      <a href="index.html">Inicio</a>
+      <span aria-hidden="true"> › </span>
+      <span>Productos</span>
+    </nav>
+    <h1 class="ctf-h1">Catálogo de <span>Productos</span></h1>
+    <p class="ctf-sub">Variedad y calidad para toda la familia al mejor precio</p>
+  </div>
+</div>
 
 <!-- CATÁLOGO -->
 <section aria-label="Catálogo de productos">
