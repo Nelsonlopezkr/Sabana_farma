@@ -80,9 +80,9 @@
 <body>
 
 <!-- ╔══════════════════════════════════════════╗
-     ║  PROMO DEL DÍA (rotación por día)       ║
+     ║  PROMO DEL DÍA (manejado por js/promo-dia.js) ║
      ╚══════════════════════════════════════════╝ -->
-<div class="promo-dia-bar" id="promoDiaBar" aria-label="Promoción del día"></div>
+<div class="promo-dia-bar" id="promoDiaBar" aria-label="Promoción del día" role="banner"></div>
 
 <!-- ╔══════════════════════════════════════════╗
      ║  TOP BAR — DOMICILIO + TELÉFONO         ║
@@ -287,9 +287,15 @@
         <span class="cat-hero-count"></span>
       </a>
 
-      <a href="productos.html?cat=Cuidado%20Personal%20y%20Belleza" class="cat-hero-card" data-cat="Cuidado Personal y Belleza">
+      <a href="productos.html?cat=Belleza" class="cat-hero-card" data-cat="Belleza">
         <div class="cat-hero-icon"><i class="fas fa-spa"></i></div>
-        <span class="cat-hero-label">Cuidado Personal y Belleza</span>
+        <span class="cat-hero-label">Belleza</span>
+        <span class="cat-hero-count"></span>
+      </a>
+
+      <a href="productos.html?cat=Cuidado%20Personal" class="cat-hero-card" data-cat="Cuidado Personal">
+        <div class="cat-hero-icon"><i class="fas fa-hand-holding-heart"></i></div>
+        <span class="cat-hero-label">Cuidado Personal</span>
         <span class="cat-hero-count"></span>
       </a>
 
@@ -639,7 +645,8 @@
         <h4>Categorías</h4>
         <ul>
           <li><a href="productos.html?cat=Medicamentos">Medicamentos</a></li>
-          <li><a href="productos.html?cat=Cuidado%20Personal%20y%20Belleza">Cuidado Personal y Belleza</a></li>
+          <li><a href="productos.html?cat=Belleza">Belleza</a></li>
+          <li><a href="productos.html?cat=Cuidado%20Personal">Cuidado Personal</a></li>
           <li><a href="productos.html?cat=Beb%C3%A9%20y%20Mam%C3%A1">Bebé &amp; Mamá</a></li>
           <li><a href="productos.html?cat=Mercado%20y%20Hogar">Mercado y Hogar</a></li>
           <li><a href="productos.html?cat=Marcas%20Propias">Marcas DE (Económicas)</a></li>
@@ -721,8 +728,8 @@
         <div class="carrito-resumen-fila">
           <span>Envío</span><span id="carritoEnvio">$0</span>
         </div>
-        <!-- MENSAJE ENVÍO GRATIS -->
-        <div id="carritoEnvioMsg" style="font-size:.78rem;font-weight:700;color:#2E7D32;padding:.3rem .1rem">🚚 Servicio de domicilio gratuito en Mosquera y Funza</div>
+        <!-- MENSAJE DINÁMICO ENVÍO GRATIS -->
+        <div id="carritoEnvioMsg">✅ Envío gratis en compras mayores a $50.000</div>
       </div>
 
       <div class="carrito-total-fila">
@@ -888,12 +895,7 @@
     // Rellenar conteo de productos por categoría
     if (typeof CATALOGO !== 'undefined') {
       var counts = {};
-      CATALOGO.forEach(function(p) {
-        var cat = p.categoria;
-        /* Fusionar Belleza + Cuidado Personal → Cuidado Personal y Belleza */
-        if (cat === 'Belleza' || cat === 'Cuidado Personal') cat = 'Cuidado Personal y Belleza';
-        counts[cat] = (counts[cat]||0)+1;
-      });
+      CATALOGO.forEach(function(p) { counts[p.categoria] = (counts[p.categoria]||0)+1; });
       document.querySelectorAll('.cat-hero-card').forEach(function(card) {
         var el = card.querySelector('.cat-hero-count');
         if (el && counts[card.dataset.cat]) el.textContent = counts[card.dataset.cat].toLocaleString() + ' productos';
@@ -1028,5 +1030,6 @@
   });
 })();
 </script>
+<script src="js/promo-dia.js"></script>
 </body>
 </html>
