@@ -17,7 +17,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Contacto — Droguerías Económicas">
-  <meta property="og:description" content="Contáctanos por WhatsApp, teléfono o formulario. 🚚 Domicilio GRATIS en pedidos +$20.000.">
+  <meta property="og:description" content="Contáctanos por WhatsApp, teléfono o visítanos en Mosquera. 🚚 Domicilio siempre GRATIS en Mosquera y Funza.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://drogeriaseconomicas.com/img/og-banner.jpg">
   <meta property="og:image:width" content="1200">
@@ -39,14 +39,14 @@
     .bottom-nav-inner { grid-template-columns:repeat(5,1fr) }
   </style>
 </head>
-<body>
+<body class="pagina-contacto">
 
 <!-- ══ PROMO DÍA ══ -->
 <div class="promo-dia-bar" id="promoDiaBar" aria-label="Promoción del día"></div>
 
 <!-- ══ TOP BAR ══ -->
 <div class="top-bar">
-  <span>🛵 <strong>🚚 Domicilio GRATIS en pedidos +$20.000</strong> · Mosquera y Funza</span>
+  <span>🚚 <strong>Domicilio GRATIS</strong> · Mosquera y Funza</span>
   <span class="top-bar-sep">|</span>
   <span>🕐 Lun–Dom: 7 am – 10 pm</span>
   <span class="top-bar-sep">|</span>
@@ -67,7 +67,7 @@
     <li><a href="promociones.html">Promociones</a></li>
     <li><a href="afiliaciones.html">Afiliación</a></li>
     <li><a href="contacto.html" class="activo">Contacto</a></li>
-    <a href="politica-datos.html">Política de Datos</a>
+    <li><a href="politica-datos.html">Política de Datos</a></li>
   </ul>
   <div class="navbar-actions">
     <button class="btn-carrito" id="btnAbrirCarrito" aria-label="Abrir carrito">
@@ -84,18 +84,61 @@
   </div>
 </nav>
 
-<!-- ══ HERO ══ -->
-<header class="contacto-hero" role="banner">
-  <div class="breadcrumb"><a href="index.html">Inicio</a> › Contacto</div>
-  <h1>Estamos aquí para <span>ayudarte</span></h1>
-  <p>Escríbenos por WhatsApp, llámanos o visítanos. Tu salud no puede esperar.</p>
-  <div class="hero-canales">
-    <a href="https://wa.me/573118719476?text=Hola%2C+quiero+hacer+un+pedido" target="_blank" rel="noopener" class="hero-canal-btn wa">
+<!-- ══ HERO PREMIUM ══ -->
+<header class="contacto-hero" role="banner" aria-labelledby="contacto-titulo">
+  <!-- Partículas decorativas -->
+  <div class="contacto-hero-particles" aria-hidden="true"></div>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb" style="position:relative;z-index:1;font-size:.82rem;opacity:.72;margin-bottom:.9rem">
+    <a href="index.html" style="color:rgba(255,255,255,.8);text-decoration:none;font-weight:600">Inicio</a>
+    <span style="margin:0 .4rem;opacity:.5">›</span>
+    <span style="color:#fff;font-weight:700">Contacto</span>
+  </div>
+
+  <!-- Badge estado -->
+  <div id="statusBadge" style="position:relative;z-index:1;display:flex;justify-content:center;margin-bottom:1.2rem"></div>
+
+  <!-- Título -->
+  <h1 id="contacto-titulo" style="position:relative;z-index:1;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;margin-bottom:.8rem;letter-spacing:-.03em">
+    Estamos aquí para <span style="color:#FFD54F">ayudarte</span>
+  </h1>
+  <p style="position:relative;z-index:1;opacity:.88;font-size:1.05rem;max-width:500px;margin:0 auto;line-height:1.7">
+    Escríbenos por WhatsApp, llámanos o visítanos en Mosquera.<br>
+    <strong style="color:#FFD54F">Tu salud no puede esperar.</strong>
+  </p>
+
+  <!-- Botones CTA -->
+  <div class="hero-canales" style="position:relative;z-index:1">
+    <a href="https://wa.me/573118719476?text=Hola%2C+quiero+hacer+un+pedido"
+       target="_blank" rel="noopener"
+       class="hero-canal-btn wa"
+       aria-label="Escribir pedido por WhatsApp">
       <i class="fab fa-whatsapp"></i> Escribir por WhatsApp
     </a>
     <a href="tel:+573118719476" class="hero-canal-btn tel">
       <i class="fas fa-phone-alt"></i> 311 871 94 76
     </a>
+  </div>
+
+  <!-- Chips de información rápida -->
+  <div class="contacto-hero-chips" aria-label="Información rápida">
+    <div class="contacto-hero-chip">
+      <i class="fas fa-motorcycle"></i>
+      <span>Domicilio GRATIS siempre</span>
+    </div>
+    <div class="contacto-hero-chip">
+      <i class="fas fa-clock"></i>
+      <span>Lun–Dom · 7am – 10pm</span>
+    </div>
+    <div class="contacto-hero-chip">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Mosquera y Funza</span>
+    </div>
+    <div class="contacto-hero-chip">
+      <i class="fas fa-reply"></i>
+      <span>Respuesta inmediata</span>
+    </div>
   </div>
 </header>
 
@@ -108,25 +151,33 @@
       <div>
         <h2 class="titulo-seccion" style="text-align:left;margin-bottom:1.2rem">Información de contacto</h2>
 
-        <div class="info-cards">
+        <div class="info-cards" id="infoCardsWrap">
 
           <a href="https://wa.me/573118719476?text=Hola%2C+quiero+hacer+un+pedido"
-             target="_blank" rel="noopener" class="info-card">
+             target="_blank" rel="noopener"
+             class="info-card"
+             style="--card-accent:var(--grad-verde)"
+             aria-label="Contactar por WhatsApp">
             <div class="info-card-icon ic-wa"><i class="fab fa-whatsapp"></i></div>
             <div class="info-card-body">
               <h4>WhatsApp</h4>
               <p>311 871 94 76</p>
               <small>Respuesta inmediata · Pedidos al instante</small>
             </div>
+            <i class="fas fa-chevron-right info-card-arrow"></i>
           </a>
 
-          <a href="tel:+573118719476" class="info-card">
+          <a href="tel:+573118719476"
+             class="info-card"
+             style="--card-accent:var(--grad-azul)"
+             aria-label="Llamar por teléfono">
             <div class="info-card-icon ic-tel"><i class="fas fa-phone-alt"></i></div>
             <div class="info-card-body">
               <h4>Teléfono</h4>
-              <p>311 871 94 76 · 826 5832</p>
+              <p>311 871 94 76</p>
               <small>Lunes a Domingo · 7 am – 10 pm</small>
             </div>
+            <i class="fas fa-chevron-right info-card-arrow"></i>
           </a>
 
           <a href="mailto:contacto@drogeriaseconomicas.com" class="info-card">
@@ -142,7 +193,7 @@
             <div class="info-card-icon ic-addr"><i class="fas fa-map-marker-alt"></i></div>
             <div class="info-card-body">
               <h4>Dirección</h4>
-              <p></p>Calle 10 #16b 21 Barrio el  Poblado, Mosquera</p>
+              <p>Calle 10 #16b 21 Barrio El Poblado, Mosquera</p>
               <small>Mosquera, Cundinamarca · Colombia</small>
             </div>
           </div>
@@ -268,6 +319,8 @@
   </div>
 </section>
 
+<hr class="section-divider">
+
 <!-- ══ REDES Y FAQ ══ -->
 <section class="redes-faq" aria-label="Redes y preguntas frecuentes">
   <div class="container">
@@ -322,7 +375,7 @@
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="faq-respuesta">
-            El domicilio es <strong>GRATIS</strong> en pedidos de +$20.000 en Mosquera y Funza. En pedidos menores aplica un costo de $3.000.
+            ¡El domicilio es completamente <strong>GRATIS</strong> en Mosquera y Funza! Sin mínimos ni condiciones.
           </div>
         </div>
 
@@ -448,7 +501,7 @@
       <div class="carrito-resumen">
         <div class="carrito-resumen-fila"><span>Subtotal</span><span id="carritoSubtotal">$0</span></div>
         <div class="carrito-resumen-fila"><span>Domicilio</span><span id="carritoEnvio" style="color:var(--verde,#1B5E20);font-weight:700">GRATIS</span></div>
-        <div id="carritoEnvioMsg">🚚 Domicilio GRATIS en pedidos +$20.000</div>
+        <div id="carritoEnvioMsg">✅ ¡Domicilio siempre GRATIS!</div>
       </div>
       <div class="carrito-total-fila"><span>Total</span><span id="carritoTotal">$0</span></div>
       <div>
@@ -518,7 +571,7 @@
 <script defer src="js/wa-config.js"></script>
 <script defer src="js/productos-data.js"></script>
 <script defer src="js/carrito.js"></script>
-<script defer src="js/pago.js"></script>
+
 
 <script>
 /* ── Navbar toggle ── */
@@ -546,20 +599,7 @@ if (mainBadge) {
   }).observe(mainBadge, { childList: true, attributes: true });
 }
 
-/* ── Promo del día ── */
-(function() {
-  const promos = [
-    '🌟 HOY DOMINGO — Electrolit 3 por el precio de 2. <strong>¡Solo hoy!</strong>',
-    '🌟 HOY LUNES — Acetaminofén MK 100 tab a <strong>$16.000</strong>',
-    '🌟 HOY MARTES — Loratadina 2×1 · ¡Anti-alergia!',
-    '🌟 HOY MIÉRCOLES — Vitamina C efervescente x10 a <strong>$4.500</strong>',
-    '🌟 HOY JUEVES — Omeprazol 20mg x30 a <strong>$9.800</strong>',
-    '🌟 HOY VIERNES — Crema Bepanthen 30g a <strong>$15.000</strong>',
-    '🌟 HOY SÁBADO — Pañales Pampers talla 2 x40 a <strong>$24.500</strong>',
-  ];
-  const bar = document.getElementById('promoDiaBar');
-  if (bar) bar.innerHTML = promos[new Date().getDay()];
-})();
+/* promo-dia manejado por js/promo-dia.js */
 
 /* ── FAQ accordion ── */
 function toggleFaq(btn) {
@@ -633,5 +673,54 @@ document.getElementById('formContacto').addEventListener('submit', function(e) {
 });
 </script>
 
+<script src="js/promo-dia.js"></script>
+<script src="js/navbar-search.js"></script>
+
+<script>
+/* ── Scroll Reveal global ── */
+(function() {
+  if (!('IntersectionObserver' in window)) return;
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: .12 });
+  document.querySelectorAll('.info-card, .form-card, .red-card, .faq-item, .mapa-wrap, .redes-box, .faq-box').forEach(function(el, i) {
+    el.classList.add('gs-reveal');
+    el.style.animationDelay = (i * 0.08) + 's';
+    obs.observe(el);
+  });
+})();
+</script>
+
+<script>
+/* ── Badge estado abierto/cerrado ── */
+(function() {
+  var badgeEl = document.getElementById('statusBadge');
+  if (!badgeEl) return;
+  var now = new Date();
+  var h = now.getHours();
+  var abierto = (h >= 7 && h < 22);
+  badgeEl.innerHTML =
+    '<span class="status-badge ' + (abierto ? 'abierto' : 'cerrado') + '">' +
+      '<span class="status-dot"></span>' +
+      (abierto ? '✅ Abierto ahora · 7am – 10pm' : '🔒 Cerrado · Abre mañana 7am') +
+    '</span>';
+})();
+
+/* ── Ripple efecto en botones ── */
+document.querySelectorAll('.btn-enviar-form, .btn-primario, .hero-canal-btn').forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    var rect = btn.getBoundingClientRect();
+    btn.style.setProperty('--rx', (e.clientX - rect.left) + 'px');
+    btn.style.setProperty('--ry', (e.clientY - rect.top) + 'px');
+    btn.classList.add('btn-ripple', 'ripple-active');
+    setTimeout(function() { btn.classList.remove('ripple-active'); }, 600);
+  });
+});
+</script>
 </body>
 </html>
