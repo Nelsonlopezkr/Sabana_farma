@@ -206,7 +206,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 35400
+        "precio": 35400 ,
+        "imagen": "img/productos/Palette 1-0 Negro 2 Tubos.jpg"
       }
     ],
     "existencias": 2,
@@ -223,7 +224,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 27500
+        "precio": 27500 ,
+        "imagen": "img/productos/Palette D. Tubo 6-88 Rubi.jpg"
       }
     ],
     "existencias": 1,
@@ -240,7 +242,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 27500
+        "precio": 27500 ,
+        "imagen": "img/productos/Palette 1-1 Negro Azul 2 Tubos.jpg"
       }
     ],
     "existencias": 1,
@@ -257,7 +260,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 29500
+        "precio": 29500 ,
+        "imagen": "img/productos/Palette 3-0 Castaño Oscuro 2 Tubos.jpg"
       }
     ],
     "existencias": 1,
@@ -274,7 +278,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 30500
+        "precio": 30500 ,
+        "imagen": "img/productos/Palette D. Tubo 6-68 Chocolate Claro.jpg"
       }
     ],
     "existencias": 1,
@@ -291,7 +296,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 29800
+        "precio": 29800 ,
+        "imagen": "img/productos/Palette D. Tubo 7-0 Rubio Medio.jpg"
       }
     ],
     "existencias": 1,
@@ -308,7 +314,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 26000
+        "precio": 26000 ,
+        "imagen": "img/productos/Palette D. Tubo 6-99 Violeta Profundo.jpg"
       }
     ],
     "existencias": 1,
@@ -325,7 +332,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 32300
+        "precio": 32300 ,
+        "imagen": "img/productos/Palette 4-89 Borgoña Intenso 2 Tubo.jpg"
       }
     ],
     "existencias": 1,
@@ -342,7 +350,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 26000
+        "precio": 26000 ,
+        "imagen": "img/productos/Palette D. Tubo 4-0 Castaño Medio.jpg"
       }
     ],
     "existencias": 1,
@@ -359,7 +368,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 33500
+        "precio": 33500 ,
+        "imagen": "img/productos/Palette D. Tubo 8-1 Rubio Claro Cenizo.jpg"
       }
     ],
     "existencias": 1,
@@ -376,7 +386,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 29500
+        "precio": 29500 ,
+        "imagen": "img/productos/Palette D. Tubo 8-0 Rubio Claro.jpg"
       }
     ],
     "existencias": 1,
@@ -393,7 +404,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 25300
+        "precio": 25300 ,
+        "imagen" : "img/productos/Bigen 57 Negro Suave Natural.jpg"
       }
     ],
     "existencias": 1,
@@ -410,7 +422,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 20600
+        "precio": 20600 ,
+        "imagen" : "img/productos/Bigen 59 Negro Oriental.jpg"
       }
     ],
     "existencias": 1,
@@ -427,7 +440,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 21800
+        "precio": 21800,
+        "imagen": "img/productos/Bigen 48 Castaño Intenso.jpg"
       }
     ],
     "existencias": 1,
@@ -444,7 +458,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 26000
+        "precio": 26000 ,
+        "imagen": "img/productos/Bigen 47 Castaño Oscuro.jpg"
       }
     ],
     "existencias": 1,
@@ -461,7 +476,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 19900
+        "precio": 19900 ,
+        "imagen": "img/productos/Bigen 46 Castaño Medio.jpg"
       }
     ],
     "existencias": 1,
@@ -478,7 +494,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 20000
+        "precio": 20000 ,
+        "imagen": "img/productos/Bigen 96 Borgoña Oscuro.jpg"
       }
     ],
     "existencias": 1,
@@ -495,7 +512,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 18500
+        "precio": 18500 ,
+        "imagen": "img/productos/Bigen 88 Negro Azulado.jpg"
       }
     ],
     "existencias": 1,
@@ -512,7 +530,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 3100
+        "precio": 3100 ,
+        "imagen": "img/productos/Dte Elizabeth Arden Class.mini ROL.30ML.jpg"
       }
     ],
     "existencias": 2,
@@ -529,7 +548,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Botella",
-        "precio": 10600
+        "precio": 10600 ,
+        "imagen": "img/productos/Hidraplus 75 Zinc Surtido 400 ML Suero.jpg"
       }
     ],
     "existencias": 21,
@@ -546,7 +566,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 3000
+        "precio": 3000 ,
+        "imagen": "img/productos/Solhidrex Sabores Surt X 30 Sobres.jpg"
       }
     ],
     "existencias": 32,
@@ -573,7 +594,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 1600
+        "precio": 1600 ,
+        "imagen": "img/productos/Aspirina Efervescente 500 MG 50 Tabletas.jpg"
       }
     ],
     "existencias": 101,
@@ -604,7 +626,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 1500
+        "precio": 1500 ,
+        "imagen": "img/productos/Alka- Seltzer 60 Tabl.jpg"
       }
     ],
     "existencias": 90,
@@ -635,7 +658,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 1000
+        "precio": 1000 ,
+        "imagen": "img/productos/Aspirina Ultra 500 MG 100 Tabletas.jpg"
       }
     ],
     "existencias": 78,
@@ -666,7 +690,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 2000
+        "precio": 2000 ,
+        "imagen": "img/productos/X Ray Dol 48 Tabletas.jpg"
       }
     ],
     "existencias": 25,
@@ -697,7 +722,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 2300
+        "precio": 2300 ,
+        "imagen": "img/productos/Advil Fem X 20 Tab Recub.jpg"
       }
     ],
     "existencias": 11,
@@ -728,7 +754,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 35500
+        "precio": 35500,
+        "imagen" : "img/productos/Igora Vital D. Tubo 1-1 Negro Azul.jpg"
       }
     ],
     "existencias": 1,
@@ -745,7 +772,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 35500
+        "precio": 35500 ,
+        "imagen" : "img/productos/Igora Vital D. Tubo 6-68 Chocolate.jpg"
       }
     ],
     "existencias": 1,
@@ -762,7 +790,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 39500
+        "precio": 39500 ,
+        "imagen" : "img/productos/Igora Vital D. Tubo 6-00 Rubio Oscuro.jpg"
       }
     ],
     "existencias": 1,
@@ -779,7 +808,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 38500
+        "precio": 38500 ,
+        "imagen" : "img/productos/Tinte Igora Vita Kit 4-0 Castaño Mediano.jpg"
       }
     ],
     "existencias": 1,
@@ -796,7 +826,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 23500
+        "precio": 23500 ,
+        "imagen": "img/productos/Dte Spray Nivea Aclarado Natural 150 ML X 2 Und.jpg"
       }
     ],
     "existencias": 1,
@@ -823,7 +854,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 13500
+        "precio": 13500 ,
+        "imagen": "img/productos/Dte. Nivea Rolon Tono Natural Clasic Touch 50 ML.jpg"
       }
     ],
     "existencias": 1,
@@ -850,7 +882,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 3800
+        "precio": 3800 ,
+        "imagen": "img/productos/Dte Dove Rollon Original 30 ML.jpg"
       }
     ],
     "existencias": 2,
@@ -867,7 +900,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 3500
+        "precio": 3500 ,
+        "imagen": "img/productos/Des Lady Talc Practi Crema X 30 Grs.jpg"
       }
     ],
     "existencias": 2,
@@ -884,7 +918,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 4500
+        "precio": 4500 ,
+        "imagen": "img/productos/Pastas Onix para EL Cabello.jpg"
       }
     ],
     "existencias": 1,
@@ -901,7 +936,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 3800
+        "precio": 3800 ,
+        "imagen": "img/productos/Dte Dove Rollon Cuidado Total 30 ML H.jpg"
       }
     ],
     "existencias": 2,
@@ -918,7 +954,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 10500
+        "precio": 10500 ,
+        "imagen": "img/productos/Oft Dte Rexona Prom Antitrans. Roll ON V8 100M.jpg"
       }
     ],
     "existencias": 4,
@@ -945,7 +982,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 16500
+        "precio": 16500 ,
+        "imagen": "img/productos/Speed Stick Prom Antitrans. Xtreme 182 Gramos Colg.jpg"
       }
     ],
     "existencias": 5,
@@ -972,7 +1010,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 9200
+        "precio": 9200 ,
+        "imagen": "img/productos/Dte Gillette Specialized Gel Surt 45 GR..jpg"
       }
     ],
     "existencias": 7,
@@ -989,7 +1028,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 16500
+        "precio": 16500 ,
+        "imagen": "img/productos/Crema P.peinar Sedal Ceramidas Sos 300GR.jpg"
       }
     ],
     "existencias": 2,
@@ -1006,7 +1046,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 38000
+        "precio": 38000 ,
+        "imagen": "img/productos/Fungisterol Shampoo X 200 ML.jpg"
       }
     ],
     "existencias": 1,
@@ -1023,7 +1064,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 28500
+        "precio": 28500 ,
+        "imagen": "img/productos/Medicasp Shampoo Ketoconazol 100ML.jpg"
       }
     ],
     "existencias": 1,
@@ -1040,7 +1082,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 12500
+        "precio": 12500 ,
+        "imagen": "img/productos/Acond.sedal Keratina 340 ML.jpg"
       }
     ],
     "existencias": 1,
@@ -1057,7 +1100,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 16000
+        "precio": 16000 ,
+        "imagen": "img/productos/Sedal Shampoo Surtido 340ML.jpg"
       }
     ],
     "existencias": 5,
@@ -1074,7 +1118,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 13500
+        "precio": 13500 ,
+        "imagen" : "img/productos/Johnsons Shampoo Surtidos X 200 ML.jpg"
       }
     ],
     "existencias": 2,
@@ -1091,7 +1136,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 11500
+        "precio": 11500 ,
+        "imagen" : "img/productos/Johnsons Shampoo Surtidos X 100 ML.jpg"
       }
     ],
     "existencias": 14,
@@ -1108,7 +1154,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 16500
+        "precio": 16500 ,
+        "imagen" : "img/productos/Johnson Baby Crema para Peinar 200 ML.jpg"
       }
     ],
     "existencias": 1,
@@ -1125,7 +1172,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 28600
+        "precio": 28600 ,
+        "imagen": "img/productos/Privatos Jarabe 120 ML.jpg"
       }
     ],
     "existencias": 1,
@@ -1142,7 +1190,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 48000
+        "precio": 48000 ,
+        "imagen": "img/productos/Vick Vaporub 12 GR 12 Uds.jpg"
       }
     ],
     "existencias": 33,
@@ -1169,7 +1218,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 3200
+        "precio": 3200 ,
+        "imagen": "img/productos/Sal de Frutas 50 SBS.jpg"
       }
     ],
     "existencias": 58,
@@ -1196,7 +1246,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 3000
+        "precio": 3000 ,
+        "imagen": "img/productos/Asa 100 MG 100 Tabletas MK.jpg"
       }
     ],
     "existencias": 670,
@@ -1223,7 +1274,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 7500
+        "precio": 7500 ,
+        "imagen": "img/productos/Retiblan 50 MG 50 Capsulas.jpg"
       }
     ],
     "existencias": 20,
@@ -1250,7 +1302,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 37500
+        "precio": 37500 ,
+        "imagen": "img/productos/Ciruelax Jalea 150 GR.jpg"
       }
     ],
     "existencias": 1,
@@ -1267,7 +1320,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 6200
+        "precio": 6200 ,
+        "imagen": "img/productos/Arnica Locion 30 Mililitros.jpg"
       }
     ],
     "existencias": 2,
@@ -1284,7 +1338,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 9500
+        "precio": 9500 ,
+        "imagen": "img/productos/Arnica Locion 60 Mililitros.jpg"
       }
     ],
     "existencias": 1,
@@ -1301,7 +1356,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 22900
+        "precio": 22900 ,
+        "imagen" : "img/productos/Concha de Nacar 60 GR Freshly.jpg"
       }
     ],
     "existencias": 1,
@@ -1318,7 +1374,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 29500
+        "precio": 29500 ,
+        "imagen": "img/productos/Mieltertos Jarabe 240 ML NF.jpg"
       }
     ],
     "existencias": 1,
@@ -1335,7 +1392,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 4500
+        "precio": 4500 ,
+        "imagen": "img/productos/Vitamina E 400 U I 100 Capsulas Colmed.jpg"
       }
     ],
     "existencias": 200,
@@ -1362,7 +1420,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 200
+        "precio": 200 ,
+        "imagen": "img/productos/Curas Medicare Color Piel 100 Uds.jpg"
       }
     ],
     "existencias": 198,
@@ -1393,7 +1452,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 3900
+        "precio": 3900 ,
+        "imagen": "img/productos/Agua Oxigenada Osa X 120 ML.jpg"
       }
     ],
     "existencias": 1,
@@ -1410,7 +1470,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 18000
+        "precio": 18000 ,
+        "imagen": "img/productos/Isodine Bucofaringeo X 60 ML.jpg"
       }
     ],
     "existencias": 1,
@@ -1427,7 +1488,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 14500
+        "precio": 14500 ,
+        "imagen": "img/productos/Bactroderm Yodopovidona Espuma 60 ML.jpg"
       }
     ],
     "existencias": 2,
@@ -1444,7 +1506,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 16200
+        "precio": 16200 ,
+        "imagen": "img/productos/Bactroderm Yodopovidona Solucion 120 ML.jpg"
       }
     ],
     "existencias": 1,
@@ -1461,7 +1524,9 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 25500
+        "precio": 25500 ,
+        "imagen": "img/productos/Citromel Liquido 310 ML.jpg"
+        
       }
     ],
     "existencias": 2,
@@ -1478,7 +1543,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Pote/Lata",
-        "precio": 12700
+        "precio": 12700 ,
+        "imagen": "img/productos/Nixoderm Unguento 20 GR.jpg"
       }
     ],
     "existencias": 9,
@@ -1495,7 +1561,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 17500
+        "precio": 17500 ,
+        "imagen": "img/productos/Multi Soluter Solucion Oftal X 50 ML.jpg"
       }
     ],
     "existencias": 3,
@@ -1512,7 +1579,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 17500
+        "precio": 17500 ,
+        "imagen": "img/productos/Multi Solution 1 60 ML Wasser.jpg"
       }
     ],
     "existencias": 1,
@@ -1529,7 +1597,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 31500
+        "precio": 31500 ,
+        "imagen": "img/productos/Multi Solution 1 120 ML Wasser.jpg"
       }
     ],
     "existencias": 1,
@@ -1546,7 +1615,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 14200
+        "precio": 14200 ,
+        "imagen": "img/productos/Emulsion Scott Surtidos 180 ML.jpg"
       }
     ],
     "existencias": 6,
@@ -1563,7 +1633,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 22800
+        "precio": 22800 ,
+        "imagen": "img/productos/Emulsion Scott Surtidos 360 ML.jpg"
       }
     ],
     "existencias": 8,
@@ -1580,7 +1651,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 5900
+        "precio": 5900 ,
+        "imagen": "img/productos/Alcohol MK X 350 ML.jpg"
       }
     ],
     "existencias": 21,
@@ -1597,7 +1669,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 10500
+        "precio": 10500 ,
+        "imagen": "img/productos/Alcohol MK X 700 ML.jpg"
       }
     ],
     "existencias": 8,
@@ -1614,7 +1687,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 1500
+        "precio": 1500 ,
+        "imagen": "img/productos/Dte Balance Crema Duos .proex.nor. X 16 SBS.jpg"
       }
     ],
     "existencias": 9,
@@ -1641,7 +1715,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Paquete",
-        "precio": 4200
+        "precio": 4200 ,
+        "imagen": "img/productos/Prot.nosotras Diarios Largos 15 Uds.jpg"
       }
     ],
     "existencias": 3,
@@ -1658,7 +1733,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Paquete",
-        "precio": 2200
+        "precio": 2200 ,
+        "imagen": "img/productos/Prot.nosotras 15 Uds E.I..jpg"
       }
     ],
     "existencias": 5,
@@ -1675,7 +1751,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 7800
+        "precio": 7800 ,
+        "imagen": "img/productos/Tampones OB Siempre Libre Medio X 8 Und.jpg"
       }
     ],
     "existencias": 3,
@@ -1692,7 +1769,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 600
+        "precio": 600 ,
+        "imagen": "img/productos/Toa.nosotras Natural Inv.clas.tela X 30 Unds.jpg"
       }
     ],
     "existencias": 13,
@@ -1719,7 +1797,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Paquete",
-        "precio": 4900
+        "precio": 4900 ,
+        "imagen": "img/productos/Nosotras Invisible Clasica X 10 Und.jpg"
       }
     ],
     "existencias": 1,
@@ -1736,7 +1815,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Paquete",
-        "precio": 18800
+        "precio": 18800 ,
+        "imagen": "img/productos/Toa.nosotras Maternidad 10 UN+ 3 Toa.b.n.jpg"
       }
     ],
     "existencias": 2,
@@ -1753,7 +1833,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Paquete",
-        "precio": 7500
+        "precio": 7500 ,
+        "imagen" : "img/productos/Ducha Intima Eterna.jpg"
       }
     ],
     "existencias": 1,
@@ -1770,7 +1851,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 19500
+        "precio": 19500 ,
+        "imagen": "img/productos/Prot.lactinosotras 40 Uds 44014.jpg"
       }
     ],
     "existencias": 1,
@@ -1787,7 +1869,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 2800
+        "precio": 2800 ,
+        "imagen": "img/productos/Tampones Kotex Dig Medio Ristra X 5 Unds.jpg"
       }
     ],
     "existencias": 10,
@@ -1814,7 +1897,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 3500
+        "precio": 3500 ,
+        "imagen" : "img/productos/Gel Ego For Men Surt Pote 110 ML.jpg" 
       }
     ],
     "existencias": 25,
@@ -1831,7 +1915,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 8900
+        "precio": 8900 ,
+        "imagen" : "img/productos/Gel Ego For Men Attraction 240 ML.jpg"
       }
     ],
     "existencias": 3,
@@ -1848,7 +1933,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 16500
+        "precio": 16500 ,
+        "imagen" : "img/productos/Gel Ego For Men Attraction 500 ML.jpg"
       }
     ],
     "existencias": 1,
@@ -1865,7 +1951,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 3600
+        "precio": 3600 ,
+        "imagen": "img/productos/Bloq.sundark Kids 12 SBS 10 GR.jpg"
       }
     ],
     "existencias": 36,
@@ -1892,7 +1979,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 7300
+        "precio": 7300 ,
+        "imagen": "img/productos/Autobron.nude Self Tanner CR 20 ML 6 SBS.jpg"
       }
     ],
     "existencias": 7,
@@ -1919,7 +2007,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 3000
+        "precio": 3000 ,
+        "imagen": "img/productos/Crema Forz 24 SBS.jpg"
       }
     ],
     "existencias": 19,
@@ -1946,7 +2035,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 1000
+        "precio": 1000 ,
+        "imagen" : "img/productos/Acondicionador Savital Surt X 20 Sobre 25 ML.jpg"
       }
     ],
     "existencias": 57,
@@ -1973,7 +2063,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 1200
+        "precio": 1200 ,
+        "imagen" : "img/productos/Shampoo Johnson Baby Surt X 12 SBS.jpg"
       }
     ],
     "existencias": 18,
@@ -2000,7 +2091,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 1000
+        "precio": 1000 ,
+        "imagen" : "img/productos/Cha.baby Soft Cuidado Delicado 20 SBS.jpg"
       }
     ],
     "existencias": 25,
@@ -2027,7 +2119,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 10800
+        "precio": 10800 ,
+        "imagen" : "img/productos/Johnsons Crema Hidrat. Surt X 100 ML.jpg"
       }
     ],
     "existencias": 4,
@@ -2044,7 +2137,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 17500
+        "precio": 17500 ,
+        "imagen" : "img/productos/Johnsons Crema Hidratante Baby Surt 200 ML.jpg"
       }
     ],
     "existencias": 3,
@@ -2061,7 +2155,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 17000
+        "precio": 17000 ,
+        "imagen" : "img/productos/Lubriderm Solar FPS 15 X 120 ML.jpg"
       }
     ],
     "existencias": 3,
@@ -2078,7 +2173,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 16500
+        "precio": 16500 ,
+        "imagen" : "img/productos/Lubriderm Reparacion Intensiva X 120 ML.jpg"
       }
     ],
     "existencias": 1,
@@ -2095,7 +2191,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 13800
+        "precio": 13800 ,
+        "imagen" : "img/productos/Lubriderm Piel Normal Ext Humec X 120 ML.jpg"
       }
     ],
     "existencias": 2,
@@ -2112,7 +2209,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 16000
+        "precio": 16000 ,
+        "imagen" : "img/productos/Jabon Asepxia Carbon Detox 100 GR.jpg"
       }
     ],
     "existencias": 4,
@@ -2129,7 +2227,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 8500
+        "precio": 8500 ,
+        "imagen" : "img/productos/3 Jabones Acid Mantle 90GR Econopack.jpg"
       }
     ],
     "existencias": 1,
@@ -2156,7 +2255,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 4800
+        "precio": 4800 ,
+        "imagen" : "img/productos/Jabon Dove Blanco Original 90 GR.jpg"
       }
     ],
     "existencias": 1,
@@ -2173,7 +2273,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 3900
+        "precio": 3900 ,
+        "imagen" : "img/productos/Jabon Dove Exfoliacion X 90 Grs.jpg"
       }
     ],
     "existencias": 1,
@@ -2190,7 +2291,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 1000
+        "precio": 1000 ,
+        "imagen" : "img/productos/Cha.sedal Kera.antiox.sbs 18 ML 20 SBS.jpg"
       }
     ],
     "existencias": 5,
@@ -2217,7 +2319,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 1000
+        "precio": 1000 ,
+        "imagen" : "img/productos/Cha.sedal Ceramidas SBS 18 ML 20 SBS.jpg"
       }
     ],
     "existencias": 1,
@@ -2244,7 +2347,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 700
+        "precio": 700 ,
+        "imagen" : "img/productos/Pantene Crema para Peinar Surtido Sachet X 18 SBS.jpg"
       }
     ],
     "existencias": 12,
@@ -2271,7 +2375,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 1200
+        "precio": 1200 ,
+        "imagen" : "img/productos/Dove Shampoo Surtidos X 12 SBS.jpg"
       }
     ],
     "existencias": 12,
@@ -2298,7 +2403,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 20000
+        "precio": 20000 ,
+        "imagen": "img/productos/Vick Vaporub 50G.jpg"
       }
     ],
     "existencias": 3,
@@ -2315,7 +2421,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Tubo",
-        "precio": 44000
+        "precio": 44000 ,
+        "imagen": "img/productos/Cremoquinona Dia Crema 30 GR.jpg"
       }
     ],
     "existencias": 1,
@@ -2332,7 +2439,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 64900
+        "precio": 64900 ,
+        "imagen": "img/productos/Cicatricure Gel 60 GR.jpg"
       }
     ],
     "existencias": 1,
@@ -2349,7 +2457,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 44200
+        "precio": 44200,
+        "imagen": "img/productos/Cicatricure Gel 30 GR.jpg"
       }
     ],
     "existencias": 2,
@@ -2366,7 +2475,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 59000
+        "precio": 59000 ,
+        "imagen": "img/productos/Cicatricure Anti-edad Crema 60 GR.jpg"
       }
     ],
     "existencias": 1,
@@ -2383,7 +2493,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 3000
+        "precio": 3000 ,
+        "imagen": "img/productos/Manteca de Cacao 5 GR 12 Uds Disanfer.jpg"
       }
     ],
     "existencias": 9,
@@ -2410,7 +2521,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 23500
+        "precio": 23500 
       }
     ],
     "existencias": 1,
