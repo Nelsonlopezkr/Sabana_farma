@@ -11938,3 +11938,41 @@ textarea:valid:not(:placeholder-shown) {
 /* ══════════════════════════════════════════════════════════
    FIN FASE 5 — Droguerías Económicas 2026
    ══════════════════════════════════════════════════════════ */
+   /* ══════════════════════════════════════════════════════════
+   FIX DEFINITIVO — Imagen del modal de producto centrada
+   Corrige conflicto de cascada previo (object-fit: cover recortaba
+   las fotos). Este bloque va al final del archivo a propósito para
+   que prevalezca sobre las reglas anteriores del modal.
+   ══════════════════════════════════════════════════════════ */
+.modal-prod-img-side {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem !important;
+}
+
+#modalProdImg,
+.modal-prod-img-side img {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  margin: 0 auto !important;
+}
+
+@media (max-width: 768px) {
+  .modal-prod-img-side {
+    height: auto !important;
+    min-height: 240px !important;
+    max-height: 280px !important;
+  }
+  #modalProdImg,
+  .modal-prod-img-side img {
+    max-height: 240px !important;
+  }
+}
