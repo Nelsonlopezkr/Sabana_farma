@@ -248,6 +248,7 @@ AddOutputFilterByType DEFLATE text/html text/css application/javascript
 ---
 
 ## 📄 Licencia
+https://nelsonlopezkr.github.io/droguerias-economicas/productos.html
 
 Proyecto privado — © 2024–2026 Droguerías Económicas.  
 Todos los derechos reservados. No se permite reproducción sin autorización.
