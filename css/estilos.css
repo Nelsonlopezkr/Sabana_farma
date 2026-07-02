@@ -11976,3 +11976,84 @@ textarea:valid:not(:placeholder-shown) {
     max-height: 240px !important;
   }
 }
+
+/* ══════════════════════════════════════════════════════════
+   LIGHTBOX — Imagen de producto ampliada (tap para zoom, móvil)
+   ══════════════════════════════════════════════════════════ */
+#modalProdImg,
+.modal-prod-img-side img {
+  cursor: zoom-in !important;
+}
+
+.modal-img-zoom-hint {
+  position: absolute !important;
+  bottom: 14px !important;
+  right: 14px !important;
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50% !important;
+  background: rgba(255,255,255,.92) !important;
+  border: none !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,.18) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--azul, #1565C0) !important;
+  font-size: .95rem !important;
+  cursor: pointer !important;
+  z-index: 3 !important;
+  transition: transform .18s !important;
+}
+.modal-img-zoom-hint:active { transform: scale(.9) !important; }
+
+.lightbox-img-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(0,0,0,.92) !important;
+  z-index: 12000 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1.5rem !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity .25s ease !important;
+}
+.lightbox-img-overlay.activo {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+.lightbox-img-overlay img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  border-radius: 12px !important;
+  transform: scale(.92) !important;
+  transition: transform .25s cubic-bezier(.34,1.56,.64,1) !important;
+}
+.lightbox-img-overlay.activo img {
+  transform: scale(1) !important;
+}
+.lightbox-close-btn {
+  position: absolute !important;
+  top: 18px !important;
+  right: 18px !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  background: rgba(255,255,255,.15) !important;
+  border: none !important;
+  color: #fff !important;
+  font-size: 1.2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  backdrop-filter: blur(4px) !important;
+}
+.lightbox-close-btn:active { transform: scale(.9) !important; }
+
+@media (max-width: 768px) {
+  .lightbox-img-overlay { padding: 0 !important; }
+  .lightbox-close-btn { top: 14px !important; right: 14px !important; width: 40px !important; height: 40px !important; }
+}

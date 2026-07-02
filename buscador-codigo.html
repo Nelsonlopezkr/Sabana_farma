@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Consulta de precio por código — Droguerías Económicas</title>
+<meta name="robots" content="noindex, nofollow">
+<!-- Herramienta interna para personal. No debe indexarse ni aparecer en buscadores. -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azul-dark:#0A2A66; --azul:#1565C0; --naranja:#FF6F00;
+    --verde:#2E7D32; --rojo:#C62828; --ambar:#E65100;
+    --gris-100:#f4f6f9; --gris-300:#dde3ec; --gris-500:#8a94a6; --texto:#1a1a2e;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Nunito',sans-serif; background:var(--gris-100); color:var(--texto);
+    min-height:100vh; display:flex; flex-direction:column;
+  }
+  header{
+    background:linear-gradient(135deg,var(--azul-dark),var(--azul));
+    color:#fff; padding:1.1rem 1.2rem; display:flex; align-items:center; gap:.7rem;
+    box-shadow:0 2px 12px rgba(0,0,0,.15);
+  }
+  header i{font-size:1.3rem}
+  header h1{font-size:1.05rem; font-weight:800}
+  header span{font-size:.72rem; opacity:.85; display:block; font-weight:600}
+
+  main{flex:1; padding:1.2rem; max-width:640px; margin:0 auto; width:100%;}
+
+  form#formBuscar{display:flex; gap:.6rem; margin-bottom:1.1rem;}
+  #inputCodigo{
+    flex:1; font-size:1.25rem; font-weight:800; letter-spacing:.5px;
+    padding:1rem 1.1rem; border:2.5px solid var(--gris-300); border-radius:14px;
+    font-family:inherit; color:var(--texto); background:#fff;
+  }
+  #inputCodigo:focus{outline:none; border-color:var(--azul); box-shadow:0 0 0 4px rgba(21,101,192,.15);}
+  #btnBuscar{
+    background:var(--azul); color:#fff; border:none; border-radius:14px;
+    width:58px; font-size:1.3rem; cursor:pointer; transition:background .15s;
+  }
+  #btnBuscar:active{background:var(--azul-dark);}
+
+  #resultado{min-height:1px;}
+
+  .card-producto{
+    background:#fff; border-radius:18px; padding:1.3rem; box-shadow:0 4px 20px rgba(0,0,0,.08);
+    animation:aparecer .18s ease; margin-bottom:1rem;
+  }
+  @keyframes aparecer{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:translateY(0)}}
+
+  .cp-top{display:flex; gap:1rem; align-items:flex-start;}
+  .cp-img{
+    width:84px; height:84px; border-radius:12px; background:var(--gris-100);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden;
+  }
+  .cp-img img{width:100%; height:100%; object-fit:contain; padding:.3rem;}
+  .cp-info{flex:1; min-width:0;}
+  .cp-cat{
+    display:inline-block; font-size:.66rem; font-weight:800; padding:.15rem .55rem;
+    border-radius:6px; background:#E3F2FD; color:var(--azul); margin-bottom:.35rem;
+  }
+  .cp-marca{font-size:.78rem; font-weight:700; color:var(--gris-500); text-transform:uppercase;}
+  .cp-nombre{font-size:1.05rem; font-weight:800; line-height:1.25; margin-top:.1rem;}
+  .cp-codigo{font-size:.7rem; color:var(--gris-500); margin-top:.3rem; font-family:monospace;}
+
+  .cp-precio-bloque{
+    display:flex; align-items:center; justify-content:space-between;
+    background:var(--gris-100); border-radius:14px; padding:1rem 1.1rem; margin-top:1.1rem;
+  }
+  .cp-precio{font-size:2rem; font-weight:900; color:var(--azul-dark); line-height:1;}
+  .cp-precio-label{font-size:.75rem; color:var(--gris-500); font-weight:700; margin-top:.15rem;}
+  .cp-stock{text-align:right; font-size:.8rem; font-weight:800; padding:.4rem .8rem; border-radius:10px;}
+  .cp-stock.ok{background:#E8F5E9; color:var(--verde);}
+  .cp-stock.bajo{background:#FFF3E0; color:var(--ambar);}
+  .cp-stock.agotado{background:#FFEBEE; color:var(--rojo);}
+
+  .cp-variantes{margin-top:1rem;}
+  .cp-variantes-titulo{font-size:.78rem; font-weight:800; color:var(--gris-500); margin-bottom:.5rem; text-transform:uppercase;}
+  .cp-var-btn{
+    display:flex; justify-content:space-between; align-items:center; width:100%;
+    background:#fff; border:2px solid var(--gris-300); border-radius:12px;
+    padding:.7rem .9rem; margin-bottom:.5rem; cursor:pointer; font-family:inherit;
+    font-size:.9rem; font-weight:700; color:var(--texto); transition:border-color .15s;
+  }
+  .cp-var-btn.activo{border-color:var(--azul); background:#F4F8FF;}
+  .cp-var-btn .cvb-precio{color:var(--azul-dark); font-weight:900;}
+
+  .cp-receta{
+    margin-top:.9rem; display:flex; gap:.5rem; align-items:flex-start; font-size:.78rem;
+    background:#FFF3E0; border:1.5px solid #FFB74D; color:var(--ambar); border-radius:10px; padding:.6rem .8rem;
+    font-weight:700;
+  }
+
+  .no-encontrado{
+    background:#fff; border-radius:18px; padding:2rem 1.3rem; text-align:center;
+    box-shadow:0 4px 20px rgba(0,0,0,.06);
+  }
+  .no-encontrado i{font-size:2.2rem; color:var(--gris-300); margin-bottom:.6rem;}
+  .no-encontrado h3{font-size:1rem; font-weight:800; margin-bottom:.35rem;}
+  .no-encontrado p{font-size:.85rem; color:var(--gris-500); margin-bottom:1rem;}
+  .no-encontrado a{
+    display:inline-flex; align-items:center; gap:.4rem; background:var(--azul); color:#fff;
+    text-decoration:none; font-weight:800; font-size:.85rem; padding:.7rem 1.2rem; border-radius:50px;
+  }
+
+  .ambiguo-lista{background:#fff; border-radius:16px; padding:1rem; box-shadow:0 4px 20px rgba(0,0,0,.08);}
+  .ambiguo-titulo{font-size:.85rem; font-weight:800; color:var(--ambar); margin-bottom:.8rem; display:flex; gap:.4rem; align-items:center;}
+  .ambiguo-item{
+    display:flex; justify-content:space-between; align-items:center; padding:.7rem .5rem;
+    border-bottom:1px solid var(--gris-100); cursor:pointer;
+  }
+  .ambiguo-item:last-child{border-bottom:none;}
+  .ambiguo-item span:first-child{font-weight:700; font-size:.85rem;}
+  .ambiguo-item span:last-child{font-weight:900; color:var(--azul-dark);}
+
+  #historial{margin-top:1.5rem;}
+  #historial h4{font-size:.78rem; font-weight:800; color:var(--gris-500); text-transform:uppercase; margin-bottom:.6rem;}
+  .hist-item{
+    display:flex; justify-content:space-between; align-items:center; background:#fff;
+    border-radius:10px; padding:.6rem .8rem; margin-bottom:.45rem; cursor:pointer; font-size:.82rem;
+    box-shadow:0 1px 4px rgba(0,0,0,.05);
+  }
+  .hist-item strong{color:var(--azul-dark);}
+
+  footer{text-align:center; padding:1rem; font-size:.72rem; color:var(--gris-500);}
+</style>
+</head>
+<body>
+
+<header>
+  <i class="fas fa-barcode"></i>
+  <div>
+    <h1>Consulta rápida de precio</h1>
+    <span>Droguerías Económicas — Herramienta interna</span>
+  </div>
+</header>
+
+<main>
+  <form id="formBuscar" autocomplete="off">
+    <label for="inputCodigo" class="sr-only" style="position:absolute;left:-9999px;">Código de barras</label>
+    <input type="text" id="inputCodigo" inputmode="numeric" placeholder="Escanea o digita el código…" autofocus>
+    <button type="submit" id="btnBuscar" aria-label="Buscar"><i class="fas fa-search"></i></button>
+  </form>
+
+  <div id="resultado" role="status" aria-live="polite"></div>
+
+  <div id="historial"></div>
+</main>
+
+<footer>Uso interno — no compartir este enlace con clientes</footer>
+
+<script src="js/productos-data.js"></script>
+<script src="js/buscador-codigo.js"></script>
+</body>
+</html>

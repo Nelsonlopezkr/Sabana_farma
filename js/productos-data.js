@@ -539,16 +539,27 @@ var CATALOGO = [
     "requiereReceta": false,
     "codigoBarras": "7702044246378"
   },
-  {
+ {
     "id": 10002,
-    "nombre": "Hidraplus 75 Zinc Surtido 400 ML Suero",
+    "nombre": "Hidraplus 75 Zinc 400 ML Suero",
     "marca": "Tecnoquímicas",
     "categoria": "Medicamentos",
     "descripcion": "Tecnoquímicas — Disponible en presentación Botella. Si tienes dudas sobre la dosis o el uso, nuestro equipo en droguería te asesora sin costo.",
+    "selector": { "titulo": "Sabores disponibles", "icono": "fas fa-ice-cream" },
     "variantes": [
       {
-        "tipo": "Botella",
-        "precio": 10600 ,
+        "tipo": "Fresa",
+        "precio": 10600,
+        "imagen": "img/productos/Hidraplus 75 Zinc Fresa 400 ML.jpg"
+      },
+      {
+        "tipo": "Mora",
+        "precio": 10600,
+        "imagen": "img/productos/Hidraplus 75 Zinc Mora 400 ML.jpg"
+      },
+      {
+        "tipo": "Surtido",
+        "precio": 10600,
         "imagen": "img/productos/Hidraplus 75 Zinc Surtido 400 ML Suero.jpg"
       }
     ],
@@ -556,7 +567,7 @@ var CATALOGO = [
     "tags": [],
     "requiereReceta": false,
     "codigoBarras": "7702057010874"
-  },
+  }, 
   {
     "id": 10003,
     "nombre": "Solhidrex Sabores Surt X 30 Sobres",
