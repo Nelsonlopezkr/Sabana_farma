@@ -12075,3 +12075,31 @@ textarea:valid:not(:placeholder-shown) {
   font-size: .8rem !important;
   color: var(--gris-500, #8a94a6) !important;
 }
+/* ══════════════════════════════════════════════════════════════════
+   FIX TOP VENTAS v2.0 — Imágenes reales en cards del home
+   ⚠ AGREGAR AL FINAL de estilos.css — NUNCA modificar reglas previas
+   ══════════════════════════════════════════════════════════════════ */
+
+/* Imagen de producto en card Top Ventas (mismo espacio que .tv-icono) */
+.tv-img {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin: .35rem auto;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+}
+
+/* Modo oscuro: fondo blanco para que las fotos (fondo blanco)
+   no floten sobre el fondo oscuro — ambos selectores obligatorios */
+[data-theme="dark"] .tv-img,
+body.oscuro .tv-img {
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.08);
+}
+
+/* Móvil: imagen ligeramente menor para conservar densidad de cards */
+@media (max-width: 480px) {
+  .tv-img { width: 64px; height: 64px; }
+}

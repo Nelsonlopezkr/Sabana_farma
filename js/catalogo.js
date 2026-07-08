@@ -125,6 +125,16 @@ function resolverImagen(p, fallbackSeed) {
 }
 
 function onImgError(img, p, size) {
+  /* FIX IMAGENES: los onerror inline no tienen acceso a la variable
+     local p del render. Si no llega, reconstruir el contexto desde
+     los data-attributes del propio <img>. */
+  if (!p && img && img.getAttribute) {
+    p = {
+      _slugImg:  img.getAttribute('data-slug') || '',
+      nombre:    img.getAttribute('data-slug') || '',
+      categoria: img.getAttribute('data-cat')  || ''
+    };
+  }
   // size: 0='md' (card), 1='lg' (modal), 2='sm' (autocomplete), o string
   if (size === 0) size = 'md';
   if (size === 1) size = 'lg';
@@ -504,7 +514,8 @@ function renderTarjeta(p) {
 
     '<div class="prod-img-wrap">' +
       '<img src="' + imagenSrc + '" alt="' + p.nombre + '" loading="lazy"' +
-        ' onerror=\"onImgError(this,p,0)\">' +
+        ' data-slug="' + slugProducto(p.nombre) + '" data-cat="' + (p.categoria || '') + '"' +
+        ' onerror=\"onImgError(this,null,0)\">' +
       '<div class="prod-tags">' + tagsHTML + '</div>' +
       '<span class="prod-cat-badge" style="background:' + meta.accent + '22;color:' + meta.accent + '">' +
         meta.emoji + ' ' + p.categoria +
@@ -1078,7 +1089,8 @@ function _construirHTMLModal(p, meta) {
     '<div class="modal-prod-img-side">' +
       '<img id="modalProdImg" src="' + imagenSrc + '" alt="' + p.nombre + '"' +
         ' onclick="abrirImagenAmpliada(this)"' +
-        ' onerror=\"onImgError(this,p,1)\">' +
+        ' data-slug="' + slugProducto(p.nombre) + '" data-cat="' + (p.categoria || '') + '"' +
+        ' onerror=\"onImgError(this,null,1)\">' +
       '<button class="modal-img-zoom-hint" onclick="abrirImagenAmpliada(document.getElementById(\'modalProdImg\'))" aria-label="Ampliar imagen" title="Ampliar imagen">' +
         '<i class="fas fa-search-plus"></i>' +
       '</button>' +
@@ -1965,7 +1977,8 @@ function mostrarAutocomplete(q, dropdown) {
       : '';
     return '<div class="ac-item" onclick="seleccionarSugerencia(\'' + p.nombre.replace(/'/g, "\\'") + '\', ' + p.id + ')">' +
       '<img class="ac-img" src="' + img + '" alt="' + p.nombre + '"' +
-        ' onerror=\"onImgError(this,p,2)\"' +
+        ' data-slug="' + slugProducto(p.nombre) + '" data-cat="' + (p.categoria || '') + '"' +
+        ' onerror=\"onImgError(this,null,2)\"' +
         ' style="width:40px;height:40px;object-fit:contain;background:#f5f5f5;border-radius:8px;flex-shrink:0;padding:3px">' +
       '<div class="ac-texto" style="flex:1;min-width:0">' +
         '<span class="ac-nombre">' + nombre + ' ' + uniTag + '</span>' +
