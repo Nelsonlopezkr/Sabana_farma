@@ -16,7 +16,7 @@
 
 'use strict';
 
-var CACHE_VERSION   = 'de-v6';
+var CACHE_VERSION   = 'de-v7';
 var CACHE_STATIC    = CACHE_VERSION + '-static';
 var CACHE_DATA      = CACHE_VERSION + '-data';
 var CACHE_PAGES     = CACHE_VERSION + '-pages';
@@ -44,6 +44,7 @@ var HTML_PAGES = [
 var DATA_JS = [
   '/js/productos-data.js',
   '/js/top-ventas-data.js',
+  '/js/top-ventas-imagenes.js',
   '/js/promo-dia.js',
   '/js/promociones-data.js',
 ];

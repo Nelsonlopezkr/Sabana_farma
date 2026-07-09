@@ -11,7 +11,7 @@
 
  <!-- Open Graph (WhatsApp, Facebook) -->
  <meta property="og:title" content="Droguerías Económicas | Mosquera y Funza, Cundinamarca">
- <meta property="og:description" content="Tu salud, nuestro compromiso. 🚚 Domicilio GRATIS · +2.000 productos · Pedidos por WhatsApp · Nequi · Transferencia · Medios electrónicos.">
+ <meta property="og:description" content="Tu salud, nuestro compromiso. 🚚 Domicilio GRATIS en pedidos +$20.000 · +2.000 productos · Pedidos por WhatsApp · Nequi · Transferencia · Medios electrónicos.">
  <meta property="og:type" content="website">
  <meta property="og:image" content="https://drogeriaseconomicas.com/img/og-banner.jpg">
  <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@
  <meta property="og:locale" content="es_CO">
  <meta name="twitter:card" content="summary_large_image">
  <meta name="twitter:title" content="Droguerías Económicas | Mosquera y Funza">
- <meta name="twitter:description" content="🚚 Domicilio GRATIS · +2.000 productos · Pedidos por WhatsApp 311 871 94 76">
+ <meta name="twitter:description" content="🚚 Domicilio GRATIS en pedidos +$20.000 · +2.000 productos · Pedidos por WhatsApp 311 871 94 76">
 
  <!-- Schema.org Pharmacy -->
  <script type="application/ld+json">
@@ -158,7 +158,7 @@
  ║ TOP BAR — DOMICILIO + TELÉFONO ║
  ╚══════════════════════════════════════════╝ -->
 <div class="top-bar" role="banner">
- <span>🚚 <strong>Domicilio GRATIS</strong> · Mosquera y Funza</span>
+ <span>🚚 <strong>Domicilio GRATIS</strong> en pedidos +$20.000 · Mosquera y Funza</span>
  <span class="top-bar-sep">|</span>
  <span>🕐 Lun–Dom: 7 am – 10 pm</span>
  <span class="top-bar-sep">|</span>
@@ -521,7 +521,7 @@
  <div class="garantia-icon">🛵</div>
  <div>
  <h4>Domicilio rápido 24/7</h4>
- <p>Entrega en 30–40 min. Domicilio GRATIS · Mosquera y Funza.</p>
+ <p>Entrega en 30–40 min. Domicilio GRATIS en pedidos +$20.000 · Mosquera y Funza.</p>
  </div>
  </div>
 
@@ -898,6 +898,7 @@
 <script defer src="js/productos-data.js"></script>
 <script defer src="js/imagenes-data.js"></script>
 <script defer src="js/top-ventas-data.js"></script>
+<script defer src="js/top-ventas-imagenes.js"></script>
 <script defer src="js/laboratorio-precios.js"></script>
 <script defer src="js/catalogo.js"></script>
 <script defer src="js/carrito.js"></script>
@@ -925,6 +926,40 @@
  return '#' + r + ' más vendido';
  }
 
+ /* ── Matching con CATALOGO (normalizado: acentos, dobles espacios) ── */
+ function tvNormalizar(s) {
+ return (s || '').toLowerCase()
+ .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+ .replace(/[^a-z0-9]+/g, ' ')
+ .trim();
+ }
+ var __tvIndice = null; /* caché: se construye 1 sola vez, no por render */
+ function tvBuscarEnCatalogo(nombre) {
+ if (typeof CATALOGO === 'undefined') return null;
+ var nom = tvNormalizar(nombre);
+ if (!nom) return null;
+ if (!__tvIndice) {
+ __tvIndice = CATALOGO.map(function(c) { return tvNormalizar(c.nombre); });
+ }
+ var clave = nom.substring(0, 18);
+ for (var i = 0; i < __tvIndice.length; i++) {
+ var cat = __tvIndice[i];
+ if (!cat) continue;
+ if (cat.indexOf(clave) !== -1 || nom.indexOf(cat.substring(0, 18)) !== -1) return CATALOGO[i];
+ }
+ return null;
+ }
+
+ /* ── Imagen real: mapa verificado (TV_IMAGENES) → catálogo → '' (emoji)
+    Sin adivinar rutas por slug: evita peticiones 404 innecesarias ── */
+ function tvImagen(ranking, prodCat) {
+ if (typeof TV_IMAGENES !== 'undefined' && TV_IMAGENES[ranking]) return TV_IMAGENES[ranking];
+ if (!prodCat) return '';
+ if (prodCat.variantes && prodCat.variantes[0] && prodCat.variantes[0].imagen) return prodCat.variantes[0].imagen;
+ if (prodCat.imagen) return prodCat.imagen;
+ return '';
+ }
+
  function renderTopVentas() {
  var grid = document.getElementById('topVentasGrid');
  if (!grid || typeof TOP_VENTAS === 'undefined') return;
@@ -934,18 +969,20 @@
  : TOP_VENTAS.slice((paginaActual - 1) * POR_PAGINA, paginaActual * POR_PAGINA);
 
  grid.innerHTML = lista.map(function(p) {
- var msgWa = encodeURIComponent('Hola! Vi que *' + p.nombre + '* es de los más vendidos 🔥\n¿Tienen disponibilidad? Precio: $' + p.precio.toLocaleString('es-CO'));
+ /* Buscar el producto en CATALOGO para agregar al carrito */
+ var prodCat = tvBuscarEnCatalogo(p.nombre);
+
+ /* ── Precio unificado: si hay match, mostrar el precio del CATÁLOGO
+    (el mismo que cobra el carrito y muestra el modal). El precio de
+    top-ventas-data.js es histórico de ventas y puede diferir. ── */
+ var precio = (prodCat && prodCat.variantes && prodCat.variantes[0] && prodCat.variantes[0].precio)
+ ? prodCat.variantes[0].precio
+ : p.precio;
+
+ var msgWa = encodeURIComponent('Hola! Vi que *' + p.nombre + '* es de los más vendidos 🔥\n¿Tienen disponibilidad? Precio: $' + precio.toLocaleString('es-CO'));
  var badge = p.ranking <= 3
  ? '<span class="tv-badge-top">TOP ' + p.ranking + '</span>'
  : (p.ranking <= 10 ? '<span class="tv-badge-10">Top 10</span>' : '');
- /* Buscar el producto en CATALOGO para agregar al carrito */
- var prodCat = null;
- if (typeof CATALOGO !== 'undefined') {
- var nom = p.nombre.toLowerCase();
- prodCat = CATALOGO.find(function(c) {
- return c.nombre && c.nombre.toLowerCase().indexOf(nom.substring(0, 15)) !== -1;
- }) || null;
- }
  var btnCarrito = prodCat
  ? '<button class="tv-btn-carrito" onclick="agregarAlCarrito(window.__tvCat' + p.ranking + ',0,this)" aria-label="Agregar al carrito">' +
  '<i class="fas fa-cart-plus"></i> Al carrito' +
@@ -959,17 +996,33 @@
  ? '<span class="tv-popular">🔥 Muy popular</span>'
  : (p.vendidos >= 50 ? '<span class="tv-popular tv-popular-med">⭐ Popular</span>' : '');
 
- return '<div class="tv-card" role="listitem">' +
+ /* Imagen real con fallback al emoji si no existe o falla la carga */
+ var imgSrc = tvImagen(p.ranking, prodCat);
+ var media = imgSrc
+ ? '<img class="tv-img" src="' + imgSrc + '" alt="' + p.nombre.replace(/"/g, '&quot;') + '" loading="lazy" width="72" height="72" decoding="async" ' +
+ 'onerror="this.style.display=\'none\';if(this.nextElementSibling)this.nextElementSibling.style.display=\'\';">' +
+ '<span class="tv-icono" style="display:none">' + p.icono + '</span>'
+ : '<span class="tv-icono">' + p.icono + '</span>';
+
+ /* Card clicable → abre el modal de detalle del producto (características,
+    referencias y modo de venta). Los botones internos no lo disparan. */
+ var attrsModal = prodCat
+ ? ' onclick="if(!event.target.closest(\'a,button\'))abrirModalProducto(' + prodCat.id + ')"' +
+ ' onkeydown="if(event.key===\'Enter\'&&!event.target.closest(\'a,button\'))abrirModalProducto(' + prodCat.id + ')"' +
+ ' tabindex="0" style="cursor:pointer" aria-label="Ver detalles de ' + p.nombre.replace(/"/g, '&quot;') + '"'
+ : '';
+
+ return '<div class="tv-card" role="listitem"' + attrsModal + '>' +
  '<div class="tv-card-head">' +
  '<span class="tv-rank ' + medalla(p.ranking) + '">' + rankLabel(p.ranking) + '</span>' +
  badge +
  '</div>' +
  popularidad +
- '<span class="tv-icono">' + p.icono + '</span>' +
+ media +
  '<span class="tv-nombre">' + p.nombre + '</span>' +
  '<span class="tv-presentacion">' + p.presentacion + '</span>' +
  '<div class="tv-precio-row">' +
- '<span class="tv-precio">$' + p.precio.toLocaleString('es-CO') + '</span>' +
+ '<span class="tv-precio">$' + precio.toLocaleString('es-CO') + '</span>' +
  '<span class="tv-vendidos"><i class="fas fa-fire"></i> ' + p.vendidos.toLocaleString('es-CO') + ' vendidos</span>' +
  '</div>' +
  '<div class="tv-btns">' +
@@ -1147,50 +1200,4 @@
 
  document.addEventListener('click', function (e) {
  var wrap = document.getElementById('heroSearchWrap');
- if (wrap && !wrap.contains(e.target)) {
- var dd = document.getElementById('heroDropdown');
- if (dd) { dd.innerHTML = ''; dd.classList.remove('activo'); }
- }
- });
- });
-})();
-</script>
-<script src="js/promo-dia.js"></script>
-<script src="js/navbar-search.js"></script>
-
-<script>
-/* ── Scroll Reveal global ── */
-(function() {
- if (!('IntersectionObserver' in window)) return;
- var obs = new IntersectionObserver(function(entries) {
- entries.forEach(function(e) {
- if (e.isIntersecting) {
- e.target.classList.add('visible');
- obs.unobserve(e.target);
- }
- });
- }, { threshold: .10 });
- document.querySelectorAll('.tv-card, .cat-card, .confianza-item, .test-card, .nosotros-item').forEach(function(el, i) {
- el.classList.add('gs-reveal');
- el.style.animationDelay = (i * 0.06) + 's';
- obs.observe(el);
- });
-})();
-</script>
-
-<script>
-/* ── Ripple en botones — Fase 2 ── */
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.btn-primario,.btn-hero-primary,.btn-checkout,.afi-btn-primary').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      var rect = btn.getBoundingClientRect();
-      btn.style.setProperty('--rx', (e.clientX - rect.left) + 'px');
-      btn.style.setProperty('--ry', (e.clientY - rect.top) + 'px');
-      btn.classList.add('btn-ripple','ripple-active');
-      setTimeout(function(){ btn.classList.remove('ripple-active'); }, 600);
-    });
-  });
-});
-</script>
-</body>
-</html>
+ 

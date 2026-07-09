@@ -1,0 +1,40 @@
+# ══════════════════════════════════════════════════════════
+#  Droguerías Económicas — .gitignore de deploy
+#  Todo lo listado aquí NO debe publicarse en el repositorio
+#  (GitHub Pages publica todo lo que esté en el repo).
+#  Si algún archivo ya fue commiteado, quitarlo del tracking:
+#     git rm --cached <archivo>
+# ══════════════════════════════════════════════════════════
+
+# ── Herramientas internas de administración (exponen inventario y costos) ──
+admin-inventario.html
+gestor-imagenes.html
+diagnostico-imagenes.html
+buscador-codigo.html
+js/inventario.js
+js/buscador-codigo.js
+
+# ── Datos internos y respaldos ──
+js/productos-data.backup.js
+js/informe_strategy.json
+
+# ── Reportes de trabajo ──
+_reporte-*.txt
+_reporte-*.csv
+
+# ── Scripts internos de migración/generación ──
+*.ps1
+htaccess_actualizado.txt
+
+# ── Fuentes Excel del catálogo (mantener solo en local) ──
+*.xlsx
+*.xls
+
+# ── Archivos que no son imágenes dentro de img/ ──
+img/productos/*.pdf
+
+# ── Sistema y editor ──
+.vscode/
+Thumbs.db
+desktop.ini
+.DS_Store

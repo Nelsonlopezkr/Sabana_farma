@@ -34,7 +34,7 @@ var OFERTAS_FLASH = [
     categoria: 'Medicamentos',
     wa_texto: 'Hola%2C+quiero+el+Tripleviral+Proomo+en+oferta+flash+%241.000',
     /* margen real: 95% → aplica para descuento */
-    valido_hasta: '2026-07-06',
+    valido_hasta: '2026-07-12',
     etiqueta: '🔥 Flash #1 más vendido'
   },
   {
@@ -50,7 +50,7 @@ var OFERTAS_FLASH = [
     icono: '💛',
     categoria: 'Medicamentos',
     wa_texto: 'Hola%2C+quiero+la+Vitamina+E+400UI+x100+en+oferta+%244.332',
-    valido_hasta: '2026-07-06',
+    valido_hasta: '2026-07-12',
     etiqueta: '⭐ Suplemento del mes'
   },
   {
@@ -66,7 +66,7 @@ var OFERTAS_FLASH = [
     icono: '✨',
     categoria: 'Cuidado Personal y Belleza',
     wa_texto: 'Hola%2C+quiero+la+Crema+Pods+Aclarant+B3+en+oferta+%241.800',
-    valido_hasta: '2026-07-06',
+    valido_hasta: '2026-07-12',
     etiqueta: '💄 Belleza flash'
   },
   {
@@ -82,7 +82,7 @@ var OFERTAS_FLASH = [
     icono: '🤧',
     categoria: 'Medicamentos',
     wa_texto: 'Hola%2C+quiero+la+Loratadina+10mg+en+oferta+%242.000',
-    valido_hasta: '2026-07-06',
+    valido_hasta: '2026-07-12',
     etiqueta: '🌿 Anti-alergia'
   },
   {
@@ -98,7 +98,7 @@ var OFERTAS_FLASH = [
     icono: '💙',
     categoria: 'Medicamentos',
     wa_texto: 'Hola%2C+quiero+el+Ainedix+Aceclofenaco+en+oferta+%244.368',
-    valido_hasta: '2026-07-06',
+    valido_hasta: '2026-07-12',
     etiqueta: '⚡ Anti-inflamatorio'
   },
 ];
@@ -188,6 +188,61 @@ var COMBOS = [
     wa_texto: 'Hola%2C+quiero+el+Combo+Control+de+Presión+%2812.000%29',
     etiqueta: 'Ahorra $1.500'
   },
+  /* ── NUEVOS julio 2026 — temporada de gripa (frío/lluvia en la sabana).
+     Precios tomados del CATÁLOGO actual (los que cobra el carrito).
+     ⚠ Verificar margen contra inventario_drog.xlsx antes de publicar. ── */
+  {
+    id: 'combo-gripa-01',
+    titulo: 'Combo Gripa Total',
+    descripcion: 'Resfrygrip + Noraver Garganta + Pax Noche — día y noche cubiertos',
+    items: [
+      { nombre: 'Resfrygrip Plus X 100 Caps',              precio: 1400 },
+      { nombre: 'Noraver Garganta Sabores Surt X 12 Unds', precio: 2300 },
+      { nombre: 'Pax Caliente Noche Limón/Panela 24 Sbs',  precio: 2800 },
+    ],
+    precio_normal: 6500,
+    precio_combo:  5800,   /* 11% desc — los 3 son top ventas (rk #3, #19, #12) */
+    ahorro: 700,
+    icono: '🤒',
+    categoria: 'Medicamentos',
+    wa_texto: 'Hola%2C+quiero+el+Combo+Gripa+Total+%285.800%29',
+    etiqueta: 'Ahorra $700 · Temporada de frío'
+  },
+  {
+    id: 'combo-hidratacion-01',
+    titulo: 'Combo Hidratación Familiar',
+    descripcion: '2 Electrolit + 1 Pedialyte Max con Zinc — y activas el domicilio GRATIS',
+    items: [
+      { nombre: 'Electrolit Hidratante 625 ML (×2)',       precio: 17000 },
+      { nombre: 'Pedialyte Max con Zinc Surtidos 500 ML',  precio: 10300 },
+    ],
+    precio_normal: 27300,
+    precio_combo:  24900,  /* 9% desc + supera $20.000 → domicilio gratis */
+    ahorro: 2400,
+    icono: '💧',
+    categoria: 'Medicamentos',
+    wa_texto: 'Hola%2C+quiero+el+Combo+Hidratación+Familiar+%2824.900%29',
+    etiqueta: 'Ahorra $2.400 + Domicilio GRATIS'
+  },
+  {
+    id: 'combo-botiquin-01',
+    titulo: 'Botiquín Básico Familiar',
+    descripcion: 'Acetaminofén + curas + gasas + alcohol + suero — todo hogar lo necesita',
+    items: [
+      { nombre: 'Acetaminofén 500 Mg 300 Tabletas',        precio: 1500 },
+      { nombre: 'Curas Hansaplast Impermeables 100 Unds',  precio: 200 },
+      { nombre: 'Gasa Alfa Estéril 3X3 Sbs',               precio: 1000 },
+      { nombre: 'Alcohol MK X 350 ML',                     precio: 5900 },
+      { nombre: 'Suero Fisiológico 500 ML',                precio: 4000 },
+    ],
+    precio_normal: 12600,
+    precio_combo:  10900,  /* 13% desc — gancho de ticket alto con top sellers */
+    ahorro: 1700,
+    icono: '🩹',
+    categoria: 'Medicamentos',
+    wa_texto: 'Hola%2C+quiero+el+Botiqu%C3%ADn+B%C3%A1sico+Familiar+%2810.900%29',
+    etiqueta: 'Ahorra $1.700'
+  },
 ];
 
 /* ══════════════════════════════════════════════════════════
@@ -263,6 +318,26 @@ var CUPONES = [
     categoria_aplica: 'Bebé y Mamá',
     valido_hasta: '2026-07-31',
     usos_maximos: 30,
+    activo: true
+  },
+  {
+    codigo: 'GRIPA10',
+    descripcion: '10% en productos para gripa y defensas por compras ≥$25.000',
+    descuento_pct: 10,
+    minimo_compra: 25000,
+    categoria_aplica: 'Medicamentos',
+    valido_hasta: '2026-07-31',
+    usos_maximos: 40,
+    activo: true
+  },
+  {
+    codigo: 'BIENVENIDO10',
+    descripcion: '10% en tu PRIMERA compra ≥$25.000 — cliente nuevo',
+    descuento_pct: 10,
+    minimo_compra: 25000,
+    categoria_aplica: 'Todas',
+    valido_hasta: '2026-08-31',
+    usos_maximos: 100,
     activo: true
   },
   {
