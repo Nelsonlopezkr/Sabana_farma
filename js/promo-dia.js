@@ -1,6 +1,6 @@
 /**
  * promo-dia.js v3.0 — Promociones diarias con datos reales
- * Droguerías Económicas
+ * Sabana Farma
  * Productos seleccionados por: volumen de ventas real + margen verificado
  * Actualizado: Junio 2026
  */
@@ -28,8 +28,8 @@
   var PROMOS = [
     /* Dom — Tripleviral: ranking #1, 1973 vendidos, margen 95% */
     {
-      txt: '🔥 DOMINGO — Tripleviral Proomo <strong>3×$2.500</strong> — el más vendido de la semana',
-      wa:  'Hola%2C+quiero+aprovechar+la+promo+Tripleviral+Proomo+3x%242.500+del+domingo'
+      txt: '🔥 DOMINGO — Tripleviral Proomo <strong>$1.000</strong> — el más vendido de la semana',
+      wa:  'Hola%2C+quiero+el+Tripleviral+Proomo+a+%241.000+del+domingo'
     },
     /* Lun — Curas Hansaplast: #6 en ventas, margen 75%, 1035 en stock */
     {

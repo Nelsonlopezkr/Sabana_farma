@@ -3,7 +3,7 @@
 > Plataforma farmacéutica moderna para pedidos por WhatsApp.  
 > **Mosquera y Funza, Cundinamarca, Colombia.**
 
-[![Hostinger](https://img.shields.io/badge/Deploy-Hostinger-orange)](https://drogeriaseconomicas.com)
+[![Hostinger](https://img.shields.io/badge/Deploy-Hostinger-orange)](https://sabanafarma.com)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
@@ -12,7 +12,7 @@
 
 ## 🏪 Sobre el negocio
 
-**Droguerías Económicas** es una droguería local con domicilio **siempre GRATIS** en Mosquera y Funza (Cundinamarca). Ofrecemos más de 2.000 productos — medicamentos, cuidado personal, bebé y mercado — con pedidos directos por WhatsApp.
+**Sabana Farma** es una droguería local con domicilio **siempre GRATIS** en Mosquera y Funza (Cundinamarca). Ofrecemos más de 2.000 productos — medicamentos, cuidado personal, bebé y mercado — con pedidos directos por WhatsApp.
 
 | Dato | Valor |
 |---|---|
@@ -250,5 +250,5 @@ AddOutputFilterByType DEFLATE text/html text/css application/javascript
 ## 📄 Licencia
 https://nelsonlopezkr.github.io/droguerias-economicas/productos.html
 
-Proyecto privado — © 2024–2026 Droguerías Económicas.  
+Proyecto privado — © 2024–2026 Sabana Farma.  
 Todos los derechos reservados. No se permite reproducción sin autorización.

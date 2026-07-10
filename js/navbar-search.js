@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════
- *  Droguerías Económicas — navbar-search.js  v2.0
+ *  Sabana Farma — navbar-search.js  v2.0
  *  Buscador global sticky en el navbar — funciona en TODAS
  *  las páginas del sitio sin romper ninguna funcionalidad.
  *

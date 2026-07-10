@@ -1,5 +1,5 @@
 /**
- * laboratorio-precios.js — Droguerías Económicas
+ * laboratorio-precios.js — Sabana Farma
  * Precios PVP reales por laboratorio — generado desde Informe de inventario
  * v3.0 — Conecta laboratorios[].nombreProducto con precios PVP del Informe
  */

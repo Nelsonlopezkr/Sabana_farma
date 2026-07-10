@@ -1,6 +1,6 @@
 /**
  * promociones-data.js v1.0
- * Droguerías Económicas — Datos de promociones
+ * Sabana Farma — Datos de promociones
  * 
  * Generado con base en:
  * - Top 300 productos más vendidos (datos reales de ventas)
@@ -369,6 +369,13 @@ var PRODUCTO_MES = {
   wa_texto: 'Hola%2C+quiero+el+Tripleviral+Proomo+del+mes+de+julio',
   valido_hasta: '2026-07-31'
 };
+
+/* ══ DESACTIVADAS (jul 2026): las promos 2×1/3×2 y combos fueron
+   reemplazadas por el descuento automático por monto de compra
+   (5% ≥ $50.000 · 7% ≥ $100.000 · 10% ≥ $150.000 — ver carrito.js).
+   Los datos de arriba se conservan solo como referencia histórica. ══ */
+PROMOS_2X1 = [];
+COMBOS     = [];
 
 /* Exportar para uso global */
 if (typeof window !== 'undefined') {

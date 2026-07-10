@@ -1,5 +1,5 @@
 /**
- * FORMULARIO DE CONTACTO — Droguerías Económicas
+ * FORMULARIO DE CONTACTO — Sabana Farma
  * Validación JS + simulación de envío
  * En producción: apunta a php/contacto.php
  */

@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════
- *  Droguerías Económicas — toast.js v1.0
+ *  Sabana Farma — toast.js v1.0
  *  Notificaciones tipo Toast con tipos: success, error,
  *  info, warning. Reemplaza el toast simple de carrito.js
  *  retrocompatible: sobreescribe window.mostrarToast

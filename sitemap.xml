@@ -6,7 +6,7 @@
 
   <!-- Página principal — máxima prioridad -->
   <url>
-    <loc>https://drogeriaseconomicas.com/</loc>
+    <loc>https://sabanafarma.com/</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
   <!-- Catálogo de productos -->
   <url>
-    <loc>https://drogeriaseconomicas.com/productos.html</loc>
+    <loc>https://sabanafarma.com/productos.html</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
@@ -22,7 +22,7 @@
 
   <!-- Promociones — actualización frecuente -->
   <url>
-    <loc>https://drogeriaseconomicas.com/promociones.html</loc>
+    <loc>https://sabanafarma.com/promociones.html</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -30,7 +30,7 @@
 
   <!-- Afiliaciones -->
   <url>
-    <loc>https://drogeriaseconomicas.com/afiliaciones.html</loc>
+    <loc>https://sabanafarma.com/afiliaciones.html</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -38,7 +38,7 @@
 
   <!-- Contacto -->
   <url>
-    <loc>https://drogeriaseconomicas.com/contacto.html</loc>
+    <loc>https://sabanafarma.com/contacto.html</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -46,7 +46,7 @@
 
   <!-- Política de datos -->
   <url>
-    <loc>https://drogeriaseconomicas.com/politica-datos.html</loc>
+    <loc>https://sabanafarma.com/politica-datos.html</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

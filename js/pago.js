@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════
- *  Droguerías Económicas — Módulo de Pagos
+ *  Sabana Farma — Módulo de Pagos
  *  pago.js  |  v1.0
  *
  *  INSTRUCCIONES DE INTEGRACIÓN:
@@ -42,7 +42,7 @@ var PAGO_CONFIG = {
 
   nequi: {
     numero: '3124213986',                  /* ← número Nequi de la droguería      */
-    nombre: 'Droguerías Económicas'
+    nombre: 'Sabana Farma'
   },
 
   whatsapp: '573118719476'                 /* ← ya existente en carrito.js        */
@@ -551,7 +551,7 @@ function procesarContraEntrega() {
       var totalFormato = '$' + Number(totales.total).toLocaleString('es-CO');
       
       /* Construir mensaje */
-      var msg = '🛒 *Pedido Droguerías Económicas*\n\n';
+      var msg = '🛒 *Pedido Sabana Farma*\n\n';
       for (var i = 0; i < carrito.length; i++) {
         var it = carrito[i];
         var precioFormato = '$' + Number(it.precio * it.cantidad).toLocaleString('es-CO');
@@ -562,6 +562,9 @@ function procesarContraEntrega() {
       
       msg += '\n━━━━━━━━━━━━━━━━━━\n';
       msg += '💰 Subtotal: ' + subtotalFormato + '\n';
+      if (totales.descuento > 0) {
+        msg += '💚 Descuento (' + totales.pctDescuento + '%): −$' + Number(totales.descuento).toLocaleString('es-CO') + '\n';
+      }
       msg += '🚚 Envío: ' + envioFormato + '\n';
       msg += '━━━━━━━━━━━━━━━━━━\n';
       msg += '💳 *TOTAL: ' + totalFormato + '*\n\n';
@@ -570,6 +573,18 @@ function procesarContraEntrega() {
       msg += '📱 *Teléfono:* ' + telefono;
       if (nota.trim()) msg += '\n📝 *Nota:* ' + nota;
       msg += '\n\n¿Confirman disponibilidad y tiempo de entrega? ✅';
+
+      /* Registrar pedido en la hoja de ventas (si está configurado) */
+      if (window.registrarPedido) window.registrarPedido({
+        origen:    'checkout-pago',
+        productos: carrito.map(function(i){ return i.nombre + ' x' + i.cantidad; }).join(' | '),
+        items:     carrito.reduce(function(a,i){ return a + i.cantidad; }, 0),
+        subtotal:  totales.subtotal,
+        descuento: totales.descuento || 0,
+        pct:       totales.pctDescuento || 0,
+        envio:     totales.envio,
+        total:     totales.total
+      });
 
       window.open('https://wa.me/' + PAGO_CONFIG.whatsapp + '?text=' + encodeURIComponent(msg), '_blank');
 

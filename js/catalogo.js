@@ -1,6 +1,6 @@
 /**
  * ══════════════════════════════════════════════════════════
- *  Droguerías Económicas — catalogo.js v8.0 DYNAMIC
+ *  Sabana Farma — catalogo.js v8.0 DYNAMIC
  *
  *  ✔ 100% dinámico — lee directamente de productos-data.js
  *  ✔ Funciona automáticamente para TODOS los productos

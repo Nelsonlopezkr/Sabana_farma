@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════
- *  Droguerías Económicas — favoritos.js v1.0
+ *  Sabana Farma — favoritos.js v1.0
  *  Lista de deseos con localStorage, ícono corazón animado,
  *  panel lateral y compatibilidad con productos-data.js
  *  IIIFE — no modifica ningún archivo existente.

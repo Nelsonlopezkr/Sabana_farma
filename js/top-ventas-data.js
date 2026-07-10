@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════
- *  Droguerías Económicas — top-ventas-data.js
+ *  Sabana Farma — top-ventas-data.js
  *  Top 300 productos más vendidos — datos reales de ventas
  *  Actualizado: Junio 2026 | 300 productos rankados
  *  ⚠ Generado automáticamente. No editar manualmente.

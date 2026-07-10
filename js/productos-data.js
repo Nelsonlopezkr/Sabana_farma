@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════
- *  Droguerías Económicas — productos-data.js
+ *  Sabana Farma — productos-data.js
  *  Generado automáticamente desde inventario_drog.xlsx
  *  Productos: 2028 · Generado: ver resumen_migracion.txt
  *  NO incluye costos ni datos internos — ver admin-inventario-data.js

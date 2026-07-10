@@ -1,6 +1,6 @@
 /**
  * sw.js — Service Worker
- * Droguerías Económicas
+ * Sabana Farma
  * Fase 6: estrategia de cache corregida
  *
  * ESTRATEGIA POR TIPO DE ARCHIVO:
@@ -16,7 +16,7 @@
 
 'use strict';
 
-var CACHE_VERSION   = 'de-v7';
+var CACHE_VERSION   = 'sf-v8';
 var CACHE_STATIC    = CACHE_VERSION + '-static';
 var CACHE_DATA      = CACHE_VERSION + '-data';
 var CACHE_PAGES     = CACHE_VERSION + '-pages';

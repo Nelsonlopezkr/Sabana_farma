@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════
- *  Droguerías Económicas — newsletter.js v1.0
+ *  Sabana Farma — newsletter.js v1.0
  *  Sección de newsletter auto-inyectable antes del footer.
  *  Guarda suscripción en localStorage para no molestar 2 veces.
  *  IIIFE — no modifica ningún archivo existente.
@@ -11,7 +11,7 @@
   var LS_KEY     = 'de_newsletter_ok';
   var WA_NUM     = '573118719476';
   var WA_MSG_ENC = encodeURIComponent(
-    'Hola Droguerías Económicas, quiero recibir promociones y novedades por WhatsApp 🎉'
+    'Hola Sabana Farma, quiero recibir promociones y novedades por WhatsApp 🎉'
   );
 
   /* ── ¿Ya suscrito? ── */
@@ -73,7 +73,7 @@
     '<div class="nl-exito" id="nlExito" role="status" aria-live="polite">' +
       '<div class="nl-exito-icono"><i class="fas fa-heart" aria-hidden="true"></i></div>' +
       '<h3>¡Gracias por suscribirte!</h3>' +
-      '<p>Pronto recibirás nuestras mejores ofertas por WhatsApp. ¡Bienvenido a la familia Droguerías Económicas! 🎉</p>' +
+      '<p>Pronto recibirás nuestras mejores ofertas por WhatsApp. ¡Bienvenido a la familia Sabana Farma! 🎉</p>' +
     '</div>';
 
   /* ── Inyectar antes del footer ── */
@@ -100,7 +100,7 @@
       var nombreEl = document.getElementById('nlNombre');
       var nombre   = nombreEl ? nombreEl.value.trim() : '';
 
-      var msgBase = 'Hola Droguerías Económicas, quiero recibir sus promociones y novedades por WhatsApp 🎉';
+      var msgBase = 'Hola Sabana Farma, quiero recibir sus promociones y novedades por WhatsApp 🎉';
       var msgFull = nombre
         ? 'Hola, soy *' + nombre + '*. ' + msgBase
         : msgBase;

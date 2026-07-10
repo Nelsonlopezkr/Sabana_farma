@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════
- *  Droguerías Económicas — top-ventas-imagenes.js
+ *  Sabana Farma — top-ventas-imagenes.js
  *  Mapa ranking → imagen real (verificado contra img/productos/)
  *  Generado: 2026-07-09 | 58 de 300 con foto
  *  ⚠ Generado automáticamente. Regenerar al añadir fotos nuevas.

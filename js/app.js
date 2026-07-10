@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════
-   Droguerías Económicas — app.js  v1.0
+   Sabana Farma — app.js  v1.0
    Script de producción: registra SW, banner cookies, 
    scroll animations, lazy loading, protección XSS,
    correcciones bugs globales.
@@ -208,7 +208,7 @@ window.suscribirWhatsapp = function () {
     return;
   }
   var msg = encodeURIComponent(
-    'Hola, quiero recibir las promociones de Droguerías Económicas. Mi número es ' + num
+    'Hola, quiero recibir las promociones de Sabana Farma. Mi número es ' + num
   );
   window.open('https://wa.me/573118719476?text=' + msg, '_blank', 'noopener');
 };

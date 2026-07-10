@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════
- *  Droguerías Económicas — Carrito PRO v2.0
+ *  Sabana Farma — Carrito PRO v2.0
  *  Mejoras: barra envío gratis, sugerencias, precio en badge,
  *           animación fly-to-cart, feedback visual botones
  * ══════════════════════════════════════════════════════════ */
@@ -257,20 +257,72 @@ function vaciarCarrito() {
   actualizarUI();
 }
 
+/* ─── Descuentos por monto de compra (Sabana Farma) ───
+   ≥ $50.000 → 5% · ≥ $100.000 → 7% · ≥ $150.000 → 10%
+   Ordenados de mayor a menor `min`. Editar solo aquí. */
+var DESCUENTOS_MONTO = [
+  { min: 150000, pct: 10 },
+  { min: 100000, pct: 7 },
+  { min: 50000,  pct: 5 }
+];
+
+/* Nivel de descuento alcanzado (o null) */
+function nivelDescuento(subtotal) {
+  for (var i = 0; i < DESCUENTOS_MONTO.length; i++) {
+    if (subtotal >= DESCUENTOS_MONTO[i].min) return DESCUENTOS_MONTO[i];
+  }
+  return null;
+}
+
+/* Siguiente nivel aún no alcanzado (o null si ya está en el máximo) */
+function proximoNivelDescuento(subtotal) {
+  var prox = null;
+  for (var i = 0; i < DESCUENTOS_MONTO.length; i++) {
+    if (subtotal < DESCUENTOS_MONTO[i].min) prox = DESCUENTOS_MONTO[i];
+  }
+  return prox;
+}
+
 /* ─── Totales ─── */
 function calcularTotales() {
   var subtotal = carrito.reduce(function(acc, i) { return acc + i.precio * i.cantidad; }, 0);
+  var nivel = nivelDescuento(subtotal);
+  var descuento = nivel ? Math.round(subtotal * nivel.pct / 100) : 0;
   var envio = (subtotal > 0 && subtotal < 20000) ? 3000 : 0; /* GRATIS en pedidos +$20.000 */
-  return { subtotal: subtotal, envio: envio, total: subtotal + envio };
+  return {
+    subtotal: subtotal,
+    descuento: descuento,
+    pctDescuento: nivel ? nivel.pct : 0,
+    envio: envio,
+    total: subtotal - descuento + envio
+  };
 }
 
-/* ─── Barra de progreso envío — gratis en pedidos +$20.000 ─── */
+/* ─── Barra de progreso — envío gratis y descuentos por monto ─── */
 function renderBarraEnvio(subtotal) {
   if (subtotal === 0) return '';
   if (subtotal >= 20000) {
+    var nivel = nivelDescuento(subtotal);
+    var prox  = proximoNivelDescuento(subtotal);
+    var msg, pctBar;
+    if (nivel && prox) {
+      msg = '💚 <strong>' + nivel.pct + '% de descuento aplicado</strong> · agrega <strong>$' +
+            (prox.min - subtotal).toLocaleString('es-CO') + '</strong> y sube al ' + prox.pct + '%';
+      pctBar = Math.min(Math.round(subtotal / prox.min * 100), 100);
+    } else if (nivel) {
+      msg = '🏆 ¡Descuento máximo del <strong>' + nivel.pct + '%</strong> aplicado!';
+      pctBar = 100;
+    } else if (prox) {
+      msg = '🎉 ¡Domicilio GRATIS! · Te faltan <strong>$' +
+            (prox.min - subtotal).toLocaleString('es-CO') + '</strong> para el <strong>' + prox.pct + '% de descuento</strong>';
+      pctBar = Math.min(Math.round(subtotal / prox.min * 100), 100);
+    } else {
+      msg = '🎉 ¡Domicilio GRATIS activado!';
+      pctBar = 100;
+    }
     return '<div class="envio-progreso-wrap">' +
-      '<div class="envio-progreso-msg envio-libre">🎉 ¡Domicilio GRATIS activado!</div>' +
-      '<div class="envio-progreso-bar"><div class="envio-progreso-fill" style="width:100%"></div></div>' +
+      '<div class="envio-progreso-msg envio-libre">' + msg + '</div>' +
+      '<div class="envio-progreso-bar"><div class="envio-progreso-fill" style="width:' + pctBar + '%"></div></div>' +
     '</div>';
   }
   var pct   = Math.min(Math.round(subtotal / 20000 * 100), 100);
@@ -342,6 +394,27 @@ function actualizarUI() {
   var envioEl    = document.getElementById('carritoEnvio');
   var totalEl    = document.getElementById('carritoTotal');
   if (subtotalEl) subtotalEl.textContent = _cop(t.subtotal);
+
+  /* Fila de descuento por monto — se crea dinámicamente si no existe */
+  var filaDesc = document.getElementById('carritoDescuentoFila');
+  if (!filaDesc && subtotalEl && subtotalEl.parentNode && subtotalEl.parentNode.parentNode) {
+    filaDesc = document.createElement('div');
+    filaDesc.className = 'carrito-resumen-fila';
+    filaDesc.id = 'carritoDescuentoFila';
+    filaDesc.innerHTML = '<span id="carritoDescuentoLabel">Descuento</span>' +
+      '<span id="carritoDescuento" style="font-weight:700;color:#2E7D32">−$0</span>';
+    subtotalEl.parentNode.parentNode.insertBefore(filaDesc, subtotalEl.parentNode.nextSibling);
+  }
+  if (filaDesc) {
+    filaDesc.style.display = t.descuento > 0 ? '' : 'none';
+    if (t.descuento > 0) {
+      var lblDesc = document.getElementById('carritoDescuentoLabel');
+      var valDesc = document.getElementById('carritoDescuento');
+      if (lblDesc) lblDesc.textContent = '💚 Descuento (' + t.pctDescuento + '%)';
+      if (valDesc) valDesc.textContent = '−' + _cop(t.descuento);
+    }
+  }
+
   if (envioEl) {
     if (t.subtotal === 0) {
       envioEl.textContent = '—';
@@ -523,7 +596,7 @@ function mostrarToast(msg) {
 ════════════════════════════════════════ */
 function checkoutWhatsApp() {
   var totales = calcularTotales();
-  var msg = '🛒 *PEDIDO — Droguerías Económicas*\n\n';
+  var msg = '🛒 *PEDIDO — Sabana Farma*\n\n';
   carrito.forEach(function(i) {
     var desc = i.variante || '';
     if (i.presentacion) desc += (desc ? ' · ' : '') + i.presentacion;
@@ -531,6 +604,7 @@ function checkoutWhatsApp() {
   });
   msg += '\n━━━━━━━━━━━━━━━━\n';
   msg += '💰 Subtotal: ' + _cop(totales.subtotal) + '\n';
+  if (totales.descuento > 0) msg += '💚 Descuento (' + totales.pctDescuento + '%): −' + _cop(totales.descuento) + '\n';
   msg += '🚚 Envío: ' + (totales.envio === 0 ? 'Gratis 🎉' : _cop(totales.envio)) + '\n';
   msg += '━━━━━━━━━━━━━━━━\n';
   msg += '💳 *TOTAL: ' + _cop(totales.total) + '*\n\n';
@@ -540,6 +614,19 @@ function checkoutWhatsApp() {
   msg += '🚚 Domicilio: ' + (totales.subtotal >= 20000 ? 'GRATIS ✅' : '$3.000 (gratis en pedidos +$20.000)') + '\n';
   msg += '⏱️ Entrega estimada: 30–40 minutos\n\n';
   msg += '¿Confirman disponibilidad? ✅';
+
+  /* Registrar pedido en la hoja de ventas (si está configurado) */
+  if (window.registrarPedido) window.registrarPedido({
+    origen:    'carrito',
+    productos: carrito.map(function(i){ return i.nombre + ' x' + i.cantidad; }).join(' | '),
+    items:     carrito.reduce(function(a,i){ return a + i.cantidad; }, 0),
+    subtotal:  totales.subtotal,
+    descuento: totales.descuento,
+    pct:       totales.pctDescuento,
+    envio:     totales.envio,
+    total:     totales.total
+  });
+
   window.open('https://wa.me/573118719476?text=' + encodeURIComponent(msg), '_blank');
 }
 

@@ -1,5 +1,5 @@
 /**
- * Droguerías Económicas — assets/js/app.js  v5.0
+ * Sabana Farma — assets/js/app.js  v5.0
  *
  * Archivo JS principal consolidado.
  * Agrega: dark mode, navbar scroll, scroll reveal,
@@ -231,9 +231,9 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!bar) return;
 
   const promos = [
-    '🌟 HOY DOMINGO — Electrolit 3 por el precio de 2. <strong>¡Solo hoy!</strong>',
+    '🌟 HOY DOMINGO — Electrolit 625 ml a <strong>$8.500</strong> · ¡Todos los sabores!',
     '🌟 HOY LUNES — Acetaminofén MK 100 tab a <strong>$16.000</strong> (normal $18.000)',
-    '🌟 HOY MARTES — Loratadina 2×1 · Paga 1 lleva 2 · ¡Anti-alergia!',
+    '🌟 HOY MARTES — Loratadina 10mg a <strong>$2.000</strong> · ¡Anti-alergia!',
     '🌟 HOY MIÉRCOLES — Vitamina C efervescente x10 a <strong>$4.500</strong>',
     '🌟 HOY JUEVES — Omeprazol 20mg x30 cáps a <strong>$9.800</strong>',
     '🌟 HOY VIERNES — Crema Bepanthen 30g a <strong>$15.000</strong> (normal $18.000)',

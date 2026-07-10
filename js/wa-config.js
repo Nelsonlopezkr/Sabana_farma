@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════
- *  Droguerías Económicas — Configuración Global
+ *  Sabana Farma — Configuración Global
  *  Carga este archivo PRIMERO en todos los HTML, antes de
  *  carrito.js, pago.js y catalogo.js
  * ══════════════════════════════════════════════════════════ */
@@ -12,10 +12,10 @@ window.DE_CONFIG = {
   TEL:        '+573124213986',
 
   /* ── Tienda ── */
-  NOMBRE:     'Droguerías Económicas',
+  NOMBRE:     'Sabana Farma',
   DIRECCION:  'Diagonal 5 Este 7D 7-06, Facatativá, Cundinamarca',
   HORARIO:    'Lun – Dom: 7 am – 10 pm',
-  EMAIL:      'contacto@drogeriaseconomicas.com',
+  EMAIL:      'sabanafarma01@gmail.com',
 
   /* ── Envío ── */
   ENVIO_PRECIO:       3000,
@@ -25,8 +25,13 @@ window.DE_CONFIG = {
   BANCO_NOMBRE:   'Bancolombia',
   BANCO_TIPO:     'Cuenta de Ahorros',
   BANCO_NUMERO:   '123-456789-00',
-  BANCO_TITULAR:  'Droguerías Económicas',
+  BANCO_TITULAR:  'Sabana Farma',
   BANCO_NIT:      '1.234.567.890',
+
+  /* ── Registro de pedidos (Google Sheets) ──
+     Pega aquí la URL de la aplicación web de Apps Script.
+     Si queda vacío, no se registra nada (el sitio funciona igual). */
+  VENTAS_WEBHOOK: '',
 };
 
 /* Helpers globales */
@@ -35,4 +40,19 @@ window.waLink = function(msg) {
 };
 window.copCurrency = function(n) {
   return '$' + Number(n).toLocaleString('es-CO');
+};
+
+/* Registro de pedidos en Google Sheets — no bloquea el checkout.
+   No envía datos personales del cliente (solo productos y montos). */
+window.registrarPedido = function(datos) {
+  try {
+    var url = window.DE_CONFIG && window.DE_CONFIG.VENTAS_WEBHOOK;
+    if (!url) return;
+    var body = JSON.stringify(datos || {});
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon(url, new Blob([body], { type: 'text/plain' }));
+    } else if (window.fetch) {
+      fetch(url, { method: 'POST', mode: 'no-cors', keepalive: true, body: body });
+    }
+  } catch (e) { /* nunca interrumpir el pedido */ }
 };

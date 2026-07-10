@@ -1,6 +1,6 @@
 /* ════════════════════════════════════════════════════════════════
    theme.js v4 — Sistema de temas definitivo
-   Droguerías Económicas
+   Sabana Farma
 
    Estrategia:
    - Anti-FOUC script en <head> aplica data-theme al <html>
