@@ -3,7 +3,7 @@
 > Plataforma farmacéutica moderna para pedidos por WhatsApp.  
 > **Mosquera y Funza, Cundinamarca, Colombia.**
 
-[![Hostinger](https://img.shields.io/badge/Deploy-Hostinger-orange)](https://sabanafarma.com)
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222?logo=github)](https://sabanafarma.com)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
@@ -27,7 +27,7 @@
 ## 🗂️ Estructura del proyecto
 
 ```
-droguerias-economicas/
+Sabana_farma/
 ├── index.html              # Página principal (hero, top ventas, categorías)
 ├── productos.html          # Catálogo completo con filtros y buscador
 ├── promociones.html        # Ofertas, cupones WhatsApp y countdown semanal
@@ -198,44 +198,21 @@ La página `afiliaciones.html` incluye:
 
 ---
 
-## 🚀 Despliegue en Hostinger
+## 🚀 Despliegue (GitHub Pages)
+
+El sitio se publica automáticamente con **GitHub Pages** desde la rama `main`:
 
 ```bash
-# Subir todos los archivos via FTP o hPanel → Administrador de archivos
-
-# ⚠️ EXCLUIR estos archivos del hosting público:
-# .git/               (control de versiones)
-# *.xlsx              (datos privados de inventario)
-# *.py                (scripts de procesamiento)
-# Informe.html        (reporte interno)
-# js/*.json           (archivos internos)
+git add -A
+git commit -m "descripción del cambio"
+git pull --rebase origin main
+git push origin main
+# GitHub Pages redespliega solo en 1–2 minutos
 ```
 
-### `.htaccess` mínimo recomendado
-
-```apache
-# Forzar HTTPS
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Comprimir respuestas
-AddOutputFilterByType DEFLATE text/html text/css application/javascript
-
-# Caché de assets
-<FilesMatch "\.(jpg|jpeg|png|gif|ico|css|js)$">
-  ExpiresActive On
-  ExpiresDefault "access plus 1 month"
-</FilesMatch>
-
-# Bloquear acceso a archivos sensibles
-<FilesMatch "\.(xlsx|py|json|log)$">
-  Order allow,deny
-  Deny from all
-</FilesMatch>
-```
-
----
+- Dominio: **https://sabanafarma.com** — DNS en mi.com.co (4 registros A de GitHub + CNAME www).
+- El archivo `CNAME` en la raíz mantiene el dominio personalizado — **no borrarlo**.
+- ⚠️ No subir al repositorio: `*.xlsx` (inventario privado), `*.py` internos ni reportes.
 
 ## 📞 Contacto
 
@@ -243,12 +220,12 @@ AddOutputFilterByType DEFLATE text/html text/css application/javascript
 |---|---|
 | WhatsApp pedidos | [311 871 94 76](https://wa.me/573118719476) |
 | WhatsApp pagos | [323 249 7559](https://wa.me/573232497559) |
-| GitHub | [Nelsonlopezkr/droguerias-economicas](https://github.com/Nelsonlopezkr/droguerias-economicas) |
+| GitHub | [Nelsonlopezkr/Sabana_farma](https://github.com/Nelsonlopezkr/Sabana_farma) |
 
 ---
 
 ## 📄 Licencia
-https://nelsonlopezkr.github.io/droguerias-economicas/productos.html
+https://sabanafarma.com/productos.html
 
 Proyecto privado — © 2024–2026 Sabana Farma.  
 Todos los derechos reservados. No se permite reproducción sin autorización.
