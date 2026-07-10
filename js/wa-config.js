@@ -31,7 +31,7 @@ window.DE_CONFIG = {
   /* ── Registro de pedidos (Google Sheets) ──
      Pega aquí la URL de la aplicación web de Apps Script.
      Si queda vacío, no se registra nada (el sitio funciona igual). */
-  VENTAS_WEBHOOK: '',
+  VENTAS_WEBHOOK: 'https://script.google.com/macros/s/AKfycbyW1Oq1USPJVgroKKeYiphAH9a6VInCQTJl7G9BbRZORxZYcdb54GuamZ0OXN2jX2it/exec',
 };
 
 /* Helpers globales */
