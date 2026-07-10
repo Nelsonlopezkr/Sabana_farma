@@ -1,4 +1,4 @@
-# 💊 Droguerías Económicas — Sitio Web
+# 💊 Sabana Farma — Sitio Web
 
 > Plataforma farmacéutica moderna para pedidos por WhatsApp.  
 > **Mosquera y Funza, Cundinamarca, Colombia.**
