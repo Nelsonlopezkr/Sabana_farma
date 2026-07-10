@@ -28,8 +28,8 @@
   var PROMOS = [
     /* Dom — Tripleviral: ranking #1, 1973 vendidos, margen 95% */
     {
-      txt: '🔥 DOMINGO — Tripleviral Proomo <strong>$1.000</strong> — el más vendido de la semana',
-      wa:  'Hola%2C+quiero+el+Tripleviral+Proomo+a+%241.000+del+domingo'
+      txt: '🔥 DOMINGO — Tripleviral Proomo <strong>$850</strong> (antes $1.000) — el más vendido del año',
+      wa:  'Hola%2C+quiero+el+Tripleviral+Proomo+a+%24850+del+domingo'
     },
     /* Lun — Curas Hansaplast: #6 en ventas, margen 75%, 1035 en stock */
     {

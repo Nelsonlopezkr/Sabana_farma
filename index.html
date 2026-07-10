@@ -1198,4 +1198,22 @@
  }
  });
 
+ /* Cerrar el dropdown al hacer clic fuera del buscador */
+ document.addEventListener('click', function (e) {
+ var wrap = document.getElementById('heroSearchWrap');
+ var dd = document.getElementById('heroDropdown');
+ if (wrap && dd && !wrap.contains(e.target)) {
+ dd.innerHTML = '';
+ dd.classList.remove('activo');
+ }
+ });
+ });
+})();
+</script>
+
+<script defer src="js/promo-dia.js"></script>
+<script src="js/navbar-search.js"></script>
+
+</body>
+</html>
  
