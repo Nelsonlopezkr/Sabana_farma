@@ -12149,3 +12149,20 @@ body.oscuro .cs-item { background: #1e2130; border-color: #333 }
 body.oscuro .cs-item:hover { border-color: var(--azul); background: #1a2540 }
 [data-theme="dark"] .cs-nombre,
 body.oscuro .cs-nombre { color: #e0e0e0 }
+
+/* ══════════════════════════════════════════════════════════
+   AJUSTE HERO (jul 2026) — tarjeta flotante "Domicilio GRATIS"
+   Se reubica arriba a la derecha (espejo de la de Productos)
+   para que no tape el nombre y eslogan de Sabana Farma.
+   Además muestra el costo de $3.000 en pedidos menores.
+   ══════════════════════════════════════════════════════════ */
+.hero-float-der {
+  top: 10% !important;
+  bottom: auto !important;
+  right: -8px !important;
+}
+/* En pantallas medianas, más pegada al borde para despejar el centro */
+@media (max-width: 900px) {
+  .hero-float-der { top: 6% !important; right: 2% !important; }
+  .hero-float-izq { top: auto !important; bottom: 8% !important; left: 2% !important; }
+}
