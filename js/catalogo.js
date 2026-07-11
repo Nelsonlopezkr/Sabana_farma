@@ -1160,7 +1160,7 @@ function _construirHTMLModal(p, meta) {
       /* 8. Info extra */
       '<div class="modal-info-extra">' +
         '<div class="modal-info-item"><i class="fas fa-motorcycle"></i><span>🚚 <strong>Domicilio GRATIS en pedidos +$20.000 · Mosquera y Funza</strong></span></div>' +
-        '<div class="modal-info-item"><i class="fas fa-mobile-alt"></i><span>💳 Pagos: Nequi · Transferencia al <strong>323 249 7559</strong></span></div>' +
+        '<div class="modal-info-item"><i class="fas fa-mobile-alt"></i><span>💳 Pagos: Nequi · Transferencia al <strong>312 421 39 86</strong></span></div>' +
         '<div class="modal-info-item"><i class="fas fa-shield-alt"></i><span>Productos 100% originales y verificados</span></div>' +
         '<div class="modal-info-item"><i class="fas fa-clock"></i><span>Entrega estimada <strong>30–40 min</strong></span></div>' +
       '</div>' +

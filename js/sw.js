@@ -16,7 +16,7 @@
 
 'use strict';
 
-var CACHE_VERSION   = 'sf-v8';
+var CACHE_VERSION   = 'sf-v9'; /* v9: retiro Tripleviral (INVIMA) + promo 2+1 al 25% */
 var CACHE_STATIC    = CACHE_VERSION + '-static';
 var CACHE_DATA      = CACHE_VERSION + '-data';
 var CACHE_PAGES     = CACHE_VERSION + '-pages';
@@ -140,7 +140,4 @@ function staleWhileRevalidate(request, cacheName) {
     }
     return response;
   });
-  return caches.match(request).then(function (cached) {
-    return cached || fetchPromise;
-  });
-}
+  return caches.match(request).then(function (
