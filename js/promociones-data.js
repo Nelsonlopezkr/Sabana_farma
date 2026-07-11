@@ -21,23 +21,6 @@
    ══════════════════════════════════════════════════════════ */
 var OFERTAS_FLASH = [
   {
-    id: 'flash-001',
-    nombre: 'Tripleviral Proomo',
-    presentacion: 'Caja',
-    precio_normal: 1200,
-    precio_oferta: 1000,
-    descuento_pct: 17,
-    stock_display: 672,   /* stock real del inventario */
-    ranking_ventas: 1,    /* #1 producto más vendido */
-    vendidos: 1973,
-    icono: '💊',
-    categoria: 'Medicamentos',
-    wa_texto: 'Hola%2C+quiero+el+Tripleviral+Proomo+en+oferta+flash+%241.000',
-    /* margen real: 95% → aplica para descuento */
-    valido_hasta: '2026-07-12',
-    etiqueta: '🔥 Flash #1 más vendido'
-  },
-  {
     id: 'flash-002',
     nombre: 'Vitamina E 400UI × 100 cáps',
     presentacion: 'Frasco',
@@ -250,21 +233,6 @@ var COMBOS = [
    ══════════════════════════════════════════════════════════ */
 var PROMOS_2X1 = [
   {
-    id: '2x1-001',
-    tipo: '3×2',   /* paga 2 lleva 3 */
-    nombre: 'Tripleviral Proomo',
-    presentacion: 'Caja',
-    precio_unitario: 1000,
-    precio_promo: 2000, /* paga 2 lleva 3 = $667 c/u */
-    cantidad_promo: 3,
-    cantidad_paga: 2,
-    stock: 672,
-    icono: '💊',
-    margen_real: 95,    /* % — justifica: costo $50, vende $1000 */
-    wa_texto: 'Hola%2C+quiero+la+promo+3x2+de+Tripleviral+Proomo',
-    etiqueta: '🔥 Paga 2 lleva 3'
-  },
-  {
     id: '2x1-002',
     tipo: '2×1',
     nombre: 'Loratadina 10mg',
@@ -357,16 +325,16 @@ var CUPONES = [
    Elegido por: mayor volumen de ventas + precio accesible + stock amplio
    ══════════════════════════════════════════════════════════ */
 var PRODUCTO_MES = {
-  nombre: 'Tripleviral Proomo',
-  presentacion: 'Caja',
-  precio: 1000,
-  precio_anterior: 1200,
-  descripcion: 'El medicamento más vendido de la droguería. 1.973 unidades vendidas. Calidad garantizada al mejor precio de Mosquera y Funza.',
-  icono: '💊',
+  nombre: 'Electrolit Hidratante Sabores Surtidos 625 ML',
+  presentacion: 'Frasco',
+  precio: 8500,
+  precio_anterior: null, /* sin descuento inventado: la promo real es 2+1 al 25% */
+  descripcion: 'El hidratante más vendido de la droguería. Compra 2 y el tercero con 25% de descuento — el ahorro se aplica solo en tu carrito. Todos los sabores.',
+  icono: '💧',
   ranking: 1,
-  vendidos_mes: 1973,
-  stock: 672,
-  wa_texto: 'Hola%2C+quiero+el+Tripleviral+Proomo+del+mes+de+julio',
+  vendidos_mes: 269,
+  stock: 189,
+  wa_texto: 'Hola%2C+quiero+el+Electrolit+del+mes+con+la+promo+2%2B1+al+25%25',
   valido_hasta: '2026-07-31'
 };
 

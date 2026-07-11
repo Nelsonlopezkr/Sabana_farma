@@ -554,14 +554,25 @@ function procesarContraEntrega() {
       var msg = '🛒 *Pedido Sabana Farma*\n\n';
       for (var i = 0; i < carrito.length; i++) {
         var it = carrito[i];
-        var precioFormato = '$' + Number(it.precio * it.cantidad).toLocaleString('es-CO');
-        msg += '📦 ' + it.nombre + ' (' + it.variante + ') x' + it.cantidad + ' → ' + precioFormato + '\n';
+        var pu = window.precioEfectivo ? window.precioEfectivo(it) : it.precio; /* aplica promos por cantidad */
+        var precioFormato = '$' + Number(pu * it.cantidad).toLocaleString('es-CO');
+        var tagPromo = '';
+        if (typeof promoCantidadActiva === 'function' && promoCantidadActiva(it)) {
+          var pr = PROMOS_CANTIDAD[it.id];
+          tagPromo = (pr && pr.tipo === 'tercera_pct')
+            ? ' 🎉 (compra 2 y el 3.º con ' + pr.pct + '% OFF)'
+            : ' 🎉 (promo $' + Number(pu).toLocaleString('es-CO') + ' c/u)';
+        }
+        msg += '📦 ' + it.nombre + ' (' + it.variante + ') x' + it.cantidad + ' → ' + precioFormato + tagPromo + '\n';
       }
       var subtotalFormato = '$' + Number(totales.subtotal).toLocaleString('es-CO');
       var envioFormato = totales.envio === 0 ? 'Gratis 🎉' : '$' + Number(totales.envio).toLocaleString('es-CO');
-      
+
       msg += '\n━━━━━━━━━━━━━━━━━━\n';
       msg += '💰 Subtotal: ' + subtotalFormato + '\n';
+      if (totales.descuentoPromos > 0) {
+        msg += '🎉 Ahorro en promociones: −$' + Number(totales.descuentoPromos).toLocaleString('es-CO') + '\n';
+      }
       if (totales.descuento > 0) {
         msg += '💚 Descuento (' + totales.pctDescuento + '%): −$' + Number(totales.descuento).toLocaleString('es-CO') + '\n';
       }
@@ -580,6 +591,7 @@ function procesarContraEntrega() {
         productos: carrito.map(function(i){ return i.nombre + ' x' + i.cantidad; }).join(' | '),
         items:     carrito.reduce(function(a,i){ return a + i.cantidad; }, 0),
         subtotal:  totales.subtotal,
+        ahorro_promos: totales.descuentoPromos || 0,
         descuento: totales.descuento || 0,
         pct:       totales.pctDescuento || 0,
         envio:     totales.envio,

@@ -283,18 +283,132 @@ function proximoNivelDescuento(subtotal) {
   return prox;
 }
 
+/* ─── Promos por cantidad — se aplican solas en el carrito ───
+   Dos tipos de promo:
+   · tercera_pct: "Compra 2 y el 3.º con X% de descuento". Por CADA grupo de
+     `grupo` unidades del MISMO producto, una unidad recibe `pct`% OFF
+     (3.ª, 6.ª, 9.ª…). No se mezclan productos distintos; sí se pueden
+     mezclar sabores/variantes del mismo producto.
+   · precio_fijo: lleva `min` o más unidades y CADA unidad queda a `precio`.
+   Los productos con promo activa no acumulan además el % por monto
+   (protege el margen). */
+var PROMOS_CANTIDAD = {
+  10735: { tipo: 'tercera_pct', grupo: 3, pct: 25, etiqueta: '🔥 3er producto 25% OFF' },  /* Electrolit 625 ml ($8.500) */
+  10734: { tipo: 'tercera_pct', grupo: 3, pct: 25, etiqueta: '🔥 3er producto 25% OFF' },  /* Pedialyte Max 500 ml ($10.300) */
+  10002: { tipo: 'tercera_pct', grupo: 3, pct: 25, etiqueta: '🔥 3er producto 25% OFF' },  /* Hidraplus 400 ml ($10.600) */
+  40038: { tipo: 'precio_fijo', min: 2, precio: 46180, etiqueta: 'Lleva 2+ · 8% OFF' }     /* Winny Pants Etp 6 x30 ($50.200) */
+};
+
+/* Unidades totales de un producto en el carrito (suma sabores/variantes) */
+function _cantidadProducto(id) {
+  return carrito.reduce(function(a, i) { return i.id === id ? a + i.cantidad : a; }, 0);
+}
+
+/* Precio unitario más bajo de un producto en el carrito (por si hay variantes) */
+function _precioUnitProducto(id) {
+  var min = 0;
+  carrito.forEach(function(i) {
+    if (i.id === id && (min === 0 || i.precio < min)) min = i.precio;
+  });
+  return min;
+}
+
+/* Precio unitario efectivo (solo promos precio_fijo rebajan el unitario) */
+function precioEfectivo(item) {
+  var p = PROMOS_CANTIDAD[item.id];
+  if (p && p.tipo === 'precio_fijo' && _cantidadProducto(item.id) >= p.min) return p.precio;
+  return item.precio;
+}
+
+function promoCantidadActiva(item) {
+  var p = PROMOS_CANTIDAD[item.id];
+  if (!p) return false;
+  var qty = _cantidadProducto(item.id);
+  return p.tipo === 'tercera_pct' ? qty >= p.grupo : qty >= p.min;
+}
+window.precioEfectivo = precioEfectivo;
+
+/* Descuento tipo tercera_pct de UN producto: floor(qty/grupo) unidades con pct% OFF */
+function descuentoPromoProducto(id) {
+  var p = PROMOS_CANTIDAD[id];
+  if (!p || p.tipo !== 'tercera_pct') return 0;
+  var unidadesGratis = Math.floor(_cantidadProducto(id) / p.grupo);
+  if (unidadesGratis === 0) return 0;
+  return unidadesGratis * Math.round(_precioUnitProducto(id) * p.pct / 100);
+}
+
+/* ¿Este item es la primera línea de su producto en el carrito?
+   (evita repetir el mensaje de promo cuando hay varios sabores) */
+function _esPrimeraLineaProducto(item) {
+  for (var i = 0; i < carrito.length; i++) {
+    if (carrito[i].id === item.id) return carrito[i].key === item.key;
+  }
+  return false;
+}
+
+/* Mensaje de promo que se muestra bajo el producto en el carrito */
+function mensajePromoLinea(item) {
+  var p = PROMOS_CANTIDAD[item.id];
+  if (!p) return '';
+
+  if (p.tipo === 'tercera_pct') {
+    if (!_esPrimeraLineaProducto(item)) return '';
+    var qty = _cantidadProducto(item.id);
+    if (qty >= p.grupo) {
+      return '<small style="display:block;color:#2E7D32;font-weight:800">' +
+        '✔ Promoción aplicada<br>Compra 2 y el tercero tiene ' + p.pct + '% OFF · ' +
+        'Ahorras ' + _cop(descuentoPromoProducto(item.id)) + '</small>';
+    }
+    var faltan = p.grupo - qty;
+    return '<small style="display:block;color:#1565C0;font-weight:700">' +
+      '💧 Agrega ' + faltan + ' más y el 3.º te sale con ' + p.pct + '% OFF</small>';
+  }
+
+  /* precio_fijo */
+  if (promoCantidadActiva(item)) {
+    return '<small style="display:block;color:#2E7D32;font-weight:800">🎉 ' +
+      p.etiqueta + ' → ' + _cop(precioEfectivo(item)) + ' c/u</small>';
+  }
+  return '';
+}
+
 /* ─── Totales ─── */
 function calcularTotales() {
-  var subtotal = carrito.reduce(function(acc, i) { return acc + i.precio * i.cantidad; }, 0);
-  var nivel = nivelDescuento(subtotal);
-  var descuento = nivel ? Math.round(subtotal * nivel.pct / 100) : 0;
-  var envio = (subtotal > 0 && subtotal < 20000) ? 3000 : 0; /* GRATIS en pedidos +$20.000 */
+  var subtotal = 0, basePct = 0, ahorroPromos = 0, descuentoPromos = 0;
+  var idsTercera = [];
+
+  carrito.forEach(function(i) {
+    var pu = precioEfectivo(i);
+    subtotal += pu * i.cantidad;
+    if (promoCantidadActiva(i)) {
+      var p = PROMOS_CANTIDAD[i.id];
+      if (p.tipo === 'precio_fijo') {
+        ahorroPromos += (i.precio - pu) * i.cantidad; /* ya rebajado en subtotal */
+      } else if (idsTercera.indexOf(i.id) === -1) {
+        idsTercera.push(i.id); /* tercera_pct: se calcula una vez por producto */
+      }
+    } else {
+      basePct += pu * i.cantidad; /* solo lo SIN promo suma para el % por monto */
+    }
+  });
+
+  idsTercera.forEach(function(id) {
+    descuentoPromos += descuentoPromoProducto(id);
+  });
+  ahorroPromos += descuentoPromos;
+
+  var subtotalNeto = subtotal - descuentoPromos;
+  var nivel = nivelDescuento(subtotalNeto);
+  var descuento = nivel ? Math.round(basePct * nivel.pct / 100) : 0;
+  var envio = (subtotalNeto > 0 && subtotalNeto < 20000) ? 3000 : 0; /* GRATIS en pedidos +$20.000 */
   return {
     subtotal: subtotal,
+    descuentoPromos: descuentoPromos, /* ahorro promos que se resta del total */
+    ahorroPromos: ahorroPromos,       /* ahorro total en promos (informativo) */
     descuento: descuento,
     pctDescuento: nivel ? nivel.pct : 0,
     envio: envio,
-    total: subtotal - descuento + envio
+    total: subtotalNeto - descuento + envio
   };
 }
 
@@ -377,7 +491,8 @@ function actualizarUI() {
         '<div class="carrito-item-info">' +
           '<p class="carrito-item-nombre">' + item.nombre + '</p>' +
           '<small class="carrito-item-variante">' + item.variante + (item.presentacion ? ' · ' + item.presentacion : '') + '</small>' +
-          '<p class="carrito-item-precio">' + _cop(item.precio * item.cantidad) + '</p>' +
+          mensajePromoLinea(item) +
+          '<p class="carrito-item-precio">' + _cop(precioEfectivo(item) * item.cantidad) + '</p>' +
         '</div>' +
         '<div class="carrito-item-controles">' +
           '<button class="btn-cant" onclick="cambiarCantidad(\'' + item.key + '\',-1)" aria-label="Quitar uno">−</button>' +
@@ -395,6 +510,24 @@ function actualizarUI() {
   var totalEl    = document.getElementById('carritoTotal');
   if (subtotalEl) subtotalEl.textContent = _cop(t.subtotal);
 
+  /* Fila "Ahorro en promociones" — se crea dinámicamente si no existe */
+  var filaPromo = document.getElementById('carritoAhorroPromosFila');
+  if (!filaPromo && subtotalEl && subtotalEl.parentNode && subtotalEl.parentNode.parentNode) {
+    filaPromo = document.createElement('div');
+    filaPromo.className = 'carrito-resumen-fila';
+    filaPromo.id = 'carritoAhorroPromosFila';
+    filaPromo.innerHTML = '<span>🎉 Ahorro en promociones</span>' +
+      '<span id="carritoAhorroPromos" style="font-weight:700;color:#2E7D32">−$0</span>';
+    subtotalEl.parentNode.parentNode.insertBefore(filaPromo, subtotalEl.parentNode.nextSibling);
+  }
+  if (filaPromo) {
+    filaPromo.style.display = t.descuentoPromos > 0 ? '' : 'none';
+    if (t.descuentoPromos > 0) {
+      var valPromo = document.getElementById('carritoAhorroPromos');
+      if (valPromo) valPromo.textContent = '−' + _cop(t.descuentoPromos);
+    }
+  }
+
   /* Fila de descuento por monto — se crea dinámicamente si no existe */
   var filaDesc = document.getElementById('carritoDescuentoFila');
   if (!filaDesc && subtotalEl && subtotalEl.parentNode && subtotalEl.parentNode.parentNode) {
@@ -403,7 +536,8 @@ function actualizarUI() {
     filaDesc.id = 'carritoDescuentoFila';
     filaDesc.innerHTML = '<span id="carritoDescuentoLabel">Descuento</span>' +
       '<span id="carritoDescuento" style="font-weight:700;color:#2E7D32">−$0</span>';
-    subtotalEl.parentNode.parentNode.insertBefore(filaDesc, subtotalEl.parentNode.nextSibling);
+    var refPromo = document.getElementById('carritoAhorroPromosFila');
+    subtotalEl.parentNode.parentNode.insertBefore(filaDesc, (refPromo || subtotalEl.parentNode).nextSibling);
   }
   if (filaDesc) {
     filaDesc.style.display = t.descuento > 0 ? '' : 'none';
@@ -429,9 +563,9 @@ function actualizarUI() {
   }
   if (totalEl)    totalEl.textContent = _cop(t.total);
 
-  /* Barra progreso envío */
+  /* Barra progreso envío (sobre el subtotal ya con promos aplicadas) */
   var barraEl = document.getElementById('envioProgresoZone');
-  if (barraEl) barraEl.innerHTML = renderBarraEnvio(t.subtotal);
+  if (barraEl) barraEl.innerHTML = renderBarraEnvio(t.subtotal - t.descuentoPromos);
 
   renderCarritoDropdown();
 
@@ -522,7 +656,7 @@ function renderCarritoDropdown() {
         '<strong>' + item.nombre + '</strong>' +
         '<span>' + (item.variante ? item.variante : '') + (item.presentacion ? ' · ' + item.presentacion : '') + ' x' + item.cantidad + '</span>' +
       '</div>' +
-      '<span class="carrito-dropdown-item-precio">' + _cop(item.precio * item.cantidad) + '</span>' +
+      '<span class="carrito-dropdown-item-precio">' + _cop(precioEfectivo(item) * item.cantidad) + '</span>' +
     '</div>';
   }).join('');
 }
@@ -600,10 +734,19 @@ function checkoutWhatsApp() {
   carrito.forEach(function(i) {
     var desc = i.variante || '';
     if (i.presentacion) desc += (desc ? ' · ' : '') + i.presentacion;
-    msg += '• ' + i.nombre + (desc ? ' (' + desc + ')' : '') + ' x' + i.cantidad + ' → ' + _cop(i.precio * i.cantidad) + '\n';
+    var pu = precioEfectivo(i);
+    var tagPromo = '';
+    if (promoCantidadActiva(i)) {
+      var pr = PROMOS_CANTIDAD[i.id];
+      tagPromo = pr.tipo === 'tercera_pct'
+        ? ' 🎉 (compra 2 y el 3.º con ' + pr.pct + '% OFF)'
+        : ' 🎉 (promo ' + _cop(pu) + ' c/u)';
+    }
+    msg += '• ' + i.nombre + (desc ? ' (' + desc + ')' : '') + ' x' + i.cantidad + ' → ' + _cop(pu * i.cantidad) + tagPromo + '\n';
   });
   msg += '\n━━━━━━━━━━━━━━━━\n';
   msg += '💰 Subtotal: ' + _cop(totales.subtotal) + '\n';
+  if (totales.descuentoPromos > 0) msg += '🎉 Ahorro en promociones: −' + _cop(totales.descuentoPromos) + '\n';
   if (totales.descuento > 0) msg += '💚 Descuento (' + totales.pctDescuento + '%): −' + _cop(totales.descuento) + '\n';
   msg += '🚚 Envío: ' + (totales.envio === 0 ? 'Gratis 🎉' : _cop(totales.envio)) + '\n';
   msg += '━━━━━━━━━━━━━━━━\n';
@@ -611,7 +754,7 @@ function checkoutWhatsApp() {
   msg += '📍 *Dirección de entrega:* (por favor indíquela)\n';
   msg += '\n💳 *Pago:* Nequi · Transferencia · Otros electrónicos\n';
   msg += '   Número de pagos: *312 421 39 86*\n\n';
-  msg += '🚚 Domicilio: ' + (totales.subtotal >= 20000 ? 'GRATIS ✅' : '$3.000 (gratis en pedidos +$20.000)') + '\n';
+  msg += '🚚 Domicilio: ' + (totales.envio === 0 ? 'GRATIS ✅' : '$3.000 (gratis en pedidos +$20.000)') + '\n';
   msg += '⏱️ Entrega estimada: 30–40 minutos\n\n';
   msg += '¿Confirman disponibilidad? ✅';
 
@@ -621,6 +764,7 @@ function checkoutWhatsApp() {
     productos: carrito.map(function(i){ return i.nombre + ' x' + i.cantidad; }).join(' | '),
     items:     carrito.reduce(function(a,i){ return a + i.cantidad; }, 0),
     subtotal:  totales.subtotal,
+    ahorro_promos: totales.descuentoPromos,
     descuento: totales.descuento,
     pct:       totales.pctDescuento,
     envio:     totales.envio,
@@ -760,4 +904,3 @@ window.eliminarDelCarrito = eliminarDelCarrito;
 window.cambiarCantidad   = cambiarCantidad;
 window.abrirCarrito      = abrirCarrito;
 window.cerrarCarrito     = cerrarCarrito;
-window.checkoutWhatsApp  = checkoutWhatsApp;

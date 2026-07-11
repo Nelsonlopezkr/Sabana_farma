@@ -26,10 +26,10 @@
 
   /* Promos basadas en datos reales de ventas e inventario */
   var PROMOS = [
-    /* Dom — Tripleviral: ranking #1, 1973 vendidos, margen 95% */
+    /* Dom — Electrolit: top ventas, promo real 2+1 al 25% (ver carrito.js) */
     {
-      txt: '🔥 DOMINGO — Tripleviral Proomo <strong>$850</strong> (antes $1.000) — el más vendido del año',
-      wa:  'Hola%2C+quiero+el+Tripleviral+Proomo+a+%24850+del+domingo'
+      txt: '💧 DOMINGO — Electrolit 625 ml: compra 2 y el 3.º con <strong>25% OFF</strong> — ¡Todos los sabores!',
+      wa:  'Hola%2C+quiero+la+promo+de+Electrolit+compra+2+y+el+tercero+con+25%25+OFF'
     },
     /* Lun — Curas Hansaplast: #6 en ventas, margen 75%, 1035 en stock */
     {

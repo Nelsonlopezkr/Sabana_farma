@@ -14354,23 +14354,6 @@ var CATALOGO = [
     "codigoBarras": "7500435019484"
   },
   {
-    "id": 10438,
-    "nombre": "Tripleviral Proomo",
-    "marca": "",
-    "categoria": "Medicamentos",
-    "descripcion": "Disponible en presentación Caja. Si tienes dudas sobre la dosis o el uso, nuestro equipo en droguería te asesora sin costo.",
-    "variantes": [
-      {
-        "tipo": "Caja",
-        "precio": 1000
-      }
-    ],
-    "existencias": 672,
-    "tags": [],
-    "requiereReceta": false,
-    "codigoBarras": "123456789"
-  },
-  {
     "id": 10439,
     "nombre": "Eutarpan Loratadina 1MG / 1 ML X 120ML",
     "marca": "Prosodent",
