@@ -95,4 +95,7 @@
 
   setInterval(function () {
     var t = bar.querySelector('.promo-timer');
-    if (t) t.textContent = '⏳ ' + tiempoRestante() + '
+    if (t) t.textContent = '⏳ ' + tiempoRestante() + ' restantes';
+  }, 60000);
+
+})();

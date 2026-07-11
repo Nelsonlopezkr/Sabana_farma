@@ -140,4 +140,7 @@ function staleWhileRevalidate(request, cacheName) {
     }
     return response;
   });
-  return caches.match(request).then(function (
+  return caches.match(request).then(function (cached) {
+    return cached || fetchPromise;
+  });
+}

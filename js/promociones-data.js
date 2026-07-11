@@ -349,4 +349,7 @@ COMBOS     = [];
 if (typeof window !== 'undefined') {
   window.OFERTAS_FLASH   = OFERTAS_FLASH;
   window.COMBOS          = COMBOS;
- 
+  window.PROMOS_2X1      = PROMOS_2X1;
+  window.CUPONES         = CUPONES;
+  window.PRODUCTO_MES    = PRODUCTO_MES;
+}
