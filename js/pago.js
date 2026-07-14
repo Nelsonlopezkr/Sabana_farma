@@ -11,7 +11,7 @@
  *
  *  Métodos disponibles:
  *   • Nequi          → pago al 312 421 39 86 + comprobante por WhatsApp
- *   • Transferencia  → pago al 312 421 39 86 + comprobante por WhatsApp
+ *   • Daviplata      → pago al 312 421 39 86 + comprobante por WhatsApp
  *   • Contra entrega → efectivo al recibir el pedido
  *
  *  INTEGRACIÓN:
@@ -37,7 +37,7 @@ function pagoNumeroFmt() {
 
 /* ─── Estado del módulo de pago ─────────────────────────── */
 var PAGO_ESTADO = {
-  metodoSeleccionado: null,   /* 'nequi' | 'transferencia' | 'contraentrega' */
+  metodoSeleccionado: null,   /* 'nequi' | 'daviplata' | 'contraentrega' */
   procesando: false
 };
 
@@ -63,10 +63,10 @@ function inyectarSelectorPago() {
           '<span class="pago-opcion-check"><i class="fas fa-check"></i></span>',
         '</button>',
 
-        /* Transferencia */
-        '<button class="pago-opcion" data-metodo="transferencia" onclick="seleccionarMetodoPago(\'transferencia\')" aria-label="Pagar con transferencia">',
-          '<span class="pago-opcion-icono pago-transfer"><i class="fas fa-university"></i></span>',
-          '<span class="pago-opcion-label">Transferencia</span>',
+        /* Daviplata */
+        '<button class="pago-opcion" data-metodo="daviplata" onclick="seleccionarMetodoPago(\'daviplata\')" aria-label="Pagar con Daviplata">',
+          '<span class="pago-opcion-icono pago-daviplata">D</span>',
+          '<span class="pago-opcion-label">Daviplata</span>',
           '<span class="pago-opcion-check"><i class="fas fa-check"></i></span>',
         '</button>',
 
@@ -134,7 +134,7 @@ function seleccionarMetodoPago(metodo) {
 
   var formularios = {
     nequi:         renderFormNequi,
-    transferencia: renderFormTransferencia,
+    daviplata:     renderFormDaviplata,
     contraentrega: renderFormContraEntrega
   };
 
@@ -184,16 +184,16 @@ function renderFormNequi() {
   '</div>';
 }
 
-/* ── Transferencia ── */
-function renderFormTransferencia() {
-  return '<div class="pago-form" id="formTransferencia">' +
+/* ── Daviplata ── */
+function renderFormDaviplata() {
+  return '<div class="pago-form" id="formDaviplata">' +
     '<p class="pago-form-info">' +
       '<i class="fas fa-info-circle"></i> ' +
-      'Transfiere al número <strong>' + pagoNumeroFmt() + '</strong> ' +
-      '(Nequi u otros medios electrónicos) y envía el comprobante por WhatsApp al confirmar el pedido.' +
+      'Paga desde tu app Daviplata al número <strong>' + pagoNumeroFmt() + '</strong> ' +
+      '(' + PAGO_CONFIG.nequi.nombre + ') y envía el comprobante por WhatsApp al confirmar el pedido.' +
     '</p>' +
     camposEntrega() +
-    '<p class="pago-nota">🏦 Tu pedido se despacha al verificar el pago.</p>' +
+    '<p class="pago-nota">🔴 Tu pedido se despacha al verificar el pago.</p>' +
   '</div>';
 }
 
@@ -255,7 +255,7 @@ function enviarPedidoWhatsApp(metodo) {
 
   var etiquetas = {
     nequi:         '💜 Nequi (' + pagoNumeroFmt() + ')',
-    transferencia: '🏦 Transferencia (' + pagoNumeroFmt() + ')',
+    daviplata:     '🔴 Daviplata (' + pagoNumeroFmt() + ')',
     contraentrega: '🛵 Contra entrega (efectivo)'
   };
 
@@ -295,7 +295,7 @@ function enviarPedidoWhatsApp(metodo) {
   msg += '━━━━━━━━━━━━━━━━━━\n';
   msg += '💳 *TOTAL: ' + totalFormato + '*\n\n';
   msg += '💳 *Método de pago:* ' + (etiquetas[metodo] || metodo) + '\n';
-  if (metodo === 'nequi' || metodo === 'transferencia') {
+  if (metodo === 'nequi' || metodo === 'daviplata') {
     msg += '   Envío el comprobante de pago por este chat. 🧾\n';
   }
   msg += '📍 *Dirección:* ' + direccion + '\n';
@@ -323,7 +323,7 @@ function enviarPedidoWhatsApp(metodo) {
   mostrarPantallaExito({
     metodo:    metodo === 'contraentrega' ? 'Contra entrega'
              : metodo === 'nequi'         ? 'Nequi'
-             : 'Transferencia',
+             : 'Daviplata',
     total:     totales.total,
     referencia: generarReferencia(),
     detalle:   metodo === 'contraentrega'
@@ -342,7 +342,7 @@ function mostrarPantallaExito(info) {
 
   var iconos = {
     'Nequi':          '💜',
-    'Transferencia':  '🏦',
+    'Daviplata':      '🔴',
     'Contra entrega': '📦'
   };
   var icono = iconos[info.metodo] || '✅';
@@ -425,7 +425,7 @@ function inyectarEstilosPago() {
     /* Ícono de opción */
     '.pago-opcion-icono{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;color:#fff}',
     '.pago-nequi{background:linear-gradient(135deg,#7B1FA2,#9C27B0)}',
-    '.pago-transfer{background:linear-gradient(135deg,#1B5E20,#2E7D32)}',
+    '.pago-daviplata{background:linear-gradient(135deg,#C62828,#E53935)}',
     '.pago-contra{background:linear-gradient(135deg,#E65100,#F57C00)}',
 
     '.pago-opcion-label{font-size:.66rem;font-weight:800;color:#333;text-align:center;line-height:1.2}',

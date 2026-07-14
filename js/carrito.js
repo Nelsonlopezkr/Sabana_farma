@@ -319,11 +319,26 @@ function proximoNivelDescuento(subtotal) {
    · precio_fijo: lleva `min` o más unidades y CADA unidad queda a `precio`.
    Los productos con promo activa no acumulan además el % por monto
    (protege el margen). */
+/* Modelo único de promoción: compra 2 unidades de la misma referencia
+   y la 3.ª queda con 25% OFF (≈8,3% de descuento efectivo sobre 3 unds —
+   seguro para márgenes ≥15%). IDs verificados contra productos-data.js. */
 var PROMOS_CANTIDAD = {
+  /* Hidratación */
   10735: { tipo: 'tercera_pct', grupo: 3, pct: 25, etiqueta: '🔥 3er producto 25% OFF' },  /* Electrolit 625 ml ($8.500) */
   10734: { tipo: 'tercera_pct', grupo: 3, pct: 25, etiqueta: '🔥 3er producto 25% OFF' },  /* Pedialyte Max 500 ml ($10.300) */
   10002: { tipo: 'tercera_pct', grupo: 3, pct: 25, etiqueta: '🔥 3er producto 25% OFF' },  /* Hidraplus 400 ml ($10.600) */
-  40038: { tipo: 'precio_fijo', min: 2, precio: 46180, etiqueta: 'Lleva 2+ · 8% OFF' }     /* Winny Pants Etp 6 x30 ($50.200) */
+  /* Gripa y alergia (temporada de frío) */
+  10168: { tipo: 'tercera_pct', grupo: 3, pct: 25, etiqueta: '🔥 3er producto 25% OFF' },  /* Loratadina 10 mg ($2.000, stock 640) */
+  10048: { tipo: 'tercera_pct', grupo: 3, pct: 25, etiqueta: '🔥 3er producto 25% OFF' },  /* Resfrygrip Plus 100 caps ($1.400, stock 352) */
+  10786: { tipo: 'tercera_pct', grupo: 3, pct: 25, etiqueta: '🔥 3er producto 25% OFF' },  /* Noraver Garganta x12 ($2.300, stock 204) */
+  10051: { tipo: 'tercera_pct', grupo: 3, pct: 25, etiqueta: '🔥 3er producto 25% OFF' },  /* Pax Caliente Noche 24 sbs ($2.800) */
+  /* Vitaminas y bienestar */
+  10018: { tipo: 'tercera_pct', grupo: 3, pct: 25, etiqueta: '🔥 3er producto 25% OFF' },  /* Vitamina E 400UI x100 ($4.500, stock 200) */
+  10714: { tipo: 'tercera_pct', grupo: 3, pct: 25, etiqueta: '🔥 3er producto 25% OFF' },  /* Vitamina E+A 150 caps ($11.000, stock 450) */
+  10011: { tipo: 'tercera_pct', grupo: 3, pct: 25, etiqueta: '🔥 3er producto 25% OFF' },  /* Sal de Frutas 50 sbs ($3.200) */
+  10840: { tipo: 'tercera_pct', grupo: 3, pct: 25, etiqueta: '🔥 3er producto 25% OFF' },  /* Ainedix Aceclofenaco x10 ($2.000) */
+  /* Bebé y Mamá (sin pañales — margen bajo) */
+  20039: { tipo: 'tercera_pct', grupo: 3, pct: 25, etiqueta: '🔥 3er producto 25% OFF' }   /* Toallitas Winny Aloe x100 ($13.000) */
 };
 
 /* Unidades totales de un producto en el carrito (suma sabores/variantes) */
@@ -779,7 +794,7 @@ function checkoutWhatsApp() {
   msg += '━━━━━━━━━━━━━━━━\n';
   msg += '💳 *TOTAL: ' + _cop(totales.total) + '*\n\n';
   msg += '📍 *Dirección de entrega:* (por favor indíquela)\n';
-  msg += '\n💳 *Pago:* Nequi · Transferencia · Otros electrónicos\n';
+  msg += '\n💳 *Pago:* Nequi · Daviplata · Contra entrega (efectivo)\n';
   msg += '   Número de pagos: *312 421 39 86*\n\n';
   msg += '🚚 Domicilio: ' + (totales.envio === 0 ? 'GRATIS ✅' : '$3.000 (gratis en pedidos +$20.000)') + '\n';
   msg += '⏱️ Entrega estimada: 30–40 minutos\n\n';
@@ -841,15 +856,15 @@ function inyectarModalCarrito() {
           '<div class="carrito-total-fila"><span>Total</span><span id="carritoTotal">$0</span></div>' +
           '<div style="background:#E8F5E9;border:1.5px solid #C8E6C9;border-radius:10px;padding:.7rem .9rem;font-size:.75rem;margin:.2rem 0">' +
             '<div style="font-weight:900;color:#1B5E20;margin-bottom:.35rem">💳 Datos para pago:</div>' +
-            '<div style="font-size:.73rem;color:#2E7D32;font-weight:700;margin-bottom:.2rem">📲 Nequi · Transferencia: <strong>312 421 39 86</strong></div>' +
+            '<div style="font-size:.73rem;color:#2E7D32;font-weight:700;margin-bottom:.2rem">📲 Nequi · Daviplata: <strong>312 421 39 86</strong></div>' +
             '<div style="font-size:.68rem;color:#555">Realiza tu pago y envía el comprobante por WhatsApp al confirmar el pedido.</div>' +
           '</div>' +
           '<div>' +
             '<div class="pagos-carrito-title">&#x1F4B3; Aceptamos:</div>' +
             '<div class="pagos-carrito">' +
               '<span class="pago-mini">🟢 Nequi</span>' +
-              '<span class="pago-mini">🏦 Transferencia</span>' +
-              '<span class="pago-mini">📱 Otros electrónicos</span>' +
+              '<span class="pago-mini">🔴 Daviplata</span>' +
+              '<span class="pago-mini">🛵 Contra entrega</span>' +
               '<div style="font-size:.66rem;color:#6b7280;margin-top:.25rem">Pagos al: <strong>312 421 39 86</strong></div>' +
             '</div>' +
           '</div>' +

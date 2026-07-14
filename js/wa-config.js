@@ -21,12 +21,9 @@ window.DE_CONFIG = {
   ENVIO_PRECIO:       3000,
   ENVIO_GRATIS_DESDE: 20000,
 
-  /* ── Bancolombia ── */
-  BANCO_NOMBRE:   'Bancolombia',
-  BANCO_TIPO:     'Cuenta de Ahorros',
-  BANCO_NUMERO:   '123-456789-00',
-  BANCO_TITULAR:  'Sabana Farma',
-  BANCO_NIT:      '1.234.567.890',
+  /* ── Métodos de pago aceptados ──
+     Nequi y Daviplata al número WA_NEQUI, o efectivo contra entrega. */
+  PAGOS: ['Nequi', 'Daviplata', 'Contra entrega'],
 
   /* ── Registro de pedidos (Google Sheets) ──
      Pega aquí la URL de la aplicación web de Apps Script.

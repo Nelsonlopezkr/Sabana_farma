@@ -11,7 +11,7 @@
 
  <!-- Open Graph (WhatsApp, Facebook) -->
  <meta property="og:title" content="Sabana Farma | Mosquera y Funza, Cundinamarca">
- <meta property="og:description" content="Tu salud, más cerca de ti. 🚚 Domicilio GRATIS en pedidos +$20.000 · +2.000 productos · Pedidos por WhatsApp · Nequi · Transferencia · Medios electrónicos.">
+ <meta property="og:description" content="Tu salud, más cerca de ti. 🚚 Domicilio GRATIS en pedidos +$20.000 · +2.000 productos · Pedidos por WhatsApp · Nequi · Daviplata · Contra entrega.">
  <meta property="og:type" content="website">
  <meta property="og:image" content="https://sabanafarma.com/img/og-banner.jpg">
  <meta property="og:image:width" content="1200">
@@ -34,7 +34,7 @@
  "url": "https://sabanafarma.com/",
  "image": "https://sabanafarma.com/img/og-banner.jpg",
  "currenciesAccepted": "COP",
- "paymentAccepted": "Nequi, Transferencia bancaria, Medios electrónicos",
+ "paymentAccepted": "Nequi, Daviplata, Efectivo contra entrega",
  "areaServed": [
  {"@type": "City", "name": "Mosquera", "addressRegion": "Cundinamarca"},
  {"@type": "City", "name": "Funza", "addressRegion": "Cundinamarca"}
@@ -545,7 +545,7 @@
  <div class="garantia-icon">💳</div>
  <div>
  <h4>Múltiples formas de pago</h4>
- <p>Nequi · Transferencia bancaria · Otros medios electrónicos. Pagos al <a href="tel:+573118719476" style="color:var(--azul)">312 421 39 86</a>.</p>
+ <p>Nequi · Daviplata · Efectivo contra entrega. Pagos al <a href="tel:+573118719476" style="color:var(--azul)">312 421 39 86</a>.</p>
  </div>
  </div>
 
@@ -692,8 +692,8 @@
  <p style="font-size:.72rem;font-weight:800;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem">Aceptamos</p>
  <div class="pagos-strip">
  <span class="pago-chip"><span>🟢</span> Nequi</span>
- <span class="pago-chip"><span>🏦</span> Transferencia</span>
- <span class="pago-chip"><span>📱</span> Otros electrónicos</span>
+ <span class="pago-chip"><span>🔴</span> Daviplata</span>
+ <span class="pago-chip"><span>🛵</span> Contra entrega</span>
  </div>
  <p style="font-size:.68rem;color:rgba(255,255,255,.45);margin-top:.45rem">Pagos: <strong style="color:rgba(255,255,255,.7)">312 421 39 86</strong></p>
  </div>
@@ -813,8 +813,8 @@
  <div class="pagos-carrito-title">💳 Aceptamos:</div>
  <div class="pagos-carrito">
  <span class="pago-mini">🟢 Nequi</span>
- <span class="pago-mini">🏦 Transferencia</span>
- <span class="pago-mini">📱 Otros electrónicos</span>
+ <span class="pago-mini">🔴 Daviplata</span>
+ <span class="pago-mini">🛵 Contra entrega</span>
  </div>
  <div style="font-size:.68rem;color:var(--color-texto-sec,#6b7280);margin-top:.35rem;text-align:center">
  Pagos al: <strong>312 421 39 86</strong>
@@ -1189,19 +1189,20 @@
  dd.classList.add('activo');
  }
 
- /* ── Buscador arriba del hero en móvil (≤900px) ──
-    Mueve el buscador existente como primer elemento del hero
-    para que sea lo primero visible bajo el navbar en celular.
+ /* ── Buscador arriba del navbar en móvil (≤900px) ──
+    Mueve el buscador existente como franja azul ANTES del
+    navbar (arriba del nombre de la droguería), para que sea
+    lo primero visible en celular.
     En escritorio vuelve a su posición original. ── */
  function ubicarBuscadorHero() {
  var wrap    = document.getElementById('heroSearchWrap');
- var inner   = document.querySelector('.hero-inner');
+ var nav     = document.querySelector('nav.navbar');
  var content = document.querySelector('.hero-content');
- if (!wrap || !inner || !content) return;
+ if (!wrap || !nav || !content) return;
  var inpB = document.getElementById('heroBuscadorInput');
  var esMovil = window.matchMedia('(max-width: 900px)').matches;
  if (esMovil) {
- if (inner.firstElementChild !== wrap) inner.insertBefore(wrap, inner.firstElementChild);
+ if (wrap.nextElementSibling !== nav) nav.parentNode.insertBefore(wrap, nav);
  wrap.classList.add('hero-search-top');
  if (inpB) inpB.placeholder = 'Buscar… aquí';
  } else {
@@ -1254,6 +1255,9 @@
 
 <script defer src="js/promo-dia.js"></script>
 <script src="js/navbar-search.js"></script>
+<script defer src="js/pwa-init.js"></script>
+<script defer src="js/newsletter.js"></script>
+<script defer src="js/favoritos.js"></script>
 
 </body>
 </html>

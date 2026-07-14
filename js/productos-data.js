@@ -5244,7 +5244,7 @@ var CATALOGO = [
     ],
     "existencias": 18,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7703712030787"
   },
   {
@@ -5684,7 +5684,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707019469707"
   },
   {
@@ -5728,7 +5728,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707019314229"
   },
   {
@@ -5762,7 +5762,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7703432421605"
   },
   {
@@ -5806,7 +5806,7 @@ var CATALOGO = [
     ],
     "existencias": 30,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -6376,7 +6376,7 @@ var CATALOGO = [
     ],
     "existencias": 400,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -6501,7 +6501,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702184010761"
   },
   {
@@ -6518,7 +6518,7 @@ var CATALOGO = [
     ],
     "existencias": 16,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7703432422237"
   },
   {
@@ -6671,7 +6671,7 @@ var CATALOGO = [
     ],
     "existencias": 20,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -6715,7 +6715,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707019469806"
   },
   {
@@ -6824,7 +6824,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702057074487"
   },
   {
@@ -6872,7 +6872,7 @@ var CATALOGO = [
     ],
     "existencias": 195,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -6950,7 +6950,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702057071073"
   },
   {
@@ -7204,7 +7204,7 @@ var CATALOGO = [
     ],
     "existencias": 210,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -7258,7 +7258,7 @@ var CATALOGO = [
     ],
     "existencias": 280,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -7302,7 +7302,7 @@ var CATALOGO = [
     ],
     "existencias": 9,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Ampolla",
@@ -7431,7 +7431,7 @@ var CATALOGO = [
     ],
     "existencias": 10,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7703712032552"
   },
   {
@@ -7529,7 +7529,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702057700928"
   },
   {
@@ -7726,7 +7726,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702057709037"
   },
   {
@@ -7831,7 +7831,7 @@ var CATALOGO = [
     ],
     "existencias": 20,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -7919,7 +7919,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7703763070329"
   },
   {
@@ -8055,7 +8055,7 @@ var CATALOGO = [
     ],
     "existencias": 60,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702195713408"
   },
   {
@@ -8072,7 +8072,7 @@ var CATALOGO = [
     ],
     "existencias": 7,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707321981539"
   },
   {
@@ -8742,7 +8742,7 @@ var CATALOGO = [
     ],
     "existencias": 60,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702195713507"
   },
   {
@@ -8759,7 +8759,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7705959881016"
   },
   {
@@ -9000,7 +9000,7 @@ var CATALOGO = [
     ],
     "existencias": 20,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -9390,7 +9390,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7704412142916"
   },
   {
@@ -9767,7 +9767,7 @@ var CATALOGO = [
     ],
     "existencias": 135,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -10126,7 +10126,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Caja",
@@ -10153,7 +10153,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "0"
   },
   {
@@ -10230,7 +10230,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Ampolla",
@@ -10502,7 +10502,7 @@ var CATALOGO = [
     ],
     "existencias": 18,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7703153039325"
   },
   {
@@ -10519,7 +10519,7 @@ var CATALOGO = [
     ],
     "existencias": 10,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -10567,7 +10567,7 @@ var CATALOGO = [
     ],
     "existencias": 190,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -10713,7 +10713,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707274722715"
   },
   {
@@ -11091,7 +11091,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7703712031456"
   },
   {
@@ -11376,7 +11376,7 @@ var CATALOGO = [
     ],
     "existencias": 30,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702605107278"
   },
   {
@@ -11393,7 +11393,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -11715,7 +11715,7 @@ var CATALOGO = [
     ],
     "existencias": 200,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -11742,7 +11742,7 @@ var CATALOGO = [
     ],
     "existencias": 290,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -11820,7 +11820,7 @@ var CATALOGO = [
     ],
     "existencias": 22,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -12662,7 +12662,7 @@ var CATALOGO = [
     ],
     "existencias": 90,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -12689,7 +12689,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -12882,7 +12882,7 @@ var CATALOGO = [
     ],
     "existencias": 4,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702195051890"
   },
   {
@@ -12899,7 +12899,7 @@ var CATALOGO = [
     ],
     "existencias": 63,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Ampolla",
@@ -12980,7 +12980,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7703546039406"
   },
   {
@@ -13099,7 +13099,7 @@ var CATALOGO = [
     ],
     "existencias": 60,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -13174,7 +13174,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702605103232"
   },
   {
@@ -13547,7 +13547,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -13686,7 +13686,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7705959881221"
   },
   {
@@ -14495,7 +14495,7 @@ var CATALOGO = [
     ],
     "existencias": 50,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -14539,7 +14539,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7709467724032"
   },
   {
@@ -14889,7 +14889,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707019381627"
   },
   {
@@ -15150,7 +15150,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707019340204"
   },
   {
@@ -15290,7 +15290,7 @@ var CATALOGO = [
     ],
     "existencias": 4,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -15741,7 +15741,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707019314205"
   },
   {
@@ -15785,7 +15785,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -15812,7 +15812,7 @@ var CATALOGO = [
     ],
     "existencias": 220,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -16212,7 +16212,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707019314120"
   },
   {
@@ -16229,7 +16229,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702896002160"
   },
   {
@@ -16246,7 +16246,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7703712030855"
   },
   {
@@ -16280,7 +16280,7 @@ var CATALOGO = [
     ],
     "existencias": 14198,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707246940055"
   },
   {
@@ -16514,7 +16514,7 @@ var CATALOGO = [
     ],
     "existencias": 9,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -16656,7 +16656,7 @@ var CATALOGO = [
     ],
     "existencias": 40,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -16727,7 +16727,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702057079598"
   },
   {
@@ -16744,7 +16744,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702057079369"
   },
   {
@@ -17143,7 +17143,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7706569001184"
   },
   {
@@ -17527,7 +17527,7 @@ var CATALOGO = [
     ],
     "existencias": 8,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707019381108"
   },
   {
@@ -17811,7 +17811,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702057712808"
   },
   {
@@ -18245,7 +18245,7 @@ var CATALOGO = [
     ],
     "existencias": 20,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -18401,7 +18401,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702057700973"
   },
   {
@@ -18503,7 +18503,7 @@ var CATALOGO = [
     ],
     "existencias": 100,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -18534,7 +18534,7 @@ var CATALOGO = [
     ],
     "existencias": 366,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Caja",
@@ -18588,7 +18588,7 @@ var CATALOGO = [
     ],
     "existencias": 32,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Caja",
@@ -19277,7 +19277,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707019413830"
   },
   {
@@ -19311,7 +19311,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707019412604"
   },
   {
@@ -19997,7 +19997,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7705959881214"
   },
   {
@@ -20262,7 +20262,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7703153016234"
   },
   {
@@ -20408,7 +20408,7 @@ var CATALOGO = [
     ],
     "existencias": 4,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707367050985"
   },
   {
@@ -20496,7 +20496,7 @@ var CATALOGO = [
     ],
     "existencias": 4,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707019380606"
   },
   {
@@ -20899,7 +20899,7 @@ var CATALOGO = [
     ],
     "existencias": 45,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -21180,7 +21180,7 @@ var CATALOGO = [
     ],
     "existencias": 20,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -21322,7 +21322,7 @@ var CATALOGO = [
     ],
     "existencias": 60,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -21712,7 +21712,7 @@ var CATALOGO = [
     ],
     "existencias": 10,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -23104,7 +23104,7 @@ var CATALOGO = [
     ],
     "existencias": 180,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -23165,7 +23165,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702896002306"
   },
   {
@@ -23182,7 +23182,7 @@ var CATALOGO = [
     ],
     "existencias": 30,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Caja",
@@ -23396,7 +23396,7 @@ var CATALOGO = [
     ],
     "existencias": 30,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707228364091"
   },
   {
@@ -23413,7 +23413,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7501098608084"
   },
   {
@@ -23464,7 +23464,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7706569021366"
   },
   {
@@ -23617,7 +23617,7 @@ var CATALOGO = [
     ],
     "existencias": 300,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -24810,7 +24810,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707035581353"
   },
   {
@@ -24827,7 +24827,7 @@ var CATALOGO = [
     ],
     "existencias": 5,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707035510124"
   },
   {
@@ -24844,7 +24844,7 @@ var CATALOGO = [
     ],
     "existencias": 240,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -25102,7 +25102,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7703445040015"
   },
   {
@@ -25373,7 +25373,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7501298224947"
   },
   {
@@ -25509,7 +25509,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702605105625"
   },
   {
@@ -25943,7 +25943,7 @@ var CATALOGO = [
     ],
     "existencias": 4,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707019310177"
   },
   {
@@ -25960,7 +25960,7 @@ var CATALOGO = [
     ],
     "existencias": 250,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -26062,7 +26062,7 @@ var CATALOGO = [
     ],
     "existencias": 45,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -26120,7 +26120,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -26147,7 +26147,7 @@ var CATALOGO = [
     ],
     "existencias": 120,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -27512,7 +27512,7 @@ var CATALOGO = [
     ],
     "existencias": 170,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -27651,7 +27651,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707351591159"
   },
   {
@@ -27858,7 +27858,7 @@ var CATALOGO = [
     ],
     "existencias": 30,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -28617,7 +28617,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7501298224237"
   },
   {
@@ -28668,7 +28668,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7703763700110"
   },
   {
@@ -28746,7 +28746,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702057079642"
   },
   {
@@ -28862,7 +28862,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702057712594"
   },
   {
@@ -29791,7 +29791,7 @@ var CATALOGO = [
     ],
     "existencias": 7,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Ampolla",
@@ -30059,7 +30059,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -30198,7 +30198,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Caja",
@@ -30225,7 +30225,7 @@ var CATALOGO = [
     ],
     "existencias": 10,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -30469,7 +30469,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Caja",
@@ -30547,7 +30547,7 @@ var CATALOGO = [
     ],
     "existencias": 140,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -31110,7 +31110,7 @@ var CATALOGO = [
     ],
     "existencias": 90,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -31300,7 +31300,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Ampolla",
@@ -31354,7 +31354,7 @@ var CATALOGO = [
     ],
     "existencias": 30,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Caja",
@@ -31622,7 +31622,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702605102617"
   },
   {
@@ -31999,7 +31999,7 @@ var CATALOGO = [
     ],
     "existencias": 8,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -32138,7 +32138,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -32165,7 +32165,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -32403,7 +32403,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -32464,7 +32464,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -32810,7 +32810,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "5000456009850"
   },
   {
@@ -32827,7 +32827,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -33679,7 +33679,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -33740,7 +33740,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -33869,7 +33869,7 @@ var CATALOGO = [
     ],
     "existencias": 4,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707357202776"
   },
   {
@@ -34083,7 +34083,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "8902269270755"
   },
   {
@@ -34965,7 +34965,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7501298224275"
   },
   {
@@ -35121,7 +35121,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "9708080808"
   },
   {
@@ -35454,7 +35454,7 @@ var CATALOGO = [
     ],
     "existencias": 11,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -35681,7 +35681,7 @@ var CATALOGO = [
     ],
     "existencias": 4,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7708902758717"
   },
   {
@@ -35729,7 +35729,7 @@ var CATALOGO = [
     ],
     "existencias": 13,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -35807,7 +35807,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702605109128"
   },
   {
@@ -35824,7 +35824,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702418000872"
   },
   {
@@ -36116,7 +36116,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -36820,7 +36820,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707263003986"
   },
   {
@@ -36837,7 +36837,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7703712035973"
   },
   {
@@ -36922,7 +36922,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -36949,7 +36949,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707184161086"
   },
   {
@@ -37010,7 +37010,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707067620396"
   },
   {
@@ -37224,7 +37224,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7703763341030"
   },
   {
@@ -37443,7 +37443,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "8904208904936"
   },
   {
@@ -37521,7 +37521,7 @@ var CATALOGO = [
     ],
     "existencias": 5,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -37599,7 +37599,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7703712080713"
   },
   {
@@ -37687,7 +37687,7 @@ var CATALOGO = [
     ],
     "existencias": 30,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -37714,7 +37714,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7704412000100"
   },
   {
@@ -37955,7 +37955,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7709530287624"
   },
   {
@@ -37989,7 +37989,7 @@ var CATALOGO = [
     ],
     "existencias": 81,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Caja",
@@ -38033,7 +38033,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -38148,7 +38148,7 @@ var CATALOGO = [
     ],
     "existencias": 16,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707270361208"
   },
   {
@@ -38213,7 +38213,7 @@ var CATALOGO = [
     ],
     "existencias": 9,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -38416,7 +38416,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7708952877192"
   },
   {
@@ -38694,7 +38694,7 @@ var CATALOGO = [
     ],
     "existencias": 36,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -38748,7 +38748,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707067510246"
   },
   {
@@ -38860,7 +38860,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7707019302202"
   },
   {
@@ -39026,7 +39026,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -39369,7 +39369,7 @@ var CATALOGO = [
     ],
     "existencias": 11,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "6916119062652"
   },
   {
@@ -39553,7 +39553,7 @@ var CATALOGO = [
     ],
     "existencias": 34,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -39718,7 +39718,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702184020616"
   },
   {
@@ -40267,7 +40267,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7704412265776"
   },
   {
@@ -40704,7 +40704,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7702605100682"
   },
   {
@@ -41203,7 +41203,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true ,
     "codigoBarras": "7709587585025"
   },
   {

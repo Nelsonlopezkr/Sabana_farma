@@ -1560,31 +1560,32 @@ body.pagina-promociones .promo-hero-btns { display: none !important; }
         </div>
       </article>
 
-      <!-- 3 Combo bebé -->
+      <!-- 3 Bebé y Mamá — Toallitas 2+1 al 25% -->
       <article class="promo-card-v2 reveal reveal-delay-2" data-cat="bebe" role="listitem">
         <div class="pcard-img">
           <img src="https://images.unsplash.com/photo-1622484212850-eb596d769edc?w=600&q=80"
-               alt="Combo bebé esencial con pañales y crema"
+               alt="Toallitas húmedas para bebé en promoción"
                loading="lazy"
                onerror="this.src='https://picsum.photos/seed/bebe/600/400'">
           <div class="pcard-badges">
-            <span class="pcard-badge badge-verde"><i class="fas fa-percent"></i> 8% OFF</span>
+            <span class="pcard-badge badge-azul"><i class="fas fa-baby"></i> 🔥 3er producto 25% OFF</span>
+            <span class="pcard-badge badge-verde">Compra 2 · 3.º con descuento</span>
           </div>
           <span class="pcard-cat-tag">Bebé y Mamá</span>
         </div>
         <div class="pcard-body">
-          <h3>👶 Pañales Winny Pants</h3>
-          <div class="pcard-vigencia"><i class="fas fa-cart-plus"></i> Lleva 2+ paquetes · el precio baja solo en tu carrito</div>
-          <p>Llevando 2 o más paquetes de Winny Pants etapa 6 ×30, cada uno te queda a $46.180 (antes $50.200). No acumulable con el descuento por monto.</p>
+          <h3>👶 Toallitas Winny Aloe ×100</h3>
+          <div class="pcard-vigencia"><i class="fas fa-cart-plus"></i> Compra 2 y el 3.º con 25% OFF · se aplica solo en tu carrito</div>
+          <p>Compra 2 paquetes de Toallitas Winny Aloe + Vitamina E ×100 y el 3.º te queda a $9.750 (normal $13.000). El descuento se aplica automáticamente en tu carrito.</p>
           <div class="pcard-precios">
-            <span class="pcard-precio-antes">$50.200</span>
-            <span class="pcard-precio-ahora">$46.180</span>
-            <span class="pcard-ahorro">Ahorras $4.020</span>
+            <span class="pcard-precio-antes">$13.000</span>
+            <span class="pcard-precio-ahora">$9.750</span>
+            <span class="pcard-ahorro">3.ª unidad comprando 2</span>
           </div>
         </div>
         <div class="pcard-footer">
-          <a href="productos.html?buscar=Winny+Pants" style="font-size:.8rem;font-weight:700;color:var(--azul,#1565C0)"><i class="fas fa-eye"></i> Ver producto</a>
-          <a href="https://wa.me/573118719476?text=Hola%2C+quiero+los+pa%C3%B1ales+Winny+Pants+con+8%25+OFF" target="_blank" rel="noopener" class="btn-pcard">
+          <a href="productos.html?buscar=Toall+Winny+Aloe" style="font-size:.8rem;font-weight:700;color:var(--azul,#1565C0)"><i class="fas fa-eye"></i> Ver producto</a>
+          <a href="https://wa.me/573118719476?text=Hola%2C+quiero+las+Toallitas+Winny+con+la+promo+2%2B1+al+25%25" target="_blank" rel="noopener" class="btn-pcard">
             <i class="fab fa-whatsapp"></i> Pedir
           </a>
         </div>
@@ -1833,7 +1834,7 @@ body.pagina-promociones .promo-hero-btns { display: none !important; }
         </div>
         <div class="cupon-wa-body">
           <div class="cupon-wa-titulo">Para los más pequeños</div>
-          <div class="cupon-wa-desc">12% en toda la categoría Bebé y Mamá: pañales, cremas, toallitas, leches y vitaminas maternales.</div>
+          <div class="cupon-wa-desc">12% en la categoría Bebé y Mamá: cremas, toallitas, leches y vitaminas maternales (no aplica a pañales).</div>
           <div class="cupon-wa-condicion"><i class="fas fa-info-circle"></i> Compra mínima $25.000 · Válido este mes</div>
           <a href="https://wa.me/573118719476?text=Hola%2C+quiero+el+12%25+en+productos+Beb%C3%A9+y+Mam%C3%A1+%F0%9F%91%B6" target="_blank" rel="noopener" class="btn-cupon-wa">
             <i class="fab fa-whatsapp"></i> Aprovechar oferta
@@ -2197,7 +2198,7 @@ if (mainBadge) {
     '🌟 HOY MIÉRCOLES — Vitamina C efervescente x10 a <strong>$4.500</strong>',
     '🌟 HOY JUEVES — Omeprazol 20mg x30 cáps a <strong>$9.800</strong>',
     '🌟 HOY VIERNES — Crema Bepanthen 30g a <strong>$15.000</strong>',
-    '🌟 HOY SÁBADO — Pañales Pampers talla 2 x40 a <strong>$24.500</strong>',
+    '🌟 HOY SÁBADO — Compra 2 Electrolit y el 3.º con <strong>25% OFF</strong>',
   ];
   const bar = document.getElementById('promoDiaBar');
   if (bar) bar.innerHTML = promos[new Date().getDay()];
@@ -2391,6 +2392,8 @@ if (subtotalEl) new MutationObserver(actualizarEnvio).observe(subtotalEl, { chil
 </script>
 
 <script src="js/navbar-search.js"></script>
+<script defer src="js/pwa-init.js"></script>
+<script defer src="js/newsletter.js"></script>
 
 </body>
 </html>

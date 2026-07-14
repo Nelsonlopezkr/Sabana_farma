@@ -12168,20 +12168,26 @@ body.oscuro .cs-nombre { color: #e0e0e0 }
 }
 
 /* ══════════════════════════════════════════════════════════
-   BUSCADOR HERO ARRIBA EN MÓVIL
+   BUSCADOR ARRIBA DEL NAVBAR EN MÓVIL
    En pantallas ≤900px el buscador del hero se reubica (vía JS
-   en index.html) como primer elemento del hero, justo debajo
-   del navbar, para que sea lo primero que ve el cliente.
+   en index.html) como franja azul ANTES del navbar, arriba del
+   nombre de la droguería: lo primero que ve el cliente.
    ══════════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
   .hero-search.hero-search-top {
     width: 100%;
-    max-width: 540px;
-    margin: 0 auto .25rem;
-    grid-column: 1 / -1;
+    max-width: none;
+    margin: 0;
+    padding: .65rem 1rem .6rem;
+    background: linear-gradient(135deg, #0d47a1, #1565C0);
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2000;                       /* dropdown por encima del navbar */
   }
   .hero-search-top .hero-search-inner {
-    border-radius: 999px;               /* píldora como el mockup */
+    max-width: 540px;
+    margin: 0 auto;
+    border-radius: 999px;                /* píldora como el mockup */
     box-shadow: 0 6px 24px rgba(0,0,0,.28);
     border: 2.5px solid rgba(255,255,255,.9);
   }
@@ -12194,6 +12200,14 @@ body.oscuro .cs-nombre { color: #e0e0e0 }
     font-weight: 900;
   }
   .hero-search-top .hero-search-btn { border-radius: 999px; }
-  /* Chips "Popular" más compactos arriba */
-  .hero-search-top .hero-search-chips { justify-content: center; }
+  /* Dropdown centrado bajo la píldora */
+  .hero-search-top .hero-search-dropdown {
+    max-width: 540px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: calc(100% - 2rem);
+  }
+  /* Chips "Popular" ocultos arriba para mantener la franja compacta */
+  .hero-search-top .hero-search-chips { display: none; }
 }
