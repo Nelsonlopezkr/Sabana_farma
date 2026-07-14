@@ -1765,6 +1765,14 @@ function aplicarFiltros() {
 /* ════════════════════════════════════════════════════════
    RENDER GRILLA — paginación correcta (sin duplicados)
    ════════════════════════════════════════════════════════ */
+
+/* Escapar HTML — previene XSS al reflejar texto del usuario (ej. ?buscar=) */
+function escaparHTML(s) {
+  return String(s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
 function renderGrilla(append) {
   var grid = document.getElementById('productosGrid');
   if (!grid || typeof CATALOGO === 'undefined') return;
@@ -1810,7 +1818,7 @@ function renderGrilla(append) {
     grid.innerHTML = '<div class="empty-state">' +
       '<div class="empty-icon">🔍</div>' +
       '<h3>Sin resultados</h3>' +
-      '<p>No encontramos <strong>' + (ESTADO.filtros.busqueda ? '&ldquo;' + ESTADO.filtros.busqueda + '&rdquo;' : 'productos') + '</strong> con esos filtros.</p>' +
+      '<p>No encontramos <strong>' + (ESTADO.filtros.busqueda ? '&ldquo;' + escaparHTML(ESTADO.filtros.busqueda) + '&rdquo;' : 'productos') + '</strong> con esos filtros.</p>' +
       '<div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">' +
         '<button onclick="limpiarFiltros()" class="btn-primario"><i class="fas fa-redo"></i> Limpiar filtros</button>' +
         '<a href="https://wa.me/' + WA_NUM + '?text=Hola%2C+busco+un+producto+específico" target="_blank" class="btn-primario" style="background:#25D366"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>' +

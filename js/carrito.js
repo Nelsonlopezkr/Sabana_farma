@@ -33,17 +33,21 @@ function guardarCarrito() {
   try { localStorage.setItem('de_carrito', JSON.stringify(carrito)); } catch (e) {}
 }
 
-/* ─── Reglas de productos sugeridos ─── */
+/* ─── Reglas de productos sugeridos ───
+   IDs verificados contra productos-data.js (catálogo real).
+   Si un ID deja de existir, el respaldo por categoría lo cubre. */
 var SUGERENCIAS_MAP = {
-  1:  [4, 22, 5],    // Acetaminofén → Antigripal, Vitamina C, Loratadina
-  2:  [16, 1],       // Ibuprofeno → Diclofenaco, Acetaminofén
-  4:  [1, 22],       // Antigripal → Acetaminofén, Vitamina C
-  6:  [14, 33],      // Omeprazol → ENO, Simeticona
-  32: [31],          // Electrolit → Sales rehidratación
-  301:[304, 305],    // Pañales Pampers → Toallitas, Bepanthen
-  302:[304, 305],    // Pañales Huggies → Toallitas, Bepanthen
-  101:[102, 103],    // Shampoo → Acondicionador, Crema peinar
-  201:[202, 204],    // Jabón Dove → Desodorante, Pasta dental
+  10239: [10053, 10656, 10168], // Acetaminofén 500MG → Noxpirin, Vitamina C+Zinc, Loratadina
+  10659: [10215, 10239],        // Ibuprofeno 400MG → Diclofenaco Retard, Acetaminofén
+  10053: [10239, 10656],        // Noxpirin (antigripal) → Acetaminofén, Vitamina C+Zinc
+  10436: [10011, 10005],        // Omeprazol → Sal de Frutas, Alka-Seltzer
+  10735: [10734, 10002],        // Electrolit 625ML → Pedialyte, Hidraplus
+  10734: [10735, 10002],        // Pedialyte → Electrolit, Hidraplus
+  10002: [10735, 10734],        // Hidraplus → Electrolit, Pedialyte
+  40038: [20039, 10660],        // Pañal Winny Pants Etp6 → Toallitas Winny, Acid Mantle antipañalitis
+  40020: [20039, 10660],        // Pañal Winny Pants ET5 → Toallitas Winny, Acid Mantle antipañalitis
+  20013: [20026, 20105],        // Sedal Shampoo → Acondicionador Savital, Oferta Savital
+  40007: [20276, 40030]         // Jabón Dove → Desodorante Speed Stick, Yodora
 };
 
 function getSugerencias() {
@@ -51,6 +55,7 @@ function getSugerencias() {
   var yaEnCarrito = carrito.map(function(i) { return i.id; });
   var candidatos  = [];
 
+  /* 1. Sugerencias curadas (solo si el ID existe en el catálogo) */
   carrito.forEach(function(item) {
     var sugs = SUGERENCIAS_MAP[item.id];
     if (!sugs) return;
@@ -61,9 +66,31 @@ function getSugerencias() {
     });
   });
 
-  return candidatos.slice(0, 3).map(function(sid) {
+  var resultado = candidatos.slice(0, 3).map(function(sid) {
     return CATALOGO.find(function(p) { return p.id === sid; });
   }).filter(Boolean);
+
+  /* 2. Respaldo: completar con productos de la misma categoría
+        (con stock y precio válido) si faltan sugerencias */
+  if (resultado.length < 3) {
+    var catsEnCarrito = {};
+    carrito.forEach(function(i) {
+      var p = CATALOGO.find(function(x) { return x.id === i.id; });
+      if (p && p.categoria) catsEnCarrito[p.categoria] = true;
+    });
+    var idsUsados = resultado.map(function(p) { return p.id; });
+    for (var k = 0; k < CATALOGO.length && resultado.length < 3; k++) {
+      var c = CATALOGO[k];
+      if (!catsEnCarrito[c.categoria]) continue;
+      if (yaEnCarrito.indexOf(c.id) !== -1 || idsUsados.indexOf(c.id) !== -1) continue;
+      if (!c.existencias || c.existencias <= 0) continue;
+      if (!c.variantes || !c.variantes[0] || !c.variantes[0].precio) continue;
+      resultado.push(c);
+      idsUsados.push(c.id);
+    }
+  }
+
+  return resultado;
 }
 
 /* ─── Agregar ─── */

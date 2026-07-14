@@ -219,7 +219,7 @@ git push origin main
 | Canal | Dato |
 |---|---|
 | WhatsApp pedidos | [311 871 94 76](https://wa.me/573118719476) |
-| WhatsApp pagos | [323 249 7559](https://wa.me/573232497559) |
+| Pagos Nequi / Transferencia | 312 421 39 86 |
 | GitHub | [Nelsonlopezkr/Sabana_farma](https://github.com/Nelsonlopezkr/Sabana_farma) |
 
 ---

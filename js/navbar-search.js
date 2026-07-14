@@ -52,6 +52,13 @@
   /* ── Escapar RegExp ── */
   function esc(s) { return s.replace(/[-.*+?^${}()|[\]\\]/g, '\\$&'); }
 
+  /* ── Escapar HTML (previene XSS al reflejar la búsqueda) ── */
+  function escHtml(s) {
+    return String(s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
   /* ── Precio de producto (compatible con labs{} y variantes[]) ── */
   function precioProducto(p) {
     if (p.laboratorios) {
@@ -110,7 +117,7 @@
       dd.innerHTML = [
         '<div class="nav-ac-empty">',
           '<i class="fas fa-search-minus"></i>',
-          '<span>Sin resultados para <strong>«' + q + '»</strong></span>',
+          '<span>Sin resultados para <strong>«' + escHtml(q) + '»</strong></span>',
           '<a class="nav-ac-wa" href="https://wa.me/' + WA_NUM +
             '?text=' + encodeURIComponent('Hola, ¿tienen ' + q + '?') +
             '" target="_blank" rel="noopener">',
@@ -154,7 +161,7 @@
     html += [
       '<div class="nav-ac-footer">',
         '<button class="nav-ac-ver-todos" onclick="navSearchIrACatalogo(\'' + idSuffix + '\')">',
-          '<i class="fas fa-th-large"></i> Ver todos los resultados para «' + q + '»',
+          '<i class="fas fa-th-large"></i> Ver todos los resultados para «' + escHtml(q) + '»',
           '<i class="fas fa-arrow-right"></i>',
         '</button>',
       '</div>'

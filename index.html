@@ -1070,6 +1070,8 @@
  if (typeof CATALOGO !== 'undefined') {
  var counts = {};
  CATALOGO.forEach(function(p) { counts[p.categoria] = (counts[p.categoria]||0)+1; });
+ /* Fusión: Belleza + Cuidado Personal → Cuidado Personal y Belleza */
+ counts['Cuidado Personal y Belleza'] = (counts['Belleza'] || 0) + (counts['Cuidado Personal'] || 0) + (counts['Cuidado Personal y Belleza'] || 0);
  document.querySelectorAll('.cat-hero-card').forEach(function(card) {
  var el = card.querySelector('.cat-hero-count');
  if (el && counts[card.dataset.cat]) el.textContent = counts[card.dataset.cat].toLocaleString() + ' productos';
@@ -1100,6 +1102,13 @@
  /* Escapar caracteres especiales de RegExp */
  function escaparRE(s) {
  return s.replace(/[-.*+?^${}()|[\]\\]/g, '\\$&');
+ }
+
+ /* Escapar HTML — previene XSS al reflejar la búsqueda del usuario */
+ function escHtmlHero(s) {
+ return String(s)
+ .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+ .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
  }
 
  window.heroSetQ = function (q) {
@@ -1136,7 +1145,7 @@
  dd.innerHTML =
  '<div class="hero-ac-empty">' +
  '<i class="fas fa-search-minus"></i>' +
- '<span>Sin resultados para <strong>&ldquo;' + q + '&rdquo;</strong></span>' +
+ '<span>Sin resultados para <strong>&ldquo;' + escHtmlHero(q) + '&rdquo;</strong></span>' +
  '<a class="hero-ac-wa" href="https://wa.me/' + WA_HERO +
  '?text=' + encodeURIComponent('Hola, ¿tienen ' + q + '?') +
  '" target="_blank" rel="noopener">' +
@@ -1180,7 +1189,39 @@
  dd.classList.add('activo');
  }
 
+ /* ── Buscador arriba del hero en móvil (≤900px) ──
+    Mueve el buscador existente como primer elemento del hero
+    para que sea lo primero visible bajo el navbar en celular.
+    En escritorio vuelve a su posición original. ── */
+ function ubicarBuscadorHero() {
+ var wrap    = document.getElementById('heroSearchWrap');
+ var inner   = document.querySelector('.hero-inner');
+ var content = document.querySelector('.hero-content');
+ if (!wrap || !inner || !content) return;
+ var inpB = document.getElementById('heroBuscadorInput');
+ var esMovil = window.matchMedia('(max-width: 900px)').matches;
+ if (esMovil) {
+ if (inner.firstElementChild !== wrap) inner.insertBefore(wrap, inner.firstElementChild);
+ wrap.classList.add('hero-search-top');
+ if (inpB) inpB.placeholder = 'Buscar… aquí';
+ } else {
+ if (wrap.parentNode !== content) {
+ var btns = content.querySelector('.hero-btns');
+ if (btns) content.insertBefore(wrap, btns);
+ else content.appendChild(wrap);
+ }
+ wrap.classList.remove('hero-search-top');
+ if (inpB) inpB.placeholder = 'Busca un medicamento, marca o categoría…';
+ }
+ }
+
  document.addEventListener('DOMContentLoaded', function () {
+ ubicarBuscadorHero();
+ window.addEventListener('resize', function () {
+ clearTimeout(window._heroSearchRz);
+ window._heroSearchRz = setTimeout(ubicarBuscadorHero, 150);
+ });
+
  var inp = document.getElementById('heroBuscadorInput');
  if (!inp) return;
 

@@ -7,19 +7,19 @@
 
 window.DE_CONFIG = {
   /* ── Contacto ── */
-  WA_NUM:     '573124213986',       /* ← número único; cámbialo aquí si cambia */
-  WA_NEQUI:   '3224395198',
-  TEL:        '+573124213986',
+  WA_NUM:     '573118719476',       /* ← pedidos WhatsApp; cámbialo aquí si cambia */
+  WA_NEQUI:   '3124213986',         /* ← pagos Nequi / transferencias */
+  TEL:        '+573118719476',
 
   /* ── Tienda ── */
   NOMBRE:     'Sabana Farma',
-  DIRECCION:  'Diagonal 5 Este 7D 7-06, Facatativá, Cundinamarca',
+  DIRECCION:  'Calle 10 #16b 21 Barrio El Poblado, Mosquera, Cundinamarca',
   HORARIO:    'Lun – Dom: 7 am – 10 pm',
   EMAIL:      'sabanafarma01@gmail.com',
 
   /* ── Envío ── */
   ENVIO_PRECIO:       3000,
-  ENVIO_GRATIS_DESDE: 50000,
+  ENVIO_GRATIS_DESDE: 20000,
 
   /* ── Bancolombia ── */
   BANCO_NOMBRE:   'Bancolombia',

@@ -12166,3 +12166,34 @@ body.oscuro .cs-nombre { color: #e0e0e0 }
   .hero-float-der { top: 6% !important; right: 2% !important; }
   .hero-float-izq { top: auto !important; bottom: 8% !important; left: 2% !important; }
 }
+
+/* ══════════════════════════════════════════════════════════
+   BUSCADOR HERO ARRIBA EN MÓVIL
+   En pantallas ≤900px el buscador del hero se reubica (vía JS
+   en index.html) como primer elemento del hero, justo debajo
+   del navbar, para que sea lo primero que ve el cliente.
+   ══════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .hero-search.hero-search-top {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto .25rem;
+    grid-column: 1 / -1;
+  }
+  .hero-search-top .hero-search-inner {
+    border-radius: 999px;               /* píldora como el mockup */
+    box-shadow: 0 6px 24px rgba(0,0,0,.28);
+    border: 2.5px solid rgba(255,255,255,.9);
+  }
+  .hero-search-top .hero-search-input {
+    font-size: 1.05rem;
+    font-weight: 800;
+  }
+  .hero-search-top .hero-search-input::placeholder {
+    color: #263238;
+    font-weight: 900;
+  }
+  .hero-search-top .hero-search-btn { border-radius: 999px; }
+  /* Chips "Popular" más compactos arriba */
+  .hero-search-top .hero-search-chips { justify-content: center; }
+}

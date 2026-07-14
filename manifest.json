@@ -1,0 +1,46 @@
+{
+  "name": "Sabana Farma — Droguería en Mosquera y Funza",
+  "short_name": "Sabana Farma",
+  "description": "Medicamentos al mejor precio con domicilio GRATIS en pedidos +$20.000 en Mosquera y Funza, Cundinamarca. Pedidos por WhatsApp.",
+  "lang": "es-CO",
+  "dir": "ltr",
+  "start_url": "/index.html?utm_source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0D47A1",
+  "theme_color": "#1565C0",
+  "categories": ["health", "medical", "shopping"],
+  "icons": [
+    {
+      "src": "img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Catálogo de productos",
+      "url": "/productos.html",
+      "icons": [{ "src": "img/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Promociones",
+      "url": "/promociones.html",
+      "icons": [{ "src": "img/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
