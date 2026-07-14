@@ -38,7 +38,7 @@
  "@type": "Pharmacy",
  "name": "Sabana Farma",
  "telephone": "+573118719476",
- "openingHours": "Mo-Su 07:00-22:00",
+ "openingHours": "Mo-Su 08:00-20:00",
  "priceRange": "$",
  "url": "https://sabanafarma.com/",
  "image": "https://sabanafarma.com/img/og-banner.jpg",
@@ -169,7 +169,7 @@
 <div class="top-bar" role="banner">
  <span>🚚 <strong>Domicilio GRATIS</strong> en pedidos +$20.000 · menores solo $3.000 · Mosquera y Funza</span>
  <span class="top-bar-sep">|</span>
- <span>🕐 Lun–Dom: 7 am – 10 pm</span>
+ <span>🕐 Lun–Dom: 8 am – 8 pm</span>
  <span class="top-bar-sep">|</span>
  <a href="tel:+573118719476">📞 311 871 94 76</a>
  <span class="top-bar-sep">|</span>
@@ -757,7 +757,7 @@
  </div>
  <div class="footer-contacto-item">
  <i class="fas fa-clock"></i>
- <span>Lun – Dom: 7 am – 10 pm</span>
+ <span>Lun – Dom: 8 am – 8 pm</span>
  </div>
  </div>
  </div>
@@ -850,20 +850,20 @@
  </a>
 </div>
 <script>
-/* Estado dinámico WhatsApp — horario 7am–10pm Colombia (UTC-5) */
+/* Estado dinámico WhatsApp — horario 8am–8pm Colombia (UTC-5) */
 (function () {
  var ahora = new Date();
  /* Hora actual en Colombia: UTC-5 */
  var horaCol = (ahora.getUTCHours() - 5 + 24) % 24;
- var abierto = horaCol >= 7 && horaCol < 22;
+ var abierto = horaCol >= 8 && horaCol < 20;
  var tooltip = document.getElementById('waTooltip');
  if (!tooltip) return;
  if (abierto) {
- tooltip.innerHTML = '🟢 <strong>¡Estamos en línea!</strong> · 7am–10pm';
+ tooltip.innerHTML = '🟢 <strong>¡Estamos en línea!</strong> · 8am–8pm';
  } else {
- /* Calcular cuántas horas faltan para las 7am */
- var horasFalta = horaCol < 7 ? (7 - horaCol) : (31 - horaCol);
- tooltip.innerHTML = '🔴 Respondemos a las <strong>7am</strong><br><span style="font-size:.72rem">Horario: Lun–Dom 7am–10pm</span>';
+ /* Calcular cuántas horas faltan para las 8am */
+ var horasFalta = horaCol < 8 ? (8 - horaCol) : (32 - horaCol);
+ tooltip.innerHTML = '🔴 Respondemos a las <strong>8am</strong><br><span style="font-size:.72rem">Horario: Lun–Dom 8am–8pm</span>';
  }
 })();
 </script>

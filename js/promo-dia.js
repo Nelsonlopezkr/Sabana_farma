@@ -81,9 +81,9 @@
   var promo = PROMOS[dia];
   var resto = tiempoRestante();
 
-  if (hora < 7 || hora >= 22) {
+  if (hora < 8 || hora >= 20) {
     bar.innerHTML =
-      '🕐 Abrimos a las <strong>7am</strong> · Lun–Dom 7am–10pm · ' +
+      '🕐 Abrimos a las <strong>8am</strong> · Lun–Dom 8am–8pm · ' +
       '<a href="https://wa.me/' + WA + '?text=Hola%2C+tengo+una+consulta" target="_blank" rel="noopener">Dejar mensaje →</a>';
     return;
   }

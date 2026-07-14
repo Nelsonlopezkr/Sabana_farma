@@ -14,7 +14,7 @@ window.DE_CONFIG = {
   /* ── Tienda ── */
   NOMBRE:     'Sabana Farma',
   DIRECCION:  'Calle 10 #16b 21 Barrio El Poblado, Mosquera, Cundinamarca',
-  HORARIO:    'Lun – Dom: 7 am – 10 pm',
+  HORARIO:    'Lun – Dom: 8 am – 8 pm',
   EMAIL:      'sabanafarma01@gmail.com',
 
   /* ── Envío ── */

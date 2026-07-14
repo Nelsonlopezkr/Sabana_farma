@@ -23,7 +23,7 @@
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto y Domicilios | Sabana Farma – Droguería en Mosquera</title>
-  <meta name="description" content="Contáctanos por WhatsApp 311 871 94 76, teléfono o visita nuestra droguería en Mosquera, Cundinamarca. Domicilios de 7 am a 10 pm en Mosquera y Funza.">
+  <meta name="description" content="Contáctanos por WhatsApp 311 871 94 76, teléfono o visita nuestra droguería en Mosquera, Cundinamarca. Domicilios de 8 am a 8 pm en Mosquera y Funza.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="geo.region" content="CO-CUN">
   <meta name="geo.placename" content="Mosquera, Cundinamarca">
@@ -42,7 +42,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contacto — Sabana Farma">
-  <meta name="twitter:description" content="WhatsApp 311 871 94 76 · Domicilios en Mosquera y Funza de 7 am a 10 pm.">
+  <meta name="twitter:description" content="WhatsApp 311 871 94 76 · Domicilios en Mosquera y Funza de 8 am a 8 pm.">
   <meta name="twitter:image" content="https://sabanafarma.com/img/og-banner.jpg">
 
   <!-- Schema.org: Breadcrumb + ContactPage -->
@@ -97,7 +97,7 @@
 <div class="top-bar">
   <span>🚚 <strong>Domicilio GRATIS</strong> en pedidos +$20.000 · menores solo $3.000 · Mosquera y Funza</span>
   <span class="top-bar-sep">|</span>
-  <span>🕐 Lun–Dom: 7 am – 10 pm</span>
+  <span>🕐 Lun–Dom: 8 am – 8 pm</span>
   <span class="top-bar-sep">|</span>
   <a href="tel:+573118719476">📞 311 871 94 76</a>
   <span class="top-bar-sep">|</span>
@@ -178,7 +178,7 @@
     </div>
     <div class="contacto-hero-chip">
       <i class="fas fa-clock"></i>
-      <span>Lun–Dom · 7am – 10pm</span>
+      <span>Lun–Dom · 8am – 8pm</span>
     </div>
     <div class="contacto-hero-chip">
       <i class="fas fa-map-marker-alt"></i>
@@ -224,7 +224,7 @@
             <div class="info-card-body">
               <h4>Teléfono</h4>
               <p>311 871 94 76</p>
-              <small>Lunes a Domingo · 7 am – 10 pm</small>
+              <small>Lunes a Domingo · 8 am – 8 pm</small>
             </div>
             <i class="fas fa-chevron-right info-card-arrow"></i>
           </a>
@@ -251,8 +251,8 @@
             <div class="info-card-icon ic-hora"><i class="fas fa-clock"></i></div>
             <div class="info-card-body">
               <h4>Horario de atención</h4>
-              <p>Lunes a Domingo: 7 am – 10 pm</p>
-              <small>Domicilios hasta las 10 pm · Urgencias: WhatsApp</small>
+              <p>Lunes a Domingo: 8 am – 8 pm</p>
+              <small>Domicilios hasta las 8 pm · Urgencias: WhatsApp</small>
             </div>
           </div>
 
@@ -516,7 +516,7 @@
           <div class="footer-contacto-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/573118719476" target="_blank" style="color:inherit">WhatsApp</a></div>
           <div class="footer-contacto-item"><i class="fas fa-envelope"></i><span>sabanafarma01@gmail.com</span></div>
           <div class="footer-contacto-item"><i class="fas fa-map-marker-alt"></i><span>Calle 10 #16b 21, Mosquera</span></div>
-          <div class="footer-contacto-item"><i class="fas fa-clock"></i><span>Lun – Dom: 7 am – 10 pm</span></div>
+          <div class="footer-contacto-item"><i class="fas fa-clock"></i><span>Lun – Dom: 8 am – 8 pm</span></div>
         </div>
       </div>
     </div>
@@ -580,12 +580,12 @@
 (function () {
   var ahora = new Date();
   var horaCol = (ahora.getUTCHours() - 5 + 24) % 24;
-  var abierto = horaCol >= 7 && horaCol < 22;
+  var abierto = horaCol >= 8 && horaCol < 20;
   var tooltip = document.getElementById('waTooltip');
   if (!tooltip) return;
   tooltip.innerHTML = abierto
-    ? '🟢 <strong>¡Estamos en línea!</strong> · 7am–10pm'
-    : '🔴 Respondemos a las <strong>7am</strong><br><span style="font-size:.72rem">Horario: Lun–Dom 7am–10pm</span>';
+    ? '🟢 <strong>¡Estamos en línea!</strong> · 8am–8pm'
+    : '🔴 Respondemos a las <strong>8am</strong><br><span style="font-size:.72rem">Horario: Lun–Dom 8am–8pm</span>';
 })();
 </script>
   <a href="https://wa.me/573118719476?text=Hola%2C+quiero+información+sobre+sus+productos"
@@ -752,11 +752,11 @@ document.getElementById('formContacto').addEventListener('submit', function(e) {
   if (!badgeEl) return;
   var now = new Date();
   var h = now.getHours();
-  var abierto = (h >= 7 && h < 22);
+  var abierto = (h >= 8 && h < 20);
   badgeEl.innerHTML =
     '<span class="status-badge ' + (abierto ? 'abierto' : 'cerrado') + '">' +
       '<span class="status-dot"></span>' +
-      (abierto ? '✅ Abierto ahora · 7am – 10pm' : '🔒 Cerrado · Abre mañana 7am') +
+      (abierto ? '✅ Abierto ahora · 8am – 8pm' : '🔒 Cerrado · Abre mañana 8am') +
     '</span>';
 })();
 
