@@ -15,7 +15,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 6500 ,
+        "precio": 6500,
         "imagen": "img/productos/esmalte-masglo-surt.jpg"
       }
     ],
@@ -33,7 +33,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 44900 ,
+        "precio": 44900,
         "imagen": "img/productos/benzirin-verde-spray-120-ml.jpg"
       }
     ],
@@ -51,7 +51,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 31800 ,
+        "precio": 31800,
         "imagen": "img/productos/fluoftal-fluorometolona-0-1-x-5ml.jpg"
       }
     ],
@@ -69,7 +69,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 4600 ,
+        "precio": 4600,
         "imagen": "img/productos/oft-oxigenta-igora-vital-30-volumenes-50ml-x-2-und.jpg"
       }
     ],
@@ -98,7 +98,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 35500 ,
+        "precio": 35500,
         "imagen": "img/productos/igora-vital-d-tubo-6-1-rubio-oscuro-cenizo.jpg"
       }
     ],
@@ -116,7 +116,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 32300 ,
+        "precio": 32300,
         "imagen": "img/productos/igora-vital-d-tubo-5-88-claro-rojizo.jpg"
       }
     ],
@@ -134,7 +134,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 32300 ,
+        "precio": 32300,
         "imagen": "img/productos/igora-vital-d-tubo-3-0-castano-oscuro.jpg"
       }
     ],
@@ -152,7 +152,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 36500 ,
+        "precio": 36500,
         "imagen": "img/productos/igora-vital-d-tubo-9-1-rubio-extraclaro-cenizo.jpg"
       }
     ],
@@ -188,7 +188,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 32300 ,
+        "precio": 32300,
         "imagen": "img/productos/igora-vital-d-tubo-6-888-rubi-apasionado.jpg"
       }
     ],
@@ -206,7 +206,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 35400 ,
+        "precio": 35400,
         "imagen": "img/productos/palette-1-0-negro-2-tubos.jpg"
       }
     ],
@@ -224,7 +224,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 27500 ,
+        "precio": 27500,
         "imagen": "img/productos/palette-d-tubo-6-88-rubi.jpg"
       }
     ],
@@ -242,7 +242,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 27500 ,
+        "precio": 27500,
         "imagen": "img/productos/palette-1-1-negro-azul-2-tubos.jpg"
       }
     ],
@@ -260,7 +260,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 29500 ,
+        "precio": 29500,
         "imagen": "img/productos/palette-3-0-castano-oscuro-2-tubos.jpg"
       }
     ],
@@ -278,7 +278,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 30500 ,
+        "precio": 30500,
         "imagen": "img/productos/palette-d-tubo-6-68-chocolate-claro.jpg"
       }
     ],
@@ -296,7 +296,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 29800 ,
+        "precio": 29800,
         "imagen": "img/productos/palette-d-tubo-7-0-rubio-medio.jpg"
       }
     ],
@@ -314,7 +314,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 26000 ,
+        "precio": 26000,
         "imagen": "img/productos/palette-d-tubo-6-99-violeta-profundo.jpg"
       }
     ],
@@ -332,7 +332,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 32300 ,
+        "precio": 32300,
         "imagen": "img/productos/palette-4-89-borgona-intenso-2-tubo.jpg"
       }
     ],
@@ -350,7 +350,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 26000 ,
+        "precio": 26000,
         "imagen": "img/productos/palette-d-tubo-4-0-castano-medio.jpg"
       }
     ],
@@ -368,7 +368,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 33500 ,
+        "precio": 33500,
         "imagen": "img/productos/palette-d-tubo-8-1-rubio-claro-cenizo.jpg"
       }
     ],
@@ -386,7 +386,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 29500 ,
+        "precio": 29500,
         "imagen": "img/productos/palette-d-tubo-8-0-rubio-claro.jpg"
       }
     ],
@@ -404,8 +404,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 25300 ,
-        "imagen" : "img/productos/Bigen 57 Negro Suave Natural.jpg"
+        "precio": 25300,
+        "imagen": "img/productos/Bigen 57 Negro Suave Natural.jpg"
       }
     ],
     "existencias": 1,
@@ -422,8 +422,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 20600 ,
-        "imagen" : "img/productos/Bigen 59 Negro Oriental.jpg"
+        "precio": 20600,
+        "imagen": "img/productos/Bigen 59 Negro Oriental.jpg"
       }
     ],
     "existencias": 1,
@@ -458,7 +458,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 26000 ,
+        "precio": 26000,
         "imagen": "img/productos/bigen-47-castano-oscuro.jpg"
       }
     ],
@@ -476,7 +476,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 19900 ,
+        "precio": 19900,
         "imagen": "img/productos/bigen-46-castano-medio.jpg"
       }
     ],
@@ -494,7 +494,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 20000 ,
+        "precio": 20000,
         "imagen": "img/productos/bigen-96-borgona-oscuro.jpg"
       }
     ],
@@ -512,7 +512,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 18500 ,
+        "precio": 18500,
         "imagen": "img/productos/bigen-88-negro-azulado.jpg"
       }
     ],
@@ -530,7 +530,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 3100 ,
+        "precio": 3100,
         "imagen": "img/productos/dte-elizabeth-arden-class-mini-rol-30ml.jpg"
       }
     ],
@@ -539,23 +539,41 @@ var CATALOGO = [
     "requiereReceta": false,
     "codigoBarras": "7702044246378"
   },
- {
+  {
     "id": 10002,
     "nombre": "Hidraplus 75 Zinc 400 ML Suero",
     "marca": "Tecnoquímicas",
     "categoria": "Medicamentos",
     "descripcion": "Tecnoquímicas — Disponible en presentación Botella. Si tienes dudas sobre la dosis o el uso, nuestro equipo en droguería te asesora sin costo.",
-    "selector": { "titulo": "Sabores disponibles", "icono": "fas fa-ice-cream" },
+    "selector": {
+      "titulo": "Sabores disponibles",
+      "icono": "fas fa-ice-cream"
+    },
     "variantes": [
+      {
+        "tipo": "Uva",
+        "precio": 10600,
+        "imagen": "img/productos/hidraplus-75-zinc-uva-400-ml.jpg"
+      },
+      {
+        "tipo": "Cereza",
+        "precio": 10600,
+        "imagen": "img/productos/hidraplus-75-zinc-cereza-400-ml.jpg"
+      },
+      {
+        "tipo": "Manzana",
+        "precio": 10600,
+        "imagen": "img/productos/hidraplus-75-zinc-manzana-400-ml.jpg"
+      },
+      {
+        "tipo": "Coco",
+        "precio": 10600,
+        "imagen": "img/productos/hidraplus-75-zinc-coco-400-ml.jpg"
+      },
       {
         "tipo": "Fresa",
         "precio": 10600,
         "imagen": "img/productos/hidraplus-75-zinc-fresa-400-ml.jpg"
-      },
-      {
-        "tipo": "Mora",
-        "precio": 10600,
-        "imagen": "img/productos/hidraplus-75-zinc-mora-400-ml.jpg"
       },
       {
         "tipo": "Surtido",
@@ -567,7 +585,7 @@ var CATALOGO = [
     "tags": [],
     "requiereReceta": false,
     "codigoBarras": "7702057010874"
-  }, 
+  },
   {
     "id": 10003,
     "nombre": "Solhidrex Sabores Surt X 30 Sobres",
@@ -577,7 +595,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 3000 ,
+        "precio": 3000,
         "imagen": "img/productos/solhidrex-sabores-surt-x-30-sobres.jpg"
       }
     ],
@@ -605,7 +623,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 1600 ,
+        "precio": 1600,
         "imagen": "img/productos/aspirina-efervescente-500-mg-50-tabletas.jpg"
       }
     ],
@@ -637,7 +655,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 1500 ,
+        "precio": 1500,
         "imagen": "img/productos/alka-seltzer-60-tabl.jpg"
       }
     ],
@@ -669,7 +687,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 1000 ,
+        "precio": 1000,
         "imagen": "img/productos/aspirina-ultra-500-mg-100-tabletas.jpg"
       }
     ],
@@ -701,7 +719,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 2000 ,
+        "precio": 2000,
         "imagen": "img/productos/x-ray-dol-48-tabletas.jpg"
       }
     ],
@@ -733,7 +751,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 2300 ,
+        "precio": 2300,
         "imagen": "img/productos/advil-fem-x-20-tab-recub.jpg"
       }
     ],
@@ -766,7 +784,7 @@ var CATALOGO = [
       {
         "tipo": "Caja",
         "precio": 35500,
-        "imagen" : "img/productos/Igora Vital D. Tubo 1-1 Negro Azul.jpg"
+        "imagen": "img/productos/Igora Vital D. Tubo 1-1 Negro Azul.jpg"
       }
     ],
     "existencias": 1,
@@ -783,8 +801,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 35500 ,
-        "imagen" : "img/productos/Igora Vital D. Tubo 6-68 Chocolate.jpg"
+        "precio": 35500,
+        "imagen": "img/productos/Igora Vital D. Tubo 6-68 Chocolate.jpg"
       }
     ],
     "existencias": 1,
@@ -801,8 +819,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 39500 ,
-        "imagen" : "img/productos/Igora Vital D. Tubo 6-00 Rubio Oscuro.jpg"
+        "precio": 39500,
+        "imagen": "img/productos/Igora Vital D. Tubo 6-00 Rubio Oscuro.jpg"
       }
     ],
     "existencias": 1,
@@ -819,8 +837,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 38500 ,
-        "imagen" : "img/productos/Tinte Igora Vita Kit 4-0 Castaño Mediano.jpg"
+        "precio": 38500,
+        "imagen": "img/productos/Tinte Igora Vita Kit 4-0 Castaño Mediano.jpg"
       }
     ],
     "existencias": 1,
@@ -837,7 +855,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 23500 ,
+        "precio": 23500,
         "imagen": "img/productos/dte-spray-nivea-aclarado-natural-150-ml-x-2-und.jpg"
       }
     ],
@@ -865,7 +883,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 13500 ,
+        "precio": 13500,
         "imagen": "img/productos/dte-nivea-rolon-tono-natural-clasic-touch-50-ml.jpg"
       }
     ],
@@ -893,7 +911,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 3800 ,
+        "precio": 3800,
         "imagen": "img/productos/dte-dove-rollon-original-30-ml.jpg"
       }
     ],
@@ -911,7 +929,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 3500 ,
+        "precio": 3500,
         "imagen": "img/productos/des-lady-talc-practi-crema-x-30-grs.jpg"
       }
     ],
@@ -929,7 +947,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 4500 ,
+        "precio": 4500,
         "imagen": "img/productos/pastas-onix-para-el-cabello.jpg"
       }
     ],
@@ -947,7 +965,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 3800 ,
+        "precio": 3800,
         "imagen": "img/productos/dte-dove-rollon-cuidado-total-30-ml-h.jpg"
       }
     ],
@@ -965,7 +983,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 10500 ,
+        "precio": 10500,
         "imagen": "img/productos/oft-dte-rexona-prom-antitrans-roll-on-v8-100m.jpg"
       }
     ],
@@ -993,7 +1011,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 16500 ,
+        "precio": 16500,
         "imagen": "img/productos/speed-stick-prom-antitrans-xtreme-182-gramos-colg.jpg"
       }
     ],
@@ -1021,7 +1039,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 9200 ,
+        "precio": 9200,
         "imagen": "img/productos/dte-gillette-specialized-gel-surt-45-gr.jpg"
       }
     ],
@@ -1039,7 +1057,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 16500 ,
+        "precio": 16500,
         "imagen": "img/productos/crema-p-peinar-sedal-ceramidas-sos-300gr.jpg"
       }
     ],
@@ -1057,7 +1075,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 38000 ,
+        "precio": 38000,
         "imagen": "img/productos/fungisterol-shampoo-x-200-ml.jpg"
       }
     ],
@@ -1075,7 +1093,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 28500 ,
+        "precio": 28500,
         "imagen": "img/productos/medicasp-shampoo-ketoconazol-100ml.jpg"
       }
     ],
@@ -1093,7 +1111,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 12500 ,
+        "precio": 12500,
         "imagen": "img/productos/acond-sedal-keratina-340-ml.jpg"
       }
     ],
@@ -1111,7 +1129,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 16000 ,
+        "precio": 16000,
         "imagen": "img/productos/sedal-shampoo-surtido-340ml.jpg"
       }
     ],
@@ -1128,15 +1146,39 @@ var CATALOGO = [
     "descripcion": "Johnson & Johnson — Presentación Unidad, pensado para el cuidado de tu bebé.",
     "variantes": [
       {
-        "tipo": "Unidad",
-        "precio": 13500 ,
-        "imagen" : "img/productos/Johnsons Shampoo Surtidos X 200 ML.jpg"
+        "tipo": "Original",
+        "precio": 13500,
+        "imagen": "img/productos/Johnsons Shampoo Surtidos X 200 ML.jpg"
+      },
+      {
+        "tipo": "Manzanilla",
+        "precio": 13500,
+        "imagen": "img/productos/johnsons-shampoo-manzanilla-200-ml.jpg"
+      },
+      {
+        "tipo": "Avena",
+        "precio": 13500,
+        "imagen": "img/productos/johnsons-shampoo-avena-200-ml.jpg"
+      },
+      {
+        "tipo": "Gotas de Brillo",
+        "precio": 13500,
+        "imagen": "img/productos/johnsons-shampoo-gotas-de-brillo-200-ml.jpg"
+      },
+      {
+        "tipo": "Hidratación Intensa",
+        "precio": 13500,
+        "imagen": "img/productos/johnsons-shampoo-hidratacion-intensa-200-ml.jpg"
       }
     ],
     "existencias": 2,
     "tags": [],
     "requiereReceta": false,
-    "codigoBarras": "7702031291565"
+    "codigoBarras": "7702031291565",
+    "selector": {
+      "titulo": "Variantes disponibles",
+      "icono": "fas fa-pump-soap"
+    }
   },
   {
     "id": 40001,
@@ -1146,15 +1188,39 @@ var CATALOGO = [
     "descripcion": "Johnson & Johnson — Presentación Frasco, pensado para el cuidado de tu bebé.",
     "variantes": [
       {
-        "tipo": "Frasco",
-        "precio": 11500 ,
-        "imagen" : "img/productos/Johnsons Shampoo Surtidos X 100 ML.jpg"
+        "tipo": "Original",
+        "precio": 11500,
+        "imagen": "img/productos/Johnsons Shampoo Surtidos X 100 ML.jpg"
+      },
+      {
+        "tipo": "Manzanilla",
+        "precio": 11500,
+        "imagen": "img/productos/johnsons-shampoo-manzanilla-100-ml.jpg"
+      },
+      {
+        "tipo": "Avena",
+        "precio": 11500,
+        "imagen": "img/productos/johnsons-shampoo-avena-100-ml.jpg"
+      },
+      {
+        "tipo": "Gotas de Brillo",
+        "precio": 11500,
+        "imagen": "img/productos/johnsons-shampoo-gotas-de-brillo-100-ml.jpg"
+      },
+      {
+        "tipo": "Hidratación Intensa",
+        "precio": 11500,
+        "imagen": "img/productos/johnsons-shampoo-hidratacion-intensa-100-ml.jpg"
       }
     ],
     "existencias": 14,
     "tags": [],
     "requiereReceta": false,
-    "codigoBarras": "7702031291534"
+    "codigoBarras": "7702031291534",
+    "selector": {
+      "titulo": "Variantes disponibles",
+      "icono": "fas fa-pump-soap"
+    }
   },
   {
     "id": 40002,
@@ -1165,8 +1231,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 16500 ,
-        "imagen" : "img/productos/Johnson Baby Crema para Peinar 200 ML.jpg"
+        "precio": 16500,
+        "imagen": "img/productos/Johnson Baby Crema para Peinar 200 ML.jpg"
       }
     ],
     "existencias": 1,
@@ -1183,7 +1249,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 28600 ,
+        "precio": 28600,
         "imagen": "img/productos/privatos-jarabe-120-ml.jpg"
       }
     ],
@@ -1201,7 +1267,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 48000 ,
+        "precio": 48000,
         "imagen": "img/productos/vick-vaporub-12-gr-12-uds.jpg"
       }
     ],
@@ -1229,7 +1295,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 3200 ,
+        "precio": 3200,
         "imagen": "img/productos/sal-de-frutas-50-sbs.jpg"
       }
     ],
@@ -1257,7 +1323,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 3000 ,
+        "precio": 3000,
         "imagen": "img/productos/asa-100-mg-100-tabletas-mk.jpg"
       }
     ],
@@ -1285,7 +1351,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 7500 ,
+        "precio": 7500,
         "imagen": "img/productos/retiblan-50-mg-50-capsulas.jpg"
       }
     ],
@@ -1313,7 +1379,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 37500 ,
+        "precio": 37500,
         "imagen": "img/productos/ciruelax-jalea-150-gr.jpg"
       }
     ],
@@ -1331,7 +1397,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 6200 ,
+        "precio": 6200,
         "imagen": "img/productos/arnica-locion-30-mililitros.jpg"
       }
     ],
@@ -1349,7 +1415,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 9500 ,
+        "precio": 9500,
         "imagen": "img/productos/arnica-locion-60-mililitros.jpg"
       }
     ],
@@ -1367,8 +1433,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 22900 ,
-        "imagen" : "img/productos/Concha de Nacar 60 GR Freshly.jpg"
+        "precio": 22900,
+        "imagen": "img/productos/Concha de Nacar 60 GR Freshly.jpg"
       }
     ],
     "existencias": 1,
@@ -1385,7 +1451,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 29500 ,
+        "precio": 29500,
         "imagen": "img/productos/mieltertos-jarabe-240-ml-nf.jpg"
       }
     ],
@@ -1403,7 +1469,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 4500 ,
+        "precio": 4500,
         "imagen": "img/productos/vitamina-e-400-u-i-100-capsulas-colmed.jpg"
       }
     ],
@@ -1431,7 +1497,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 200 ,
+        "precio": 200,
         "imagen": "img/productos/curas-medicare-color-piel-100-uds.jpg"
       }
     ],
@@ -1463,7 +1529,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 3900 ,
+        "precio": 3900,
         "imagen": "img/productos/agua-oxigenada-osa-x-120-ml.jpg"
       }
     ],
@@ -1481,7 +1547,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 18000 ,
+        "precio": 18000,
         "imagen": "img/productos/isodine-bucofaringeo-x-60-ml.jpg"
       }
     ],
@@ -1499,7 +1565,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 14500 ,
+        "precio": 14500,
         "imagen": "img/productos/bactroderm-yodopovidona-espuma-60-ml.jpg"
       }
     ],
@@ -1517,7 +1583,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 16200 ,
+        "precio": 16200,
         "imagen": "img/productos/bactroderm-yodopovidona-solucion-120-ml.jpg"
       }
     ],
@@ -1535,9 +1601,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 25500 ,
+        "precio": 25500,
         "imagen": "img/productos/citromel-liquido-310-ml.jpg"
-        
       }
     ],
     "existencias": 2,
@@ -1554,7 +1619,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Pote/Lata",
-        "precio": 12700 ,
+        "precio": 12700,
         "imagen": "img/productos/nixoderm-unguento-20-gr.jpg"
       }
     ],
@@ -1572,7 +1637,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 17500 ,
+        "precio": 17500,
         "imagen": "img/productos/multi-soluter-solucion-oftal-x-50-ml.jpg"
       }
     ],
@@ -1590,7 +1655,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 17500 ,
+        "precio": 17500,
         "imagen": "img/productos/multi-solution-1-60-ml-wasser.jpg"
       }
     ],
@@ -1608,7 +1673,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 31500 ,
+        "precio": 31500,
         "imagen": "img/productos/multi-solution-1-120-ml-wasser.jpg"
       }
     ],
@@ -1626,7 +1691,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 14200 ,
+        "precio": 14200,
         "imagen": "img/productos/emulsion-scott-surtidos-180-ml.jpg"
       }
     ],
@@ -1644,7 +1709,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 22800 ,
+        "precio": 22800,
         "imagen": "img/productos/emulsion-scott-surtidos-360-ml.jpg"
       }
     ],
@@ -1662,7 +1727,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 5900 ,
+        "precio": 5900,
         "imagen": "img/productos/alcohol-mk-x-350-ml.jpg"
       }
     ],
@@ -1680,7 +1745,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 10500 ,
+        "precio": 10500,
         "imagen": "img/productos/alcohol-mk-x-700-ml.jpg"
       }
     ],
@@ -1698,7 +1763,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 1500 ,
+        "precio": 1500,
         "imagen": "img/productos/dte-balance-crema-duos-proex-nor-x-16-sbs.jpg"
       }
     ],
@@ -1726,7 +1791,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Paquete",
-        "precio": 4200 ,
+        "precio": 4200,
         "imagen": "img/productos/prot-nosotras-diarios-largos-15-uds.jpg"
       }
     ],
@@ -1744,7 +1809,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Paquete",
-        "precio": 2200 ,
+        "precio": 2200,
         "imagen": "img/productos/prot-nosotras-15-uds-e-i.jpg"
       }
     ],
@@ -1762,7 +1827,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 7800 ,
+        "precio": 7800,
         "imagen": "img/productos/tampones-ob-siempre-libre-medio-x-8-und.jpg"
       }
     ],
@@ -1780,7 +1845,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 600 ,
+        "precio": 600,
         "imagen": "img/productos/toa-nosotras-natural-inv-clas-tela-x-30-unds.jpg"
       }
     ],
@@ -1808,7 +1873,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Paquete",
-        "precio": 4900 ,
+        "precio": 4900,
         "imagen": "img/productos/nosotras-invisible-clasica-x-10-und.jpg"
       }
     ],
@@ -1826,7 +1891,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Paquete",
-        "precio": 18800 ,
+        "precio": 18800,
         "imagen": "img/productos/toa-nosotras-maternidad-10-un-3-toa-b-n.jpg"
       }
     ],
@@ -1844,8 +1909,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Paquete",
-        "precio": 7500 ,
-        "imagen" : "img/productos/Ducha Intima Eterna.jpg"
+        "precio": 7500,
+        "imagen": "img/productos/Ducha Intima Eterna.jpg"
       }
     ],
     "existencias": 1,
@@ -1862,7 +1927,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 19500 ,
+        "precio": 19500,
         "imagen": "img/productos/prot-lactinosotras-40-uds-44014.jpg"
       }
     ],
@@ -1880,7 +1945,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 2800 ,
+        "precio": 2800,
         "imagen": "img/productos/tampones-kotex-dig-medio-ristra-x-5-unds.jpg"
       }
     ],
@@ -1908,8 +1973,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 3500 ,
-        "imagen" : "img/productos/Gel Ego For Men Surt Pote 110 ML.jpg" 
+        "precio": 3500,
+        "imagen": "img/productos/Gel Ego For Men Surt Pote 110 ML.jpg"
       }
     ],
     "existencias": 25,
@@ -1926,8 +1991,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 8900 ,
-        "imagen" : "img/productos/Gel Ego For Men Attraction 240 ML.jpg"
+        "precio": 8900,
+        "imagen": "img/productos/Gel Ego For Men Attraction 240 ML.jpg"
       }
     ],
     "existencias": 3,
@@ -1944,8 +2009,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 16500 ,
-        "imagen" : "img/productos/Gel Ego For Men Attraction 500 ML.jpg"
+        "precio": 16500,
+        "imagen": "img/productos/Gel Ego For Men Attraction 500 ML.jpg"
       }
     ],
     "existencias": 1,
@@ -1962,7 +2027,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 3600 ,
+        "precio": 3600,
         "imagen": "img/productos/bloq-sundark-kids-12-sbs-10-gr.jpg"
       }
     ],
@@ -1990,7 +2055,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 7300 ,
+        "precio": 7300,
         "imagen": "img/productos/autobron-nude-self-tanner-cr-20-ml-6-sbs.jpg"
       }
     ],
@@ -2018,7 +2083,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 3000 ,
+        "precio": 3000,
         "imagen": "img/productos/crema-forz-24-sbs.jpg"
       }
     ],
@@ -2046,8 +2111,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 1000 ,
-        "imagen" : "img/productos/Acondicionador Savital Surt X 20 Sobre 25 ML.jpg"
+        "precio": 1000,
+        "imagen": "img/productos/Acondicionador Savital Surt X 20 Sobre 25 ML.jpg"
       }
     ],
     "existencias": 57,
@@ -2074,8 +2139,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 1200 ,
-        "imagen" : "img/productos/Shampoo Johnson Baby Surt X 12 SBS.jpg"
+        "precio": 1200,
+        "imagen": "img/productos/Shampoo Johnson Baby Surt X 12 SBS.jpg"
       }
     ],
     "existencias": 18,
@@ -2102,8 +2167,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 1000 ,
-        "imagen" : "img/productos/Cha.baby Soft Cuidado Delicado 20 SBS.jpg"
+        "precio": 1000,
+        "imagen": "img/productos/Cha.baby Soft Cuidado Delicado 20 SBS.jpg"
       }
     ],
     "existencias": 25,
@@ -2130,8 +2195,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 10800 ,
-        "imagen" : "img/productos/Johnsons Crema Hidrat. Surt X 100 ML.jpg"
+        "precio": 10800,
+        "imagen": "img/productos/Johnsons Crema Hidrat. Surt X 100 ML.jpg"
       }
     ],
     "existencias": 4,
@@ -2148,8 +2213,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 17500 ,
-        "imagen" : "img/productos/Johnsons Crema Hidratante Baby Surt 200 ML.jpg"
+        "precio": 17500,
+        "imagen": "img/productos/Johnsons Crema Hidratante Baby Surt 200 ML.jpg"
       }
     ],
     "existencias": 3,
@@ -2166,8 +2231,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 17000 ,
-        "imagen" : "img/productos/Lubriderm Solar FPS 15 X 120 ML.jpg"
+        "precio": 17000,
+        "imagen": "img/productos/Lubriderm Solar FPS 15 X 120 ML.jpg"
       }
     ],
     "existencias": 3,
@@ -2184,8 +2249,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 16500 ,
-        "imagen" : "img/productos/Lubriderm Reparacion Intensiva X 120 ML.jpg"
+        "precio": 16500,
+        "imagen": "img/productos/Lubriderm Reparacion Intensiva X 120 ML.jpg"
       }
     ],
     "existencias": 1,
@@ -2202,8 +2267,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 13800 ,
-        "imagen" : "img/productos/Lubriderm Piel Normal Ext Humec X 120 ML.jpg"
+        "precio": 13800,
+        "imagen": "img/productos/Lubriderm Piel Normal Ext Humec X 120 ML.jpg"
       }
     ],
     "existencias": 2,
@@ -2220,8 +2285,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 16000 ,
-        "imagen" : "img/productos/Jabon Asepxia Carbon Detox 100 GR.jpg"
+        "precio": 16000,
+        "imagen": "img/productos/Jabon Asepxia Carbon Detox 100 GR.jpg"
       }
     ],
     "existencias": 4,
@@ -2238,8 +2303,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 8500 ,
-        "imagen" : "img/productos/3 Jabones Acid Mantle 90GR Econopack.jpg"
+        "precio": 8500,
+        "imagen": "img/productos/3 Jabones Acid Mantle 90GR Econopack.jpg"
       }
     ],
     "existencias": 1,
@@ -2266,8 +2331,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 4800 ,
-        "imagen" : "img/productos/Jabon Dove Blanco Original 90 GR.jpg"
+        "precio": 4800,
+        "imagen": "img/productos/Jabon Dove Blanco Original 90 GR.jpg"
       }
     ],
     "existencias": 1,
@@ -2284,8 +2349,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 3900 ,
-        "imagen" : "img/productos/Jabon Dove Exfoliacion X 90 Grs.jpg"
+        "precio": 3900,
+        "imagen": "img/productos/Jabon Dove Exfoliacion X 90 Grs.jpg"
       }
     ],
     "existencias": 1,
@@ -2302,8 +2367,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 1000 ,
-        "imagen" : "img/productos/Cha.sedal Kera.antiox.sbs 18 ML 20 SBS.jpg"
+        "precio": 1000,
+        "imagen": "img/productos/Cha.sedal Kera.antiox.sbs 18 ML 20 SBS.jpg"
       }
     ],
     "existencias": 5,
@@ -2330,8 +2395,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 1000 ,
-        "imagen" : "img/productos/Cha.sedal Ceramidas SBS 18 ML 20 SBS.jpg"
+        "precio": 1000,
+        "imagen": "img/productos/Cha.sedal Ceramidas SBS 18 ML 20 SBS.jpg"
       }
     ],
     "existencias": 1,
@@ -2358,8 +2423,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 700 ,
-        "imagen" : "img/productos/Pantene Crema para Peinar Surtido Sachet X 18 SBS.jpg"
+        "precio": 700,
+        "imagen": "img/productos/Pantene Crema para Peinar Surtido Sachet X 18 SBS.jpg"
       }
     ],
     "existencias": 12,
@@ -2386,8 +2451,8 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Blíster",
-        "precio": 1200 ,
-        "imagen" : "img/productos/Dove Shampoo Surtidos X 12 SBS.jpg"
+        "precio": 1200,
+        "imagen": "img/productos/Dove Shampoo Surtidos X 12 SBS.jpg"
       }
     ],
     "existencias": 12,
@@ -2414,7 +2479,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 20000 ,
+        "precio": 20000,
         "imagen": "img/productos/vick-vaporub-50g.jpg"
       }
     ],
@@ -2432,7 +2497,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Tubo",
-        "precio": 44000 ,
+        "precio": 44000,
         "imagen": "img/productos/cremoquinona-dia-crema-30-gr.jpg"
       }
     ],
@@ -2450,7 +2515,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 64900 ,
+        "precio": 64900,
         "imagen": "img/productos/cicatricure-gel-60-gr.jpg"
       }
     ],
@@ -2486,7 +2551,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 59000 ,
+        "precio": 59000,
         "imagen": "img/productos/cicatricure-anti-edad-crema-60-gr.jpg"
       }
     ],
@@ -2504,7 +2569,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 3000 ,
+        "precio": 3000,
         "imagen": "img/productos/manteca-de-cacao-5-gr-12-uds-disanfer.jpg"
       }
     ],
@@ -2532,7 +2597,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 23500 
+        "precio": 23500
       }
     ],
     "existencias": 1,
@@ -5244,7 +5309,7 @@ var CATALOGO = [
     ],
     "existencias": 18,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7703712030787"
   },
   {
@@ -5684,7 +5749,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707019469707"
   },
   {
@@ -5728,7 +5793,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707019314229"
   },
   {
@@ -5762,7 +5827,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7703432421605"
   },
   {
@@ -5806,7 +5871,7 @@ var CATALOGO = [
     ],
     "existencias": 30,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -6376,7 +6441,7 @@ var CATALOGO = [
     ],
     "existencias": 400,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -6501,7 +6566,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702184010761"
   },
   {
@@ -6518,7 +6583,7 @@ var CATALOGO = [
     ],
     "existencias": 16,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7703432422237"
   },
   {
@@ -6671,7 +6736,7 @@ var CATALOGO = [
     ],
     "existencias": 20,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -6715,7 +6780,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707019469806"
   },
   {
@@ -6824,7 +6889,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702057074487"
   },
   {
@@ -6872,7 +6937,7 @@ var CATALOGO = [
     ],
     "existencias": 195,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -6950,7 +7015,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702057071073"
   },
   {
@@ -7204,7 +7269,7 @@ var CATALOGO = [
     ],
     "existencias": 210,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -7258,7 +7323,7 @@ var CATALOGO = [
     ],
     "existencias": 280,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -7302,7 +7367,7 @@ var CATALOGO = [
     ],
     "existencias": 9,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Ampolla",
@@ -7431,7 +7496,7 @@ var CATALOGO = [
     ],
     "existencias": 10,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7703712032552"
   },
   {
@@ -7529,7 +7594,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702057700928"
   },
   {
@@ -7726,7 +7791,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702057709037"
   },
   {
@@ -7831,7 +7896,7 @@ var CATALOGO = [
     ],
     "existencias": 20,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -7919,7 +7984,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7703763070329"
   },
   {
@@ -8055,7 +8120,7 @@ var CATALOGO = [
     ],
     "existencias": 60,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702195713408"
   },
   {
@@ -8072,7 +8137,7 @@ var CATALOGO = [
     ],
     "existencias": 7,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707321981539"
   },
   {
@@ -8742,7 +8807,7 @@ var CATALOGO = [
     ],
     "existencias": 60,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702195713507"
   },
   {
@@ -8759,7 +8824,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7705959881016"
   },
   {
@@ -9000,7 +9065,7 @@ var CATALOGO = [
     ],
     "existencias": 20,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -9390,7 +9455,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7704412142916"
   },
   {
@@ -9767,7 +9832,7 @@ var CATALOGO = [
     ],
     "existencias": 135,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -10126,7 +10191,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Caja",
@@ -10153,7 +10218,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "0"
   },
   {
@@ -10230,7 +10295,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Ampolla",
@@ -10502,7 +10567,7 @@ var CATALOGO = [
     ],
     "existencias": 18,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7703153039325"
   },
   {
@@ -10519,7 +10584,7 @@ var CATALOGO = [
     ],
     "existencias": 10,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -10567,7 +10632,7 @@ var CATALOGO = [
     ],
     "existencias": 190,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -10713,7 +10778,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707274722715"
   },
   {
@@ -11091,7 +11156,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7703712031456"
   },
   {
@@ -11376,7 +11441,7 @@ var CATALOGO = [
     ],
     "existencias": 30,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702605107278"
   },
   {
@@ -11393,7 +11458,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -11715,7 +11780,7 @@ var CATALOGO = [
     ],
     "existencias": 200,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -11742,7 +11807,7 @@ var CATALOGO = [
     ],
     "existencias": 290,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -11820,7 +11885,7 @@ var CATALOGO = [
     ],
     "existencias": 22,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -12662,7 +12727,7 @@ var CATALOGO = [
     ],
     "existencias": 90,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -12689,7 +12754,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -12882,7 +12947,7 @@ var CATALOGO = [
     ],
     "existencias": 4,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702195051890"
   },
   {
@@ -12899,7 +12964,7 @@ var CATALOGO = [
     ],
     "existencias": 63,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Ampolla",
@@ -12980,7 +13045,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7703546039406"
   },
   {
@@ -13099,7 +13164,7 @@ var CATALOGO = [
     ],
     "existencias": 60,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -13174,7 +13239,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702605103232"
   },
   {
@@ -13219,14 +13284,39 @@ var CATALOGO = [
     "descripcion": "Johnson & Johnson — Presentación Frasco, pensado para el cuidado de tu bebé.",
     "variantes": [
       {
-        "tipo": "Frasco",
-        "precio": 23400
+        "tipo": "Original",
+        "precio": 23400,
+        "imagen": "img/productos/johnsons-shampoo-original-400-ml.jpg"
+      },
+      {
+        "tipo": "Manzanilla",
+        "precio": 23400,
+        "imagen": "img/productos/johnsons-shampoo-manzanilla-400-ml.jpg"
+      },
+      {
+        "tipo": "Avena",
+        "precio": 23400,
+        "imagen": "img/productos/johnsons-shampoo-avena-400-ml.jpg"
+      },
+      {
+        "tipo": "Gotas de Brillo",
+        "precio": 23400,
+        "imagen": "img/productos/johnsons-shampoo-gotas-de-brillo-400-ml.jpg"
+      },
+      {
+        "tipo": "Hidratación Intensa",
+        "precio": 23400,
+        "imagen": "img/productos/johnsons-shampoo-hidratacion-intensa-400-ml.jpg"
       }
     ],
     "existencias": 7,
     "tags": [],
     "requiereReceta": false,
-    "codigoBarras": "7702031291510"
+    "codigoBarras": "7702031291510",
+    "selector": {
+      "titulo": "Variantes disponibles",
+      "icono": "fas fa-pump-soap"
+    }
   },
   {
     "id": 10421,
@@ -13341,14 +13431,39 @@ var CATALOGO = [
     "descripcion": "Johnson & Johnson — Presentación Frasco, ideal para tu rutina de cuidado diario.",
     "variantes": [
       {
-        "tipo": "Frasco",
-        "precio": 42000
+        "tipo": "Original",
+        "precio": 42000,
+        "imagen": "img/productos/johnsons-shampoo-original-1-litro.jpg"
+      },
+      {
+        "tipo": "Manzanilla",
+        "precio": 42000,
+        "imagen": "img/productos/johnsons-shampoo-manzanilla-1-litro.jpg"
+      },
+      {
+        "tipo": "Avena",
+        "precio": 42000,
+        "imagen": "img/productos/johnsons-shampoo-avena-1-litro.jpg"
+      },
+      {
+        "tipo": "Gotas de Brillo",
+        "precio": 42000,
+        "imagen": "img/productos/johnsons-shampoo-gotas-de-brillo-1-litro.jpg"
+      },
+      {
+        "tipo": "Hidratación Intensa",
+        "precio": 42000,
+        "imagen": "img/productos/johnsons-shampoo-hidratacion-intensa-1-litro.jpg"
       }
     ],
     "existencias": 4,
     "tags": [],
     "requiereReceta": false,
-    "codigoBarras": "7702031293484"
+    "codigoBarras": "7702031293484",
+    "selector": {
+      "titulo": "Variantes disponibles",
+      "icono": "fas fa-pump-soap"
+    }
   },
   {
     "id": 20105,
@@ -13547,7 +13662,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -13686,7 +13801,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7705959881221"
   },
   {
@@ -14495,7 +14610,7 @@ var CATALOGO = [
     ],
     "existencias": 50,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -14539,7 +14654,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7709467724032"
   },
   {
@@ -14889,7 +15004,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707019381627"
   },
   {
@@ -15150,7 +15265,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707019340204"
   },
   {
@@ -15290,7 +15405,7 @@ var CATALOGO = [
     ],
     "existencias": 4,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -15741,7 +15856,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707019314205"
   },
   {
@@ -15785,7 +15900,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -15812,7 +15927,7 @@ var CATALOGO = [
     ],
     "existencias": 220,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -16212,7 +16327,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707019314120"
   },
   {
@@ -16229,7 +16344,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702896002160"
   },
   {
@@ -16246,7 +16361,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7703712030855"
   },
   {
@@ -16280,7 +16395,7 @@ var CATALOGO = [
     ],
     "existencias": 14198,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707246940055"
   },
   {
@@ -16514,7 +16629,7 @@ var CATALOGO = [
     ],
     "existencias": 9,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -16656,7 +16771,7 @@ var CATALOGO = [
     ],
     "existencias": 40,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -16727,7 +16842,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702057079598"
   },
   {
@@ -16744,7 +16859,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702057079369"
   },
   {
@@ -17143,7 +17258,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7706569001184"
   },
   {
@@ -17527,7 +17642,7 @@ var CATALOGO = [
     ],
     "existencias": 8,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707019381108"
   },
   {
@@ -17811,7 +17926,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702057712808"
   },
   {
@@ -18245,7 +18360,7 @@ var CATALOGO = [
     ],
     "existencias": 20,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -18401,7 +18516,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702057700973"
   },
   {
@@ -18503,7 +18618,7 @@ var CATALOGO = [
     ],
     "existencias": 100,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -18534,7 +18649,7 @@ var CATALOGO = [
     ],
     "existencias": 366,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Caja",
@@ -18588,7 +18703,7 @@ var CATALOGO = [
     ],
     "existencias": 32,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Caja",
@@ -19277,7 +19392,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707019413830"
   },
   {
@@ -19311,7 +19426,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707019412604"
   },
   {
@@ -19997,7 +20112,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7705959881214"
   },
   {
@@ -20262,7 +20377,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7703153016234"
   },
   {
@@ -20273,14 +20388,39 @@ var CATALOGO = [
     "descripcion": "Johnson & Johnson — Presentación Caja, ideal para tu rutina de cuidado diario.",
     "variantes": [
       {
-        "tipo": "Caja",
-        "precio": 33900
+        "tipo": "Original",
+        "precio": 33900,
+        "imagen": "img/productos/johnsons-shampoo-original-750-ml.jpg"
+      },
+      {
+        "tipo": "Manzanilla",
+        "precio": 33900,
+        "imagen": "img/productos/johnsons-shampoo-manzanilla-750-ml.jpg"
+      },
+      {
+        "tipo": "Avena",
+        "precio": 33900,
+        "imagen": "img/productos/johnsons-shampoo-avena-750-ml.jpg"
+      },
+      {
+        "tipo": "Gotas de Brillo",
+        "precio": 33900,
+        "imagen": "img/productos/johnsons-shampoo-gotas-de-brillo-750-ml.jpg"
+      },
+      {
+        "tipo": "Hidratación Intensa",
+        "precio": 33900,
+        "imagen": "img/productos/johnsons-shampoo-hidratacion-intensa-750-ml.jpg"
       }
     ],
     "existencias": 3,
     "tags": [],
     "requiereReceta": false,
-    "codigoBarras": "7702031291527"
+    "codigoBarras": "7702031291527",
+    "selector": {
+      "titulo": "Variantes disponibles",
+      "icono": "fas fa-pump-soap"
+    }
   },
   {
     "id": 30056,
@@ -20408,7 +20548,7 @@ var CATALOGO = [
     ],
     "existencias": 4,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707367050985"
   },
   {
@@ -20496,7 +20636,7 @@ var CATALOGO = [
     ],
     "existencias": 4,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707019380606"
   },
   {
@@ -20899,7 +21039,7 @@ var CATALOGO = [
     ],
     "existencias": 45,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -21180,7 +21320,7 @@ var CATALOGO = [
     ],
     "existencias": 20,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -21322,7 +21462,7 @@ var CATALOGO = [
     ],
     "existencias": 60,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -21712,7 +21852,7 @@ var CATALOGO = [
     ],
     "existencias": 10,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -23104,7 +23244,7 @@ var CATALOGO = [
     ],
     "existencias": 180,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -23165,7 +23305,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702896002306"
   },
   {
@@ -23182,7 +23322,7 @@ var CATALOGO = [
     ],
     "existencias": 30,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Caja",
@@ -23396,7 +23536,7 @@ var CATALOGO = [
     ],
     "existencias": 30,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707228364091"
   },
   {
@@ -23413,7 +23553,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7501098608084"
   },
   {
@@ -23464,7 +23604,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7706569021366"
   },
   {
@@ -23617,7 +23757,7 @@ var CATALOGO = [
     ],
     "existencias": 300,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -24810,7 +24950,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707035581353"
   },
   {
@@ -24827,7 +24967,7 @@ var CATALOGO = [
     ],
     "existencias": 5,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707035510124"
   },
   {
@@ -24844,7 +24984,7 @@ var CATALOGO = [
     ],
     "existencias": 240,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -25102,7 +25242,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7703445040015"
   },
   {
@@ -25373,7 +25513,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7501298224947"
   },
   {
@@ -25509,7 +25649,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702605105625"
   },
   {
@@ -25943,7 +26083,7 @@ var CATALOGO = [
     ],
     "existencias": 4,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707019310177"
   },
   {
@@ -25960,7 +26100,7 @@ var CATALOGO = [
     ],
     "existencias": 250,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -26062,7 +26202,7 @@ var CATALOGO = [
     ],
     "existencias": 45,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -26120,7 +26260,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -26147,7 +26287,7 @@ var CATALOGO = [
     ],
     "existencias": 120,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -27512,7 +27652,7 @@ var CATALOGO = [
     ],
     "existencias": 170,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -27651,7 +27791,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707351591159"
   },
   {
@@ -27858,7 +27998,7 @@ var CATALOGO = [
     ],
     "existencias": 30,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -28617,7 +28757,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7501298224237"
   },
   {
@@ -28668,7 +28808,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7703763700110"
   },
   {
@@ -28746,7 +28886,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702057079642"
   },
   {
@@ -28862,7 +29002,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702057712594"
   },
   {
@@ -29229,14 +29369,44 @@ var CATALOGO = [
     "descripcion": "Disponible en presentación Frasco. Si tienes dudas sobre la dosis o el uso, nuestro equipo en droguería te asesora sin costo.",
     "variantes": [
       {
-        "tipo": "Frasco",
-        "precio": 10300
+        "tipo": "Manzana",
+        "precio": 10300,
+        "imagen": "img/productos/pedialyte-max-500-ml-manzana.jpg"
+      },
+      {
+        "tipo": "Uva",
+        "precio": 10300,
+        "imagen": "img/productos/pedialyte-max-500-ml-uva.jpg"
+      },
+      {
+        "tipo": "Cereza",
+        "precio": 10300,
+        "imagen": "img/productos/pedialyte-max-500-ml-cereza.jpg"
+      },
+      {
+        "tipo": "Coco",
+        "precio": 10300,
+        "imagen": "img/productos/pedialyte-max-500-ml-coco.jpg"
+      },
+      {
+        "tipo": "Fresa",
+        "precio": 10300,
+        "imagen": "img/productos/pedialyte-max-500-ml-fresa.jpg"
+      },
+      {
+        "tipo": "Naranja",
+        "precio": 10300,
+        "imagen": "img/productos/pedialyte-max-500-ml-naranja.jpg"
       }
     ],
     "existencias": 40,
     "tags": [],
     "requiereReceta": false,
-    "codigoBarras": "7501033957369"
+    "codigoBarras": "7501033957369",
+    "selector": {
+      "titulo": "Sabores disponibles",
+      "icono": "fas fa-ice-cream"
+    }
   },
   {
     "id": 10735,
@@ -29246,14 +29416,54 @@ var CATALOGO = [
     "descripcion": "Disponible en presentación Frasco. Si tienes dudas sobre la dosis o el uso, nuestro equipo en droguería te asesora sin costo.",
     "variantes": [
       {
-        "tipo": "Frasco",
-        "precio": 8500
+        "tipo": "Mora Azul",
+        "precio": 8500,
+        "imagen": "img/productos/electrolit-625-ml-mora-azul.jpg"
+      },
+      {
+        "tipo": "Fresa",
+        "precio": 8500,
+        "imagen": "img/productos/electrolit-625-ml-fresa.jpg"
+      },
+      {
+        "tipo": "Fresa Kiwi",
+        "precio": 8500,
+        "imagen": "img/productos/electrolit-625-ml-fresa-kiwi.jpg"
+      },
+      {
+        "tipo": "Naranja Mandarina",
+        "precio": 8500,
+        "imagen": "img/productos/electrolit-625-ml-naranja-mandarina.jpg"
+      },
+      {
+        "tipo": "Uva",
+        "precio": 8500,
+        "imagen": "img/productos/electrolit-625-ml-uva.jpg"
+      },
+      {
+        "tipo": "Manzana",
+        "precio": 8500,
+        "imagen": "img/productos/electrolit-625-ml-manzana.jpg"
+      },
+      {
+        "tipo": "Ponche de Frutas",
+        "precio": 8500,
+        "imagen": "img/productos/electrolit-625-ml-ponche-de-frutas.jpg"
+      },
+      {
+        "tipo": "Maracuyá",
+        "precio": 8500,
+        "imagen": "img/productos/electrolit-625-ml-maracuya.jpg"
       }
     ],
     "existencias": 189,
     "tags": [],
     "requiereReceta": false,
-    "codigoBarras": "7501125176456"
+    "codigoBarras": "7501125176456",
+    "selector": {
+      "titulo": "Sabores disponibles",
+      "icono": "fas fa-ice-cream"
+    }
   },
   {
     "id": 10736,
@@ -29791,7 +30001,7 @@ var CATALOGO = [
     ],
     "existencias": 7,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Ampolla",
@@ -30059,7 +30269,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -30198,7 +30408,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Caja",
@@ -30225,7 +30435,7 @@ var CATALOGO = [
     ],
     "existencias": 10,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -30469,7 +30679,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Caja",
@@ -30547,7 +30757,7 @@ var CATALOGO = [
     ],
     "existencias": 140,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -31110,7 +31320,7 @@ var CATALOGO = [
     ],
     "existencias": 90,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -31300,7 +31510,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Ampolla",
@@ -31354,7 +31564,7 @@ var CATALOGO = [
     ],
     "existencias": 30,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Caja",
@@ -31622,7 +31832,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702605102617"
   },
   {
@@ -31999,7 +32209,7 @@ var CATALOGO = [
     ],
     "existencias": 8,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -32138,7 +32348,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -32165,7 +32375,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -32403,7 +32613,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -32464,7 +32674,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -32810,7 +33020,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "5000456009850"
   },
   {
@@ -32827,7 +33037,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -33679,7 +33889,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -33740,7 +33950,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -33869,7 +34079,7 @@ var CATALOGO = [
     ],
     "existencias": 4,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707357202776"
   },
   {
@@ -34083,7 +34293,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "8902269270755"
   },
   {
@@ -34965,7 +35175,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7501298224275"
   },
   {
@@ -35121,7 +35331,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "9708080808"
   },
   {
@@ -35454,7 +35664,7 @@ var CATALOGO = [
     ],
     "existencias": 11,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -35681,7 +35891,7 @@ var CATALOGO = [
     ],
     "existencias": 4,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7708902758717"
   },
   {
@@ -35729,7 +35939,7 @@ var CATALOGO = [
     ],
     "existencias": 13,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -35807,7 +36017,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702605109128"
   },
   {
@@ -35824,7 +36034,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702418000872"
   },
   {
@@ -36116,7 +36326,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -36820,7 +37030,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707263003986"
   },
   {
@@ -36837,7 +37047,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7703712035973"
   },
   {
@@ -36922,7 +37132,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -36949,7 +37159,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707184161086"
   },
   {
@@ -37010,7 +37220,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707067620396"
   },
   {
@@ -37224,7 +37434,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7703763341030"
   },
   {
@@ -37443,7 +37653,7 @@ var CATALOGO = [
     ],
     "existencias": 2,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "8904208904936"
   },
   {
@@ -37521,7 +37731,7 @@ var CATALOGO = [
     ],
     "existencias": 5,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -37599,7 +37809,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7703712080713"
   },
   {
@@ -37687,7 +37897,7 @@ var CATALOGO = [
     ],
     "existencias": 30,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -37714,7 +37924,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7704412000100"
   },
   {
@@ -37955,7 +38165,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7709530287624"
   },
   {
@@ -37989,7 +38199,7 @@ var CATALOGO = [
     ],
     "existencias": 81,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Caja",
@@ -38033,7 +38243,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -38148,7 +38358,7 @@ var CATALOGO = [
     ],
     "existencias": 16,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707270361208"
   },
   {
@@ -38213,7 +38423,7 @@ var CATALOGO = [
     ],
     "existencias": 9,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -38416,7 +38626,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7708952877192"
   },
   {
@@ -38694,7 +38904,7 @@ var CATALOGO = [
     ],
     "existencias": 36,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -38748,7 +38958,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707067510246"
   },
   {
@@ -38860,7 +39070,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7707019302202"
   },
   {
@@ -39026,7 +39236,7 @@ var CATALOGO = [
     ],
     "existencias": 3,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -39369,7 +39579,7 @@ var CATALOGO = [
     ],
     "existencias": 11,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "6916119062652"
   },
   {
@@ -39553,7 +39763,7 @@ var CATALOGO = [
     ],
     "existencias": 34,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Blíster",
@@ -39718,7 +39928,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702184020616"
   },
   {
@@ -40267,7 +40477,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7704412265776"
   },
   {
@@ -40704,7 +40914,7 @@ var CATALOGO = [
     ],
     "existencias": 1,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7702605100682"
   },
   {
@@ -41203,7 +41413,7 @@ var CATALOGO = [
     ],
     "existencias": 6,
     "tags": [],
-    "requiereReceta": true ,
+    "requiereReceta": true,
     "codigoBarras": "7709587585025"
   },
   {
