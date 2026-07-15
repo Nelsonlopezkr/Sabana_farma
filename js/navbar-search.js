@@ -142,7 +142,7 @@
       return [
         '<button class="nav-ac-item"',
           ' role="option" data-idx="' + i + '"',
-          ' onclick="navSearchIrA(' + JSON.stringify(p.nombre) + ',\'' + idSuffix + '\')"',
+          ' data-nombre="' + escHtml(p.nombre) + '"',
           '>',
           '<img src="' + imgSrc + '" alt="" loading="lazy"',
             ' onerror="this.src=\'' + imgFallback + '\'">',
@@ -168,6 +168,17 @@
     ].join('');
 
     dd.innerHTML = html;
+
+    /* Clic en cada resultado (listener directo — evita bugs de comillas en onclick) */
+    var items = dd.querySelectorAll('.nav-ac-item');
+    for (var k = 0; k < items.length; k++) {
+      (function (btn) {
+        btn.addEventListener('click', function () {
+          navSearchIrA(btn.getAttribute('data-nombre'), idSuffix);
+        });
+      })(items[k]);
+    }
+
     abrirDropdown(idSuffix);
   }
 

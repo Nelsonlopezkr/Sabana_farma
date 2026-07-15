@@ -18,9 +18,12 @@ js/buscador-codigo.js
 js/productos-data.backup.js
 js/informe_strategy.json
 
-# ── Reportes de trabajo ──
+# ── Reportes de trabajo (contienen costos internos — NUNCA publicar) ──
 _reporte-*.txt
 _reporte-*.csv
+_auditoria-*.csv
+_cambios-*.csv
+_imagenes-pendientes-*.txt
 
 # ── Scripts internos de migración/generación ──
 *.ps1

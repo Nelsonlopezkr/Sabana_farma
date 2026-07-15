@@ -134,7 +134,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 32300,
+        "precio": 40600,
         "imagen": "img/productos/igora-vital-d-tubo-3-0-castano-oscuro.jpg"
       }
     ],
@@ -5663,7 +5663,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Bolsa",
-        "precio": 15000
+        "precio": 14000
       }
     ],
     "existencias": 17,
@@ -5671,12 +5671,12 @@ var CATALOGO = [
     "requiereReceta": false,
     "presentaciones": [
       {
-        "tipo": "Bolsa",
-        "precio": 15000
+        "tipo": "Sobre",
+        "precio": 700
       },
       {
-        "tipo": "Bolsa",
-        "precio": 700
+        "tipo": "Pack x20",
+        "precio": 14000
       }
     ],
     "codigoBarras": "7707145300721"
@@ -6993,7 +6993,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 23800
+        "precio": 32100
       }
     ],
     "existencias": 1,
@@ -7629,7 +7629,7 @@ var CATALOGO = [
     "existencias": 1,
     "tags": [],
     "requiereReceta": false,
-    "codigoBarras": "0"
+    "codigoBarras": ""
   },
   {
     "id": 10221,
@@ -7752,27 +7752,27 @@ var CATALOGO = [
   },
   {
     "id": 10228,
-    "nombre": "Betametasona 8 MG 2 ML 10 Ampollas GF",
+    "nombre": "Betametasona 8 MG 2 ML Ampolla GF",
     "marca": "Genfar",
     "categoria": "Medicamentos",
     "descripcion": "Genfar — Disponible en presentación Ampolla. Si tienes dudas sobre la dosis o el uso, nuestro equipo en droguería te asesora sin costo.",
     "variantes": [
       {
         "tipo": "Ampolla",
-        "precio": 35000
+        "precio": 5500
       }
     ],
     "existencias": 8,
     "tags": [],
-    "requiereReceta": false,
+    "requiereReceta": true,
     "presentaciones": [
       {
         "tipo": "Ampolla",
-        "precio": 35000
+        "precio": 5500
       },
       {
-        "tipo": "Ampolla",
-        "precio": 5500
+        "tipo": "Caja x10",
+        "precio": 55000
       }
     ],
     "codigoBarras": "7702605104291"
@@ -9331,7 +9331,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Tarro",
-        "precio": 10800
+        "precio": 16000
       }
     ],
     "existencias": 1,
@@ -10186,7 +10186,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 8800
+        "precio": 9800
       }
     ],
     "existencias": 6,
@@ -10219,7 +10219,7 @@ var CATALOGO = [
     "existencias": 1,
     "tags": [],
     "requiereReceta": true,
-    "codigoBarras": "0"
+    "codigoBarras": ""
   },
   {
     "id": 20080,
@@ -10722,7 +10722,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 22800
+        "precio": 33100
       }
     ],
     "existencias": 1,
@@ -12094,14 +12094,14 @@ var CATALOGO = [
   },
   {
     "id": 10373,
-    "nombre": "Lomotil 2.5 MG 12 Cajas X 4 Tabletas",
+    "nombre": "Lomotil 2.5 MG Caja X 4 Tabletas",
     "marca": "Grunenthal Colombiana",
     "categoria": "Medicamentos",
     "descripcion": "Grunenthal Colombiana — Disponible en presentación Caja. Si tienes dudas sobre la dosis o el uso, nuestro equipo en droguería te asesora sin costo.",
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 82000
+        "precio": 8500
       }
     ],
     "existencias": 13,
@@ -12109,11 +12109,7 @@ var CATALOGO = [
     "requiereReceta": false,
     "presentaciones": [
       {
-        "tipo": "Caja",
-        "precio": 82000
-      },
-      {
-        "tipo": "Caja",
+        "tipo": "Caja x4 tab",
         "precio": 8500
       }
     ],
@@ -14785,7 +14781,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 26400
+        "precio": 33100
       }
     ],
     "existencias": 3,
@@ -15308,7 +15304,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Media Canasta",
-        "precio": 11200
+        "precio": 23400
       }
     ],
     "existencias": 18,
@@ -15316,16 +15312,12 @@ var CATALOGO = [
     "requiereReceta": false,
     "presentaciones": [
       {
-        "tipo": "Media Canasta",
-        "precio": 11200
-      },
-      {
         "tipo": "Botella",
         "precio": 3900
       },
       {
-        "tipo": "Canasta",
-        "precio": 22000
+        "tipo": "Six Pack",
+        "precio": 23400
       }
     ],
     "codigoBarras": "7702535009987"
@@ -15543,7 +15535,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Media Canasta",
-        "precio": 8100
+        "precio": 2600
       }
     ],
     "existencias": 1,
@@ -15551,16 +15543,12 @@ var CATALOGO = [
     "requiereReceta": false,
     "presentaciones": [
       {
-        "tipo": "Media Canasta",
-        "precio": 8100
-      },
-      {
         "tipo": "Botella",
         "precio": 2600
       },
       {
-        "tipo": "Canasta",
-        "precio": 16200
+        "tipo": "Six Pack",
+        "precio": 15600
       }
     ],
     "codigoBarras": "7702535012857"
@@ -15574,7 +15562,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Media Canasta",
-        "precio": 5400
+        "precio": 2000
       }
     ],
     "existencias": 2,
@@ -15582,16 +15570,12 @@ var CATALOGO = [
     "requiereReceta": false,
     "presentaciones": [
       {
-        "tipo": "Media Canasta",
-        "precio": 5400
-      },
-      {
         "tipo": "Botella",
         "precio": 2000
       },
       {
-        "tipo": "Canasta",
-        "precio": 21600
+        "tipo": "Six Pack",
+        "precio": 12000
       }
     ],
     "codigoBarras": "7702535002063"
@@ -15636,7 +15620,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Media Canasta",
-        "precio": 10800
+        "precio": 2000
       }
     ],
     "existencias": 10,
@@ -15644,16 +15628,12 @@ var CATALOGO = [
     "requiereReceta": false,
     "presentaciones": [
       {
-        "tipo": "Media Canasta",
-        "precio": 10800
-      },
-      {
         "tipo": "Botella",
         "precio": 2000
       },
       {
-        "tipo": "Canasta",
-        "precio": 21600
+        "tipo": "Six Pack",
+        "precio": 12000
       }
     ],
     "codigoBarras": "77035684"
@@ -15715,7 +15695,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Media Canasta",
-        "precio": 24000
+        "precio": 1600
       }
     ],
     "existencias": 18,
@@ -15723,16 +15703,12 @@ var CATALOGO = [
     "requiereReceta": false,
     "presentaciones": [
       {
-        "tipo": "Media Canasta",
-        "precio": 24000
-      },
-      {
         "tipo": "Botella",
         "precio": 1600
       },
       {
-        "tipo": "Canasta",
-        "precio": 48000
+        "tipo": "Six Pack",
+        "precio": 9600
       }
     ],
     "codigoBarras": "7702535010327"
@@ -17877,7 +17853,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Frasco",
-        "precio": 21000
+        "precio": 27800
       }
     ],
     "existencias": 1,
@@ -17938,7 +17914,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Media Canasta",
-        "precio": 12000
+        "precio": 2600
       }
     ],
     "existencias": 4,
@@ -17946,16 +17922,12 @@ var CATALOGO = [
     "requiereReceta": false,
     "presentaciones": [
       {
-        "tipo": "Media Canasta",
-        "precio": 12000
-      },
-      {
         "tipo": "Botella",
         "precio": 2600
       },
       {
-        "tipo": "Canasta",
-        "precio": 24000
+        "tipo": "Six Pack",
+        "precio": 15600
       }
     ],
     "codigoBarras": "7702535012086"
@@ -21728,7 +21700,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Media Canasta",
-        "precio": 18000
+        "precio": 1500
       }
     ],
     "existencias": 4,
@@ -21736,16 +21708,12 @@ var CATALOGO = [
     "requiereReceta": false,
     "presentaciones": [
       {
-        "tipo": "Media Canasta",
-        "precio": 18000
-      },
-      {
         "tipo": "Botella",
         "precio": 1500
       },
       {
-        "tipo": "Canasta",
-        "precio": 22500
+        "tipo": "Paquete x12",
+        "precio": 18000
       }
     ],
     "codigoBarras": "77024411"
@@ -28820,7 +28788,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Unidad",
-        "precio": 1600
+        "precio": 2500
       }
     ],
     "existencias": 10,
@@ -28829,11 +28797,11 @@ var CATALOGO = [
     "presentaciones": [
       {
         "tipo": "Caja",
-        "precio": 16900
+        "precio": 30000
       },
       {
         "tipo": "Unidad",
-        "precio": 1600
+        "precio": 2500
       }
     ],
     "codigoBarras": "7702993042625"
@@ -32500,12 +32468,12 @@ var CATALOGO = [
     "requiereReceta": false,
     "presentaciones": [
       {
-        "tipo": "Caja",
-        "precio": 42000
-      },
-      {
         "tipo": "Frasco",
         "precio": 16000
+      },
+      {
+        "tipo": "Caja x3",
+        "precio": 42000
       }
     ],
     "codigoBarras": "7702006200981"
@@ -37358,7 +37326,7 @@ var CATALOGO = [
     "variantes": [
       {
         "tipo": "Caja",
-        "precio": 26000
+        "precio": 36700
       }
     ],
     "existencias": 1,
