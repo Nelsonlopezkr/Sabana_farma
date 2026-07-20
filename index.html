@@ -959,10 +959,13 @@
  return null;
  }
 
- /* ── Imagen real: mapa verificado (TV_IMAGENES) → catálogo → '' (emoji)
-    Sin adivinar rutas por slug: evita peticiones 404 innecesarias ── */
- function tvImagen(ranking, prodCat) {
- if (typeof TV_IMAGENES !== 'undefined' && TV_IMAGENES[ranking]) return TV_IMAGENES[ranking];
+ /* ── Imagen real: mapa por NOMBRE (TV_IMAGENES_NOMBRE) → catálogo → '' (emoji)
+    Indexado por nombre, no por ranking: no se descuadra al regenerar el ranking ── */
+ function tvImagen(nombre, prodCat) {
+ if (typeof TV_IMAGENES_NOMBRE !== 'undefined') {
+ var img = TV_IMAGENES_NOMBRE[tvNormalizar(nombre)];
+ if (img) return img;
+ }
  if (!prodCat) return '';
  if (prodCat.variantes && prodCat.variantes[0] && prodCat.variantes[0].imagen) return prodCat.variantes[0].imagen;
  if (prodCat.imagen) return prodCat.imagen;
@@ -1006,7 +1009,7 @@
  : (p.vendidos >= 50 ? '<span class="tv-popular tv-popular-med">⭐ Popular</span>' : '');
 
  /* Imagen real con fallback al emoji si no existe o falla la carga */
- var imgSrc = tvImagen(p.ranking, prodCat);
+ var imgSrc = tvImagen(p.nombre, prodCat);
  var media = imgSrc
  ? '<img class="tv-img" src="' + imgSrc + '" alt="' + p.nombre.replace(/"/g, '&quot;') + '" loading="lazy" width="72" height="72" decoding="async" ' +
  'onerror="this.style.display=\'none\';if(this.nextElementSibling)this.nextElementSibling.style.display=\'\';">' +
@@ -1142,12 +1145,15 @@
  return;
  }
 
- var ql = q.toLowerCase();
+ /* Normalizar tildes/eñes — helper global de wa-config.js con respaldo */
+ var _n = window.normalizarBusqueda || function (s) { return String(s == null ? '' : s).toLowerCase(); };
+ var ql = _n(q);
  var catalogo = window.CATALOGO || [];
  var res = catalogo.filter(function (p) {
- return (p.nombre && p.nombre.toLowerCase().includes(ql))
- || (p.categoria && p.categoria.toLowerCase().includes(ql))
- || (p.marca && p.marca.toLowerCase().includes(ql));
+ if (window.textoBusquedaProducto) return window.textoBusquedaProducto(p).indexOf(ql) !== -1;
+ return (p.nombre && _n(p.nombre).includes(ql))
+ || (p.categoria && _n(p.categoria).includes(ql))
+ || (p.marca && _n(p.marca).includes(ql));
  }).slice(0, 7);
 
  if (!res.length) {

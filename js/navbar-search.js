@@ -52,6 +52,16 @@
   /* ── Escapar RegExp ── */
   function esc(s) { return s.replace(/[-.*+?^${}()|[\]\\]/g, '\\$&'); }
 
+  /* ── Normalizar (tildes/eñes) — helper global de wa-config.js con respaldo ── */
+  function norm(s) {
+    if (window.normalizarBusqueda) return window.normalizarBusqueda(s);
+    return String(s == null ? '' : s).toLowerCase();
+  }
+  function textoProd(p) {
+    if (window.textoBusquedaProducto) return window.textoBusquedaProducto(p);
+    return ((p.nombre || '') + ' ' + (p.marca || '') + ' ' + (p.categoria || '') + ' ' + (p.descripcion || '')).toLowerCase();
+  }
+
   /* ── Escapar HTML (previene XSS al reflejar la búsqueda) ── */
   function escHtml(s) {
     return String(s)
@@ -103,14 +113,12 @@
     if (!q || q.length < 2) { cerrarDropdown(idSuffix); return; }
 
     var catalogo = window.CATALOGO || [];
-    var ql = q.toLowerCase().trim();
+    var ql  = norm(q.trim());
+    var qlc = q.toLowerCase().trim(); /* código de barras: sin normalizar */
 
     var resultados = catalogo.filter(function (p) {
-      return (p.nombre       && p.nombre.toLowerCase().includes(ql))
-          || (p.categoria    && p.categoria.toLowerCase().includes(ql))
-          || (p.marca        && p.marca.toLowerCase().includes(ql))
-          || (p.descripcion  && p.descripcion.toLowerCase().includes(ql))
-          || (p.codigoBarras && p.codigoBarras.includes(ql));
+      return textoProd(p).indexOf(ql) !== -1
+          || (p.codigoBarras && p.codigoBarras.includes(qlc));
     }).slice(0, 8);
 
     if (!resultados.length) {

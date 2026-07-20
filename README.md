@@ -12,15 +12,16 @@
 
 ## 🏪 Sobre el negocio
 
-**Sabana Farma** es una droguería local con domicilio **siempre GRATIS** en Mosquera y Funza (Cundinamarca). Ofrecemos más de 2.000 productos — medicamentos, cuidado personal, bebé y mercado — con pedidos directos por WhatsApp.
+**Sabana Farma** es una droguería local con domicilio **GRATIS en pedidos de $20.000 o más** ($3.000 en pedidos menores) en Mosquera y Funza (Cundinamarca). Ofrecemos más de 2.000 productos — medicamentos, cuidado personal, bebé y mercado — con pedidos directos por WhatsApp.
 
 | Dato | Valor |
 |---|---|
 | 📦 Pedidos | [311 871 94 76](https://wa.me/573118719476) |
-| 💳 Pagos (Nequi) | 323 249 7559 |
-| 🕐 Horario | Lunes – Domingo, 7 am – 10 pm |
-| 🚚 Cobertura | Mosquera y Funza, Cundinamarca |
-| 💰 Métodos de pago | Nequi · Daviplata · Bancolombia · Efectivo |
+| 💳 Pagos (Nequi/Daviplata) | 312 421 39 86 |
+| 🕐 Horario | Lunes – Domingo, 8 am – 8 pm |
+| 🚚 Cobertura | Mosquera y Funza, Cundinamarca (no Facatativá) |
+| 🛵 Domicilio | GRATIS desde $20.000 · $3.000 en pedidos menores · 30–40 min |
+| 💰 Métodos de pago | Nequi · Daviplata · Efectivo contra entrega |
 
 ---
 
@@ -136,7 +137,7 @@ El archivo `js/navbar-search.js` inyecta automáticamente un buscador en el navb
 - **Compatibilidad**: productos simples, `variantes[]`, y sistema `laboratorios{}`
 - **Animación**: efecto fly-to-cart al agregar un producto
 - **Checkout**: genera mensaje WhatsApp con resumen completo del pedido
-- **Domicilio**: siempre gratis (nunca muestra costo de envío)
+- **Domicilio**: GRATIS en pedidos de $20.000 o más; $3.000 en pedidos menores. El carrito muestra una barra de progreso "Te faltan $X para domicilio GRATIS" que incentiva a subir el ticket. Valores centralizados en `wa-config.js` (`ENVIO_PRECIO`, `ENVIO_GRATIS_DESDE`) y regla de cálculo en `carrito.js` (`calcularTotales`).
 
 ---
 

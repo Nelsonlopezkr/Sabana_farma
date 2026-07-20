@@ -28,6 +28,12 @@ function _cop(n) {
   return '$' + Number(n).toLocaleString('es-CO');
 }
 
+/* ─── Helper número de pagos (centralizado en wa-config.js) ─── */
+function _pagoNumFmtCarrito() {
+  var n = (window.DE_CONFIG && window.DE_CONFIG.WA_NEQUI) || '3124213986';
+  return n.replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 $2 $3 $4');
+}
+
 /* ─── Guardar ─── */
 function guardarCarrito() {
   try { localStorage.setItem('de_carrito', JSON.stringify(carrito)); } catch (e) {}
@@ -795,7 +801,7 @@ function checkoutWhatsApp() {
   msg += '💳 *TOTAL: ' + _cop(totales.total) + '*\n\n';
   msg += '📍 *Dirección de entrega:* (por favor indíquela)\n';
   msg += '\n💳 *Pago:* Nequi · Daviplata · Contra entrega (efectivo)\n';
-  msg += '   Número de pagos: *312 421 39 86*\n\n';
+  msg += '   Número de pagos: *' + _pagoNumFmtCarrito() + '*\n\n';
   msg += '🚚 Domicilio: ' + (totales.envio === 0 ? 'GRATIS ✅' : '$3.000 (gratis en pedidos +$20.000)') + '\n';
   msg += '⏱️ Entrega estimada: 30–40 minutos\n\n';
   msg += '¿Confirman disponibilidad? ✅';
@@ -813,7 +819,9 @@ function checkoutWhatsApp() {
     total:     totales.total
   });
 
-  window.open('https://wa.me/573118719476?text=' + encodeURIComponent(msg), '_blank');
+  /* Número centralizado en wa-config.js (DE_CONFIG.WA_NUM), con fallback seguro */
+  var waNum = (window.DE_CONFIG && window.DE_CONFIG.WA_NUM) || '573118719476';
+  window.open('https://wa.me/' + waNum + '?text=' + encodeURIComponent(msg), '_blank');
 }
 
 

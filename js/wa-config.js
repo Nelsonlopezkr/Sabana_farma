@@ -35,6 +35,25 @@ window.DE_CONFIG = {
 window.waLink = function(msg) {
   return 'https://wa.me/' + window.DE_CONFIG.WA_NUM + '?text=' + encodeURIComponent(msg || '');
 };
+
+/* ── Búsqueda insensible a tildes y eñes ──
+   "acetaminofén" encuentra "Acetaminofen", "panal" encuentra "Pañal".
+   Usado por catalogo.js, navbar-search.js y el buscador del hero. */
+window.normalizarBusqueda = function(s) {
+  s = String(s == null ? '' : s).toLowerCase();
+  try { s = s.normalize('NFD').replace(new RegExp('[\\u0300-\\u036f]', 'g'), ''); } catch (e) { /* navegadores muy viejos */ }
+  return s;
+};
+/* Texto de búsqueda por producto, normalizado y cacheado (rendimiento
+   con catálogos de 10.000+ productos: se calcula una sola vez). */
+window.textoBusquedaProducto = function(p) {
+  if (!p._bq) {
+    p._bq = window.normalizarBusqueda(
+      (p.nombre || '') + ' ' + (p.marca || '') + ' ' + (p.categoria || '') + ' ' + (p.descripcion || '')
+    );
+  }
+  return p._bq;
+};
 window.copCurrency = function(n) {
   return '$' + Number(n).toLocaleString('es-CO');
 };

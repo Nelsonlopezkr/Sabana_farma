@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Gestor de Imágenes TOP VENTAS — Sabana Farma (Interno)</title>
+<style>
+  /* ══════════════════════════════════════════════════════════
+     Herramienta INTERNA — prioriza los productos MÁS VENDIDOS.
+     Estilos autocontenidos: cero riesgo para el resto del sitio.
+     ══════════════════════════════════════════════════════════ */
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Nunito','Segoe UI',sans-serif;
+    background:#f4f6fb; color:#263238;
+    padding-bottom:4rem;
+  }
+  .top {
+    background:linear-gradient(135deg,#B71C1C,#FF6F00);
+    color:#fff; padding:1.25rem 1rem; text-align:center;
+  }
+  .top h1 { font-size:1.15rem; font-weight:900; }
+  .top p { font-size:.78rem; opacity:.9; margin-top:.25rem; }
+  .wrap { max-width:860px; margin:0 auto; padding:1rem; }
+
+  .stats { display:flex; gap:.6rem; margin-bottom:1rem; }
+  .stat {
+    flex:1; background:#fff; border-radius:12px; padding:.7rem;
+    text-align:center; box-shadow:0 1px 4px rgba(10,42,102,.08);
+  }
+  .stat b { display:block; font-size:1.3rem; font-weight:900; }
+  .stat span { font-size:.68rem; color:#78909c; font-weight:700; text-transform:uppercase; }
+  .stat.ok b { color:#2e7d32; }
+  .stat.falta b { color:#e65100; }
+
+  .controles { background:#fff; border-radius:14px; padding:.9rem; box-shadow:0 1px 4px rgba(10,42,102,.08); margin-bottom:1rem; }
+  .controles input[type=search] {
+    width:100%; padding:.65rem .9rem; border:1.5px solid #cfd8dc;
+    border-radius:10px; font-size:.9rem; font-family:inherit; margin-bottom:.6rem;
+  }
+  .fila-ctrl { display:flex; gap:.5rem; flex-wrap:wrap; align-items:center; }
+  select {
+    padding:.5rem .7rem; border:1.5px solid #cfd8dc; border-radius:10px;
+    font-size:.82rem; font-family:inherit; background:#fff;
+  }
+  .chk { display:flex; align-items:center; gap:.35rem; font-size:.82rem; font-weight:700; cursor:pointer; }
+  .btn-verificar {
+    margin-left:auto; background:#B71C1C; color:#fff; border:none;
+    padding:.55rem 1rem; border-radius:10px; font-size:.82rem;
+    font-weight:800; cursor:pointer; font-family:inherit;
+  }
+  .btn-verificar:disabled { background:#90a4ae; cursor:wait; }
+  .btn-generar {
+    background:#2e7d32; color:#fff; border:none;
+    padding:.55rem 1rem; border-radius:10px; font-size:.82rem;
+    font-weight:800; cursor:pointer; font-family:inherit; display:none;
+  }
+  .progreso { font-size:.75rem; color:#546e7a; font-weight:700; margin-top:.5rem; display:none; }
+
+  .item {
+    background:#fff; border-radius:12px; padding:.75rem;
+    box-shadow:0 1px 4px rgba(10,42,102,.08); margin-bottom:.6rem;
+    display:flex; gap:.7rem; align-items:flex-start;
+  }
+  .rank {
+    flex-shrink:0; width:44px; height:44px; border-radius:10px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    font-weight:900; background:#eceff1; color:#546e7a; font-size:.85rem;
+  }
+  .rank small { font-size:.5rem; font-weight:800; text-transform:uppercase; }
+  .rank.oro    { background:#fff8e1; color:#b28704; }
+  .rank.plata  { background:#f5f5f5; color:#757575; }
+  .rank.bronce { background:#efebe9; color:#8d6e63; }
+  .rank.top10  { background:#e3f2fd; color:#1565C0; }
+  .thumb {
+    width:54px; height:54px; border-radius:10px; background:#eceff1;
+    flex-shrink:0; display:flex; align-items:center; justify-content:center;
+    font-size:1.3rem; overflow:hidden;
+  }
+  .thumb img { width:100%; height:100%; object-fit:contain; }
+  .info { flex:1; min-width:0; }
+  .info .nom { font-size:.85rem; font-weight:800; line-height:1.3; }
+  .info .cat { font-size:.68rem; color:#78909c; font-weight:700; margin:.15rem 0 .4rem; }
+  .slug-box {
+    display:flex; align-items:center; gap:.4rem;
+    background:#f4f6fb; border:1px dashed #b0bec5; border-radius:8px;
+    padding:.35rem .55rem; font-family:monospace; font-size:.72rem;
+    word-break:break-all;
+  }
+  .badge { font-size:.62rem; font-weight:900; padding:.2rem .5rem; border-radius:50px; text-transform:uppercase; flex-shrink:0; }
+  .badge.si   { background:#e8f5e9; color:#2e7d32; }
+  .badge.no   { background:#fff3e0; color:#e65100; }
+  .badge.pend { background:#eceff1; color:#78909c; }
+  .acciones { display:flex; gap:.4rem; margin-top:.45rem; flex-wrap:wrap; }
+  .acciones button, .acciones a {
+    border:none; border-radius:8px; padding:.4rem .7rem;
+    font-size:.72rem; font-weight:800; cursor:pointer;
+    font-family:inherit; text-decoration:none; display:inline-flex;
+    align-items:center; gap:.3rem;
+  }
+  .b-copiar { background:#e3f2fd; color:#1565C0; }
+  .b-copiar.copiado { background:#e8f5e9; color:#2e7d32; }
+  .b-google { background:#FF6F00; color:#fff; }
+  .vendidos-tag { font-size:.68rem; color:#e65100; font-weight:800; }
+
+  .paginacion { display:flex; justify-content:center; gap:.5rem; margin-top:1rem; align-items:center; }
+  .paginacion button {
+    background:#fff; border:1.5px solid #cfd8dc; border-radius:10px;
+    padding:.45rem .9rem; font-weight:800; cursor:pointer; font-family:inherit; font-size:.8rem;
+  }
+  .paginacion button:disabled { opacity:.4; cursor:default; }
+  .paginacion span { font-size:.78rem; font-weight:700; color:#546e7a; }
+
+  .ayuda {
+    background:#fff3e0; border:1px solid rgba(230,81,0,.25);
+    border-radius:12px; padding:.8rem 1rem; font-size:.78rem;
+    line-height:1.6; color:#5d4037; margin-bottom:1rem;
+  }
+  .ayuda b { font-weight:900; }
+  .vacio { text-align:center; padding:2rem; color:#78909c; font-weight:700; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <h1>🔥 Gestor de Imágenes — TOP VENTAS</h1>
+  <p>Prioriza las fotos de lo que más se vende · Herramienta interna</p>
+</header>
+
+<div class="wrap">
+
+  <div class="ayuda">
+    <b>Flujo de trabajo:</b> 1) Pulsa <b>Verificar imágenes</b> ·
+    2) Activa <b>Solo sin imagen</b> — la lista queda ordenada del más al menos vendido ·
+    3) En cada producto pulsa <b>Buscar en Google</b>, descarga la foto ·
+    4) Pulsa <b>📋 Copiar</b> y guarda el archivo con ese nombre exacto en <b>img/productos/</b> (.jpg o .webp) ·
+    5) Vuelve a <b>Verificar</b> y pulsa <b>⬇ Generar top-ventas-imagenes.js</b>:
+    descarga el archivo y reemplaza el de la carpeta <b>js/</b> para que el home muestre las fotos nuevas.
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b id="stTotal">—</b><span>Top ventas</span></div>
+    <div class="stat ok"><b id="stOk">—</b><span>Con imagen</span></div>
+    <div class="stat falta"><b id="stFalta">—</b><span>Sin imagen</span></div>
+  </div>
+
+  <div class="controles">
+    <input type="search" id="buscar" placeholder="🔍 Buscar producto..." autocomplete="off">
+    <div class="fila-ctrl">
+      <select id="filtroTop">
+        <option value="">Todo el ranking</option>
+        <option value="10">Top 10</option>
+        <option value="20">Top 20</option>
+        <option value="50" selected>Top 50</option>
+        <option value="100">Top 100</option>
+      </select>
+      <label class="chk"><input type="checkbox" id="soloSin"> Solo sin imagen</label>
+      <button class="btn-verificar" id="btnVerificar">Verificar imágenes</button>
+      <button class="btn-generar" id="btnGenerar">⬇ Generar top-ventas-imagenes.js</button>
+    </div>
+    <div class="progreso" id="progreso"></div>
+  </div>
+
+  <div id="lista"></div>
+
+  <div class="paginacion" id="paginacion" style="display:none">
+    <button id="pgPrev">← Anterior</button>
+    <span id="pgInfo"></span>
+    <button id="pgNext">Siguiente →</button>
+  </div>
+
+</div>
+
+<script src="js/top-ventas-data.js"></script>
+<script src="js/top-ventas-imagenes.js"></script>
+<script src="js/productos-data.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  /* ══ Normalizador idéntico a tvNormalizar() de index.html ══ */
+  function normalizar(s) {
+    return (s || '').toLowerCase()
+      .normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9]+/g, ' ')
+      .trim();
+  }
+  /* ══ Slug idéntico a slugProducto() de catalogo.js ══ */
+  function slugProducto(nombre) {
+    return nombre.toLowerCase()
+      .normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+
+  var POR_PAGINA = 30;
+  var pagina = 1;
+  /* estado[ranking] = { tiene, src, origen: 'mapa'|'archivo' } */
+  var estado = {};
+  var verificado = false;
+
+  var $lista   = document.getElementById('lista');
+  var $buscar  = document.getElementById('buscar');
+  var $top     = document.getElementById('filtroTop');
+  var $soloSin = document.getElementById('soloSin');
+  var $btnVer  = document.getElementById('btnVerificar');
+  var $btnGen  = document.getElementById('btnGenerar');
+  var $prog    = document.getElementById('progreso');
+
+  if (typeof TOP_VENTAS === 'undefined') {
+    $lista.innerHTML = '<div class="vacio">⚠️ No se pudo cargar js/top-ventas-data.js.</div>';
+    return;
+  }
+  var MAPA = (typeof TV_IMAGENES_NOMBRE !== 'undefined') ? TV_IMAGENES_NOMBRE : {};
+
+  document.getElementById('stTotal').textContent = TOP_VENTAS.length.toLocaleString('es-CO');
+
+  function probarImg(src) {
+    return new Promise(function (resolve) {
+      var i = new Image();
+      i.onload  = function () { resolve(true);  };
+      i.onerror = function () { resolve(false); };
+      i.src = src;
+    });
+  }
+
+  /* ── Verificar un producto: mapa por nombre → slug.webp → slug.jpg ── */
+  function verificarUna(p) {
+    var slug = slugProducto(p.nombre);
+    var enMapa = MAPA[normalizar(p.nombre)];
+    var candidatos = [];
+    if (enMapa) candidatos.push({ src: enMapa, origen: 'mapa' });
+    candidatos.push({ src: 'img/productos/' + slug + '.webp', origen: 'archivo' });
+    candidatos.push({ src: 'img/productos/' + slug + '.jpg',  origen: 'archivo' });
+
+    function probar(i) {
+      if (i >= candidatos.length) {
+        estado[p.ranking] = { tiene: false, src: '', origen: '' };
+        return Promise.resolve();
+      }
+      return probarImg(candidatos[i].src).then(function (ok) {
+        if (ok) {
+          estado[p.ranking] = { tiene: true, src: candidatos[i].src, origen: candidatos[i].origen };
+          return;
+        }
+        return probar(i + 1);
+      });
+    }
+    return probar(0);
+  }
+
+  function verificarTodo() {
+    $btnVer.disabled = true;
+    $prog.style.display = 'block';
+    var cola = TOP_VENTAS.slice();
+    var hechas = 0, total = cola.length;
+    var CONCURRENCIA = 20;
+
+    function siguiente() {
+      if (!cola.length) return Promise.resolve();
+      var p = cola.shift();
+      return verificarUna(p).then(function () {
+        hechas++;
+        if (hechas % 50 === 0 || hechas === total) {
+          $prog.textContent = 'Verificando… ' + hechas + ' / ' + total;
+        }
+        return siguiente();
+      });
+    }
+
+    var trabajos = [];
+    for (var i = 0; i < CONCURRENCIA; i++) trabajos.push(siguiente());
+
+    Promise.all(trabajos).then(function () {
+      verificado = true;
+      $btnVer.disabled = false;
+      $btnVer.textContent = 'Volver a verificar';
+      $btnGen.style.display = 'inline-flex';
+      $prog.textContent = '✓ Verificación completa';
+      actualizarStats();
+      render();
+    });
+  }
+
+  function actualizarStats() {
+    var ok = 0, falta = 0;
+    TOP_VENTAS.forEach(function (p) {
+      var e = estado[p.ranking];
+      if (e && e.tiene) ok++;
+      else if (e) falta++;
+    });
+    document.getElementById('stOk').textContent = ok.toLocaleString('es-CO');
+    document.getElementById('stFalta').textContent = falta.toLocaleString('es-CO');
+  }
+
+  /* ── Generar js/top-ventas-imagenes.js con todo lo encontrado ── */
+  function generarArchivo() {
+    var pares = [];
+    TOP_VENTAS.forEach(function (p) {
+      var e = estado[p.ranking];
+      if (e && e.tiene) {
+        var clave = normalizar(p.nombre);
+        if (!pares.some(function (x) { return x.clave === clave; })) {
+          pares.push({ clave: clave, src: e.src, ranking: p.ranking });
+        }
+      }
+    });
+    var hoy = new Date().toISOString().slice(0, 10);
+    var out = '/* ══════════════════════════════════════════════════════════\n' +
+      ' *  Sabana Farma — top-ventas-imagenes.js\n' +
+      ' *  Mapa NOMBRE (normalizado) → imagen real (verificado contra img/productos/)\n' +
+      ' *  Generado: ' + hoy + ' | ' + pares.length + ' de ' + TOP_VENTAS.length + ' con foto\n' +
+      ' *  Clave = nombre en minúsculas, sin tildes, solo [a-z0-9] y espacios.\n' +
+      ' *  ⚠ Indexado por nombre (NO por ranking): sobrevive a regeneraciones del ranking.\n' +
+      ' *  Generado con gestor-imagenes-top.html · Cargar DESPUÉS de top-ventas-data.js\n' +
+      ' * ══════════════════════════════════════════════════════════ */\n\n' +
+      'var TV_IMAGENES_NOMBRE = {\n' +
+      pares.map(function (x) {
+        return '  ' + JSON.stringify(x.clave) + ': ' + JSON.stringify(x.src) + ', /* #' + x.ranking + ' */';
+      }).join('\n') +
+      '\n};\n\n' +
+      '/* Compatibilidad: normalizador idéntico al de index.html */\n' +
+      'function tvImagenPorNombre(nombre){\n' +
+      "  var n=(nombre||'').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();\n" +
+      "  return TV_IMAGENES_NOMBRE[n]||'';\n" +
+      '}\n';
+
+    var blob = new Blob([out], { type: 'text/javascript' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'top-ventas-imagenes.js';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(a.href);
+    $prog.style.display = 'block';
+    $prog.textContent = '⬇ Descargado con ' + pares.length + ' fotos — reemplaza js/top-ventas-imagenes.js y sube el cambio.';
+  }
+
+  /* ── Filtrado (siempre ordenado por ranking) ── */
+  function filtrados() {
+    var q = normalizar($buscar.value);
+    var topN = parseInt($top.value, 10) || 0;
+    var solo = $soloSin.checked;
+    return TOP_VENTAS.filter(function (p) {
+      if (topN && p.ranking > topN) return false;
+      if (solo) {
+        var e = estado[p.ranking];
+        if (!e || e.tiene) return false;
+      }
+      if (q && normalizar(p.nombre).indexOf(q) === -1) return false;
+      return true;
+    });
+  }
+
+  function esc(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+                    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function claseRank(r) {
+    if (r === 1) return 'oro';
+    if (r === 2) return 'plata';
+    if (r === 3) return 'bronce';
+    if (r <= 10) return 'top10';
+    return '';
+  }
+
+  function render() {
+    var lista = filtrados();
+    var totalPag = Math.max(1, Math.ceil(lista.length / POR_PAGINA));
+    if (pagina > totalPag) pagina = totalPag;
+    var vista = lista.slice((pagina - 1) * POR_PAGINA, pagina * POR_PAGINA);
+
+    if (!vista.length) {
+      $lista.innerHTML = '<div class="vacio">No hay productos que coincidan con el filtro.</div>';
+    } else {
+      $lista.innerHTML = vista.map(function (p) {
+        var slug = slugProducto(p.nombre);
+        var e = estado[p.ranking];
+        var badge = !e ? '<span class="badge pend">Sin verificar</span>'
+                  : e.tiene ? '<span class="badge si">✓ ' + (e.origen === 'mapa' ? 'En mapa' : 'Tiene imagen') + '</span>'
+                  : '<span class="badge no">✗ Falta</span>';
+        var thumb = (e && e.tiene)
+          ? '<img src="' + esc(e.src) + '" alt="" loading="lazy">'
+          : '<span>' + (p.icono || '📦') + '</span>';
+        var busqueda = encodeURIComponent(p.nombre + ' colombia producto');
+        return '<div class="item">' +
+          '<div class="rank ' + claseRank(p.ranking) + '"><small>Top</small>#' + p.ranking + '</div>' +
+          '<div class="thumb">' + thumb + '</div>' +
+          '<div class="info">' +
+            '<div class="nom">' + esc(p.nombre) + ' ' + badge + '</div>' +
+            '<div class="cat">' + esc(p.presentacion || '') + ' · <span class="vendidos-tag">🔥 ' + p.vendidos.toLocaleString('es-CO') + ' vendidos</span></div>' +
+            '<div class="slug-box">📄 ' + slug + '.jpg</div>' +
+            '<div class="acciones">' +
+              '<button class="b-copiar" data-slug="' + slug + '">📋 Copiar nombre</button>' +
+              '<a class="b-google" target="_blank" rel="noopener" ' +
+                'href="https://www.google.com/search?tbm=isch&q=' + busqueda + '">🔍 Buscar en Google</a>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+      }).join('');
+    }
+
+    var $pg = document.getElementById('paginacion');
+    if (lista.length > POR_PAGINA) {
+      $pg.style.display = 'flex';
+      document.getElementById('pgInfo').textContent = 'Página ' + pagina + ' de ' + totalPag + ' · ' + lista.length.toLocaleString('es-CO') + ' productos';
+      document.getElementById('pgPrev').disabled = pagina <= 1;
+      document.getElementById('pgNext').disabled = pagina >= totalPag;
+    } else {
+      $pg.style.display = 'none';
+    }
+  }
+
+  /* ── Copiar al portapapeles (con fallback para file://) ── */
+  $lista.addEventListener('click', function (ev) {
+    var btn = ev.target.closest('.b-copiar');
+    if (!btn) return;
+    var texto = btn.getAttribute('data-slug');
+    function feedback() {
+      btn.classList.add('copiado');
+      btn.textContent = '✓ Copiado';
+      setTimeout(function () {
+        btn.classList.remove('copiado');
+        btn.textContent = '📋 Copiar nombre';
+      }, 1500);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texto).then(feedback).catch(function () { copiarFallback(texto); feedback(); });
+    } else {
+      copiarFallback(texto); feedback();
+    }
+  });
+
+  function copiarFallback(texto) {
+    var ta = document.createElement('textarea');
+    ta.value = texto;
+    ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+
+  /* ── Eventos ── */
+  var timer;
+  $buscar.addEventListener('input', function () {
+    clearTimeout(timer);
+    timer = setTimeout(function () { pagina = 1; render(); }, 200);
+  });
+  $top.addEventListener('change', function () { pagina = 1; render(); });
+  $soloSin.addEventListener('change', function () { pagina = 1; render(); });
+  $btnVer.addEventListener('click', verificarTodo);
+  $btnGen.addEventListener('click', generarArchivo);
+  document.getElementById('pgPrev').addEventListener('click', function () { pagina--; render(); window.scrollTo(0, 0); });
+  document.getElementById('pgNext').addEventListener('click', function () { pagina++; render(); window.scrollTo(0, 0); });
+
+  render();
+})();
+</script>
+</body>
+</html>

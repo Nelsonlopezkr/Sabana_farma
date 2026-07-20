@@ -39,6 +39,38 @@ function ordenarResultados(criterio) {
 }
 window.ordenarResultados = ordenarResultados;
 
+/* ── Ranking de ventas: los más vendidos aparecen primero (orden "relevancia").
+   Usa TOP_VENTAS (top-ventas-data.js) con el mismo matching difuso del home. ── */
+var __rankPorId = null;
+function _rankVentas(p) {
+  if (!__rankPorId) {
+    __rankPorId = {};
+    if (typeof TOP_VENTAS !== 'undefined' && typeof CATALOGO !== 'undefined') {
+      var normV = function(s) {
+        return (s || '').toLowerCase()
+          .normalize('NFD').replace(/[̀-ͯ]/g, '')
+          .replace(/[^a-z0-9]+/g, ' ')
+          .trim();
+      };
+      var idx = CATALOGO.map(function(c) { return normV(c.nombre); });
+      TOP_VENTAS.forEach(function(t) {
+        var nom = normV(t.nombre);
+        if (!nom) return;
+        var clave = nom.substring(0, 18);
+        for (var i = 0; i < idx.length; i++) {
+          var cat = idx[i];
+          if (!cat) continue;
+          if (cat.indexOf(clave) !== -1 || nom.indexOf(cat.substring(0, 18)) !== -1) {
+            if (!(CATALOGO[i].id in __rankPorId)) __rankPorId[CATALOGO[i].id] = t.ranking;
+            break;
+          }
+        }
+      });
+    }
+  }
+  return __rankPorId[p.id] || Infinity;
+}
+
 function _aplicarOrden(lista) {
   if (ESTADO_ORDEN === 'precio-asc') {
     return lista.slice().sort(function(a, b) {
@@ -55,8 +87,10 @@ function _aplicarOrden(lista) {
       return a.nombre.localeCompare(b.nombre, 'es');
     });
   }
-  /* relevancia: mantener orden original (índice en CATALOGO) */
-  return lista;
+  /* relevancia: más vendidos primero, luego orden original (sort estable) */
+  return lista.slice().sort(function(a, b) {
+    return _rankVentas(a) - _rankVentas(b);
+  });
 }
 
 var ESTADO = {
@@ -64,6 +98,16 @@ var ESTADO = {
   pagina:     1,
   resultados: [],
 };
+
+/* ── Búsqueda insensible a tildes/eñes (helpers de wa-config.js con respaldo local) ── */
+function _normB(s) {
+  if (window.normalizarBusqueda) return window.normalizarBusqueda(s);
+  return String(s == null ? '' : s).toLowerCase();
+}
+function _busqProd(p) {
+  if (window.textoBusquedaProducto) return window.textoBusquedaProducto(p);
+  return ((p.nombre || '') + ' ' + (p.marca || '') + ' ' + (p.categoria || '') + ' ' + (p.descripcion || '')).toLowerCase();
+}
 
 /* ── Estado activo por producto — persiste en localStorage ── */
 var variantesActivas      = {};
@@ -1738,11 +1782,8 @@ function aplicarFiltros() {
     if (tagsActivos.length && !tagsActivos.some(function(t) {
       return p.tags && p.tags.some(function(pt) { return pt.label === t; });
     })) return false;
-    var q = (ESTADO.filtros.busqueda || '').toLowerCase();
-    if (q && !p.nombre.toLowerCase().includes(q) &&
-             !p.categoria.toLowerCase().includes(q) &&
-             !p.marca.toLowerCase().includes(q) &&
-             !p.descripcion.toLowerCase().includes(q)) return false;
+    var q = _normB(ESTADO.filtros.busqueda || '');
+    if (q && _busqProd(p).indexOf(q) === -1) return false;
     /* Filtro de categoría con soporte para fusión */
     if (ESTADO.filtros.categoria) {
       var catFiltro = ESTADO.filtros.categoria;
@@ -1780,12 +1821,10 @@ function renderGrilla(append) {
   var lista = [];
 
   if (ES_INDEX) {
-    var q = (ESTADO.filtros.busqueda || '').toLowerCase();
+    var q = _normB(ESTADO.filtros.busqueda || '');
     if (q) {
       lista = CATALOGO.filter(function(p) {
-        return p.nombre.toLowerCase().includes(q) ||
-               p.categoria.toLowerCase().includes(q) ||
-               p.marca.toLowerCase().includes(q);
+        return _busqProd(p).indexOf(q) !== -1;
       }).slice(0, CFG.DESTACADOS);
     } else if (ESTADO.filtros.categoria) {
       var catSel = ESTADO.filtros.categoria;
@@ -1963,11 +2002,9 @@ function initBuscador() {
 
 function mostrarAutocomplete(q, dropdown) {
   if (!q || q.length < 2 || typeof CATALOGO === 'undefined') { cerrarAutocomplete(); return; }
-  var ql = q.toLowerCase();
+  var ql = _normB(q);
   var resultados = CATALOGO.filter(function(p) {
-    return p.nombre.toLowerCase().includes(ql) ||
-           p.categoria.toLowerCase().includes(ql) ||
-           p.marca.toLowerCase().includes(ql);
+    return _busqProd(p).indexOf(ql) !== -1;
   }).slice(0, 6);
   if (!resultados.length) { cerrarAutocomplete(); return; }
 

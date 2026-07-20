@@ -16,7 +16,7 @@
 
 'use strict';
 
-var CACHE_VERSION   = 'sf-v10'; /* v10: precios corregidos, sabores, pagos Nequi/Daviplata, horario 8-8, GA4 */
+var CACHE_VERSION   = 'sf-v12'; /* v12: imágenes top-ventas por nombre (fix descuadre) + tienda ordenada por más vendidos */
 var CACHE_STATIC    = CACHE_VERSION + '-static';
 var CACHE_DATA      = CACHE_VERSION + '-data';
 var CACHE_PAGES     = CACHE_VERSION + '-pages';
